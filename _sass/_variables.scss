@@ -1,19 +1,20 @@
 @use "sass:color";
 
-// Creative color palette for SolarSprout
-$creative-purple: #7E57C2 !default;    // Primary brand color - creativity/imagination
-$sunlight-gold: #FFD54F !default;      // Accent color for highlights - inspiration/energy
-$deep-teal: #00897B !default;          // Secondary accent - growth/stability
-$vibrant-coral: #FF7043 !default;      // Accent for art/animation - passion/energy
-$midnight-blue: #303F9F !default;      // Accent for music/film - depth/emotion
-$sprout-green: #7CB342 !default;       // Keeping some green for the "Sprout" identity
-$soil-brown: #5D4037 !default;         // Earthy brown for contrast with bright colors
-$leaf-green: #7CB342 !default;         // For backward compatibility, same as sprout-green
+// Earthy color palette for SolarSprout
+$rich-soil: #5D4037 !default;          // Deep brown - grounding, earthy base
+$terracotta: #A1887F !default;         // Warm mid-tone - pottery, earth
+$moss-green: #7CB342 !default;         // Natural green - "Sprout" identity
+$sage: #8D9440 !default;               // Muted green - natural, calming
+$clay: #BCB09C !default;               // Neutral beige - natural material
+$autumn-leaf: #D7A06C !default;        // Warm amber - fall leaves, warmth
+$forest-green: #2E7D32 !default;       // Deep green - forest depth
+$stone: #607D8B !default;              // Blue-gray - slate, stone
+$cream: #F5F5DC !default;              // Soft off-white - natural paper
 
 // Base colors
-$background-color: #FAFAFA !default; // Clean, slightly off-white background
-$text-color: #333333 !default;      // Soft black for better readability
-$brand-color: $creative-purple !default;  // Primary brand color
+$background-color: #FEFAF5 !default; // Warm off-white background
+$text-color: #3E2723 !default;      // Deep brown for readability
+$brand-color: $rich-soil !default;   // Primary brand color
 
 // Gray colors
 $grey-color: #828282 !default;
@@ -27,30 +28,30 @@ $on-laptop: 800px !default;
 
 // Tag colors for creative pursuits (Portfolio)
 $tag-colors: (
-  "animation": $vibrant-coral,
-  "gamedev": #9575CD,         // Light purple
-  "music": $midnight-blue,
-  "film": #5C6BC0,            // Indigo
-  "art": #EC407A,             // Pink
-  "writing": $deep-teal,
-  "design": #26A69A,          // Teal
-  "3d": #7986CB,              // Blue
-  "pixel-art": #8D6E63,        // Brown
-  "digital-art": #FF9800,      // Orange
-  "traditional-art": #795548,  // Brown
-  "portfolio": $sunlight-gold,
-  "tutorial": $sprout-green,
-  "project": #42A5F5,          // Blue
-  "showcase": #AB47BC,         // Purple
-  "behind-the-scenes": #78909C // Blue gray
+  "animation": #C67C4E,        // Rust orange
+  "gamedev": #8D6E63,         // Walnut brown
+  "music": #607D8B,           // Stone blue-gray
+  "film": #795548,            // Chocolate brown
+  "art": #A1887F,             // Warm terracotta
+  "writing": #4E342E,         // Dark coffee
+  "design": #7D8C85,          // Sage gray
+  "3d": #5D4037,              // Rich soil
+  "pixel-art": #8D9440,        // Olive sage
+  "digital-art": #D7A06C,      // Autumn leaf
+  "traditional-art": #A1887F,  // Terracotta
+  "portfolio": #BCB09C,        // Clay
+  "tutorial": $moss-green,     // Moss green
+  "project": #7D8C85,          // Sage gray
+  "showcase": #8D6E63,         // Walnut brown
+  "behind-the-scenes": #607D8B // Stone
 );
 
-// Blog post tag colors - visually appealing palette
+// Blog post tag colors - earthy palette
 $blog-tag-colors: (
-  "research": #3F51B5,       // Indigo - scholarly/academic
-  "art": #E91E63,           // Pink - creative/artistic
-  "news": #009688,          // Teal - informative/current
-  "film": #673AB7,          // Deep Purple - cinematic
-  "music": #2196F3,         // Blue - melodic/rhythmic
-  "animation": #FF5722      // Deep Orange - dynamic/lively
+  "research": #607D8B,       // Stone - scholarly/academic
+  "art": #A1887F,           // Terracotta - creative/artistic
+  "news": #7D8C85,          // Sage gray - informative/current
+  "film": #5D4037,          // Rich soil - cinematic
+  "music": #8D9440,         // Olive sage - melodic/rhythmic
+  "animation": #C67C4E      // Rust orange - dynamic/lively
 ) !default;

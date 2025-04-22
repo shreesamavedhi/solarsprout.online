@@ -12,7 +12,7 @@
   margin-bottom: 60px;
   
   h1 {
-    color: vars.$creative-purple;
+    color: vars.$rich-soil;
     font-size: 2.5rem;
     margin-bottom: 20px;
   }
@@ -34,11 +34,11 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 30px;
-  border-bottom: 2px solid color.scale(vars.$creative-purple, $lightness: 80%);
+  border-bottom: 2px solid vars.$clay;
   padding-bottom: 15px;
   
   h2 {
-    color: vars.$deep-teal;
+    color: vars.$forest-green;
     font-size: 1.8rem;
     margin: 0;
   }
@@ -46,7 +46,7 @@
   .platform-link {
     display: inline-flex;
     align-items: center;
-    color: vars.$creative-purple;
+    color: vars.$moss-green;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
@@ -57,7 +57,7 @@
     }
     
     &:hover {
-      color: vars.$vibrant-coral;
+      color: vars.$autumn-leaf;
     }
   }
   
@@ -121,7 +121,7 @@
   }
   
   .view-button {
-    background-color: vars.$creative-purple;
+    background-color: vars.$moss-green;
     color: white;
     padding: 10px 20px;
     border-radius: 30px;
@@ -131,7 +131,7 @@
     transition: transform 0.3s ease, background-color 0.3s ease;
     
     &:hover {
-      background-color: vars.$vibrant-coral;
+      background-color: vars.$forest-green;
     }
   }
   
@@ -183,39 +183,39 @@
 
 // Animation section styling
 #animation .section-header h2 {
-  color: vars.$vibrant-coral;
+  color: vars.$autumn-leaf;
 }
 
 // Game development section styling
 #gamedev .section-header h2 {
-  color: vars.$creative-purple;
+  color: vars.$terracotta;
 }
 
 // Music section styling
 #music .section-header h2 {
-  color: vars.$midnight-blue;
+  color: vars.$stone;
 }
 
 // Art section styling
 #art .section-header h2 {
-  color: #EC407A;
+  color: vars.$rich-soil;
 }
 
 // Film section styling
 #film .section-header h2 {
-  color: #5C6BC0;
+  color: vars.$sage;
 }
 
 // Contact section styling
 .contact-section {
-  background-color: color.scale(vars.$background-color, $lightness: -3%);
+  background-color: vars.$clay;
   padding: 60px;
   border-radius: 10px;
   text-align: center;
   margin-top: 80px;
   
   h2 {
-    color: vars.$creative-purple;
+    color: vars.$rich-soil;
     margin-top: 0;
     margin-bottom: 20px;
     font-size: 2rem;
@@ -232,7 +232,7 @@
 
 .contact-button {
   display: inline-block;
-  background-color: vars.$creative-purple;
+  background-color: vars.$moss-green;
   color: white;
   padding: 12px 30px;
   border-radius: 30px;
@@ -242,7 +242,7 @@
   transition: background-color 0.3s ease, transform 0.3s ease;
   
   &:hover {
-    background-color: vars.$vibrant-coral;
+    background-color: vars.$forest-green;
     transform: translateY(-3px);
   }
 }

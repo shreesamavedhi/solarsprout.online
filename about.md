@@ -101,42 +101,19 @@ permalink: /about/
     </div>
   </div>
   
-  <div class="contact-section">
-    <h2>Get in Touch</h2>
-    
-    <div class="contact-grid">
-      <div class="contact-info">
-        <p>I love hearing from readers and fellow sustainability enthusiasts! Whether you have questions, suggestions, or just want to share your own journey, I'd love to connect.</p>
-        
-        <p><strong>Email:</strong> hello@solarsprout.online</p>
-        <p><strong>Location:</strong> San Francisco Bay Area, California</p>
-        
-        <div class="social-links">
-          <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
-          <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="#" title="Pinterest"><i class="fab fa-pinterest"></i></a>
-          <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+  <div class="about-section newsletter get-in-touch">
+    <div class="newsletter-container">
+      <h2>Get In Touch</h2>
+      <p>Have a question or want to collaborate? Drop me a message and I'll get back to you soon!</p>
+      <form class="newsletter-form contact-form" action="https://formspree.io/f/your-formspree-endpoint" method="POST">
+        <!-- Replace 'your-formspree-endpoint' with your actual endpoint ID from Formspree -->
+        <div class="form-fields">
+          <input type="text" name="name" placeholder="Your name" required>
+          <input type="email" name="email" placeholder="Your email address" required>
+          <textarea name="message" placeholder="Your message" required></textarea>
         </div>
-      </div>
-      
-      <div class="contact-form">
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" required>
-        </div>
-        
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-        
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" required></textarea>
-        </div>
-        
-        <button type="submit">Send Message</button>
-      </div>
+        <button type="submit">Send</button>
+      </form>
     </div>
   </div>
 </div>

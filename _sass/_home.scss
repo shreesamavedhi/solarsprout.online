@@ -37,8 +37,8 @@
 
 .banner-button {
   display: inline-block;
-  background-color: vars.$sunlight-gold;
-  color: vars.$soil-brown;
+  background-color: vars.$moss-green;
+  color: white;
   padding: 12px 30px;
   border-radius: 30px;
   font-size: 1.1rem;
@@ -47,7 +47,7 @@
   transition: all 0.3s ease;
   
   &:hover {
-    background-color: color.scale(vars.$sunlight-gold, $lightness: -10%);
+    background-color: vars.$forest-green;
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   }
@@ -96,7 +96,7 @@
   flex: 1;
   
   h2 {
-    color: vars.$leaf-green;
+    color: vars.$rich-soil;
     margin-bottom: 20px;
     font-size: 2rem;
   }
@@ -110,7 +110,7 @@
 
 .read-more-button {
   display: inline-block;
-  background-color: vars.$leaf-green;
+  background-color: vars.$sage;
   color: white;
   padding: 10px 25px;
   border-radius: 30px;
@@ -120,7 +120,7 @@
   transition: all 0.3s ease;
   
   &:hover {
-    background-color: color.scale(vars.$leaf-green, $lightness: -10%);
+    background-color: vars.$forest-green;
     transform: translateY(-2px);
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
   }
@@ -133,7 +133,7 @@
   h2 {
     text-align: center;
     margin-bottom: 40px;
-    color: vars.$soil-brown;
+    color: vars.$rich-soil;
     font-size: 2rem;
   }
 }
@@ -194,7 +194,7 @@
     text-decoration: none;
     
     &:hover {
-      color: vars.$leaf-green;
+      color: vars.$moss-green;
     }
   }
 }
@@ -207,8 +207,8 @@
 .view-all-button {
   display: inline-block;
   background-color: transparent;
-  color: vars.$leaf-green;
-  border: 2px solid vars.$leaf-green;
+  color: vars.$sage;
+  border: 2px solid vars.$sage;
   padding: 10px 25px;
   border-radius: 30px;
   font-size: 1rem;
@@ -217,7 +217,7 @@
   transition: all 0.3s ease;
   
   &:hover {
-    background-color: vars.$leaf-green;
+    background-color: vars.$sage;
     color: white;
     transform: translateY(-2px);
   }
@@ -225,7 +225,7 @@
 
 // Newsletter Section
 .newsletter {
-  background-color: vars.$sprout-green;
+  background-color: vars.$terracotta;
   padding: 60px 0;
   margin-bottom: 60px;
   border-radius: 8px;
@@ -271,7 +271,7 @@
   }
   
   button {
-    background-color: vars.$soil-brown;
+    background-color: vars.$rich-soil;
     color: white;
     border: none;
     padding: 15px 30px;
@@ -286,7 +286,7 @@
     }
     
     &:hover {
-      background-color: color.scale(vars.$soil-brown, $lightness: -10%);
+      background-color: vars.$forest-green;
     }
   }
 }
