@@ -1,0 +1,29 @@
+@use "sass:color";
+
+// Base colors
+$background-color: #fdfdfd !default;
+$text-color: #111 !default;
+$brand-color: #2a7ae2 !default;
+
+// Gray colors
+$grey-color: #828282 !default;
+$grey-color-light: color.scale($grey-color, $lightness: 40%) !default;
+$grey-color-dark: color.scale($grey-color, $lightness: -25%) !default;
+
+// Width of the content area
+$content-width: 800px !default;
+$on-palm: 600px !default;
+$on-laptop: 800px !default;
+
+// Tag colors
+$tag-colors: (
+  "documentation": #2196F3,
+  "introduction": #4CAF50,
+  "getting-started": #FF9800,
+  "tutorial": #9C27B0,
+  "beginner": #00BCD4,
+  "setup": #607D8B,
+  "advanced": #F44336,
+  "customization": #795548,
+  "features": #673AB7
+);

@@ -1,0 +1,14 @@
+@use "sass:color";
+@use "variables" as vars;
+@use "mixins" as mix;
+
+// Import our modernized Minima theme components
+@use "minima-base";
+@use "minima-layout";
+@use "minima-syntax-highlighting";
+
+// Import our custom styles
+@use "custom";
+
+// This file forwards all the styles needed for the site
+// It will be imported by the main style.scss file

@@ -4,7 +4,8 @@ baseurl: ""
 url: "https://solarsprout.online"
 
 # Theme settings
-theme: minima
+# Using custom theme files instead of minima
+theme: null
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
@@ -21,6 +22,9 @@ collections:
   docs:
     output: true
     permalink: /:collection/:path/
+  tags:
+    output: true
+    permalink: /tag/:name/
 
 defaults:
   - scope:
@@ -33,6 +37,11 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+  - scope:
+      path: ""
+      type: "tags"
+    values:
+      layout: "tag"
   - scope:
       path: ""
     values:

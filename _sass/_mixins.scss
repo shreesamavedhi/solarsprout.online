@@ -1,0 +1,16 @@
+@use "sass:color";
+
+// Mixins for responsive design
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+// Mixin for tag colors
+@mixin tag-color($name, $color) {
+  .tag-#{$name} {
+    background-color: $color;
+    color: white;
+  }
+}

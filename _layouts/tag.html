@@ -2,7 +2,10 @@
 layout: default
 ---
 <div class="tag-page">
-  <h1 class="tag-title">Posts tagged with "{{ page.tag }}"</h1>
+  <div class="tag-header">
+    <span class="category-label">category</span>
+    <h1 class="tag-title">{{ page.tag }}</h1>
+  </div>
   
   <div class="post-list">
     {% for post in site.posts %}
