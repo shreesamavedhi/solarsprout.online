@@ -4,7 +4,7 @@ title: "Getting Started with SolarSprout"
 date: 2025-04-20 15:30:00 -0700
 categories: tutorial
 description: "A comprehensive guide to help you get started with the SolarSprout platform."
-image: "/assets/images/default-post.jpg"
+image: "/assets/images/default-post.svg"
 tags: [tutorial, beginner, setup]
 ---
 

@@ -6,14 +6,14 @@ permalink: /blog/
 
 <div class="blog-posts">
   {%- if site.posts.size > 0 -%}
-    <div class="post-grid">
+    <div class="post-list">
       {%- for post in site.posts -%}
-      <div class="post-card">
+      <div class="post-row">
         <div class="post-image">
           {% if post.image %}
             <img src="{{ post.image | relative_url }}" alt="{{ post.title }}">
           {% else %}
-            <img src="/assets/images/default-post.jpg" alt="{{ post.title }}">
+            <img src="/assets/images/default-post.svg" alt="{{ post.title }}">
           {% endif %}
         </div>
         <div class="post-content">
@@ -32,7 +32,9 @@ permalink: /blog/
           {% if post.tags %}
           <div class="post-tags">
             {% for tag in post.tags %}
-              <span class="post-tag">{{ tag }}</span>
+              {% assign tag_slug = tag | slugify %}
+              {% assign tag_class = "tag-" | append: tag_slug %}
+              <a href="/tag/{{ tag_slug }}" class="post-tag {{ tag_class }}">{{ tag }}</a>
             {% endfor %}
           </div>
           {% endif %}

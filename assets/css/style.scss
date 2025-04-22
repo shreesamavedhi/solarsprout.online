@@ -53,31 +53,37 @@
 }
 
 // Blog styles
-.post-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-gap: 30px;
+.post-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
   margin-top: 30px;
 }
 
-.post-card {
+.post-row {
+  display: flex;
   border: 1px solid #e8e8e8;
   border-radius: 5px;
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
   
   &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  @media (max-width: 768px) {
+    flex-direction: column;
   }
 }
 
 .post-image {
-  height: 200px;
+  flex: 0 0 250px;
   overflow: hidden;
+  
+  @media (max-width: 768px) {
+    flex: 0 0 200px;
+  }
   
   img {
     width: 100%;
@@ -92,7 +98,7 @@
 }
 
 .post-content {
-  padding: 20px;
+  padding: 25px;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -122,23 +128,75 @@
 
 .post-excerpt {
   color: #555;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   flex-grow: 1;
 }
 
 .post-tags {
   margin-top: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.post-tag {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-size: 12px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
   
-  .post-tag {
-    display: inline-block;
-    background-color: #f1f8ff;
-    color: #0366d6;
-    padding: 3px 10px;
-    border-radius: 15px;
-    font-size: 12px;
-    margin-right: 5px;
-    margin-bottom: 5px;
+  &:hover {
+    opacity: 0.9;
+    text-decoration: none;
   }
+}
+
+// Tag colors
+.tag-documentation {
+  background-color: #2196F3;
+  color: white;
+}
+
+.tag-introduction {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.tag-getting-started {
+  background-color: #FF9800;
+  color: white;
+}
+
+.tag-tutorial {
+  background-color: #9C27B0;
+  color: white;
+}
+
+.tag-beginner {
+  background-color: #00BCD4;
+  color: white;
+}
+
+.tag-setup {
+  background-color: #607D8B;
+  color: white;
+}
+
+.tag-advanced {
+  background-color: #F44336;
+  color: white;
+}
+
+.tag-customization {
+  background-color: #795548;
+  color: white;
+}
+
+.tag-features {
+  background-color: #673AB7;
+  color: white;
 }
 
 // Documentation styles

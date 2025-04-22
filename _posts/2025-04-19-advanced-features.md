@@ -4,7 +4,7 @@ title: "Advanced Features and Customization"
 date: 2025-04-19 10:15:00 -0700
 categories: advanced
 description: "Explore the advanced features and customization options available in SolarSprout."
-image: "/assets/images/default-post.jpg"
+image: "/assets/images/default-post.svg"
 tags: [advanced, customization, features]
 ---
 
