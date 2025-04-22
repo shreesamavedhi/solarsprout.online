@@ -1,0 +1,43 @@
+title: SolarSprout Docs
+description: Documentation and Blog Site
+baseurl: ""
+url: "https://solarsprout.online"
+
+# Theme settings
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Navigation
+header_pages:
+  - docs.md
+  - blog.md
+  - about.md
+
+# Collections
+collections:
+  docs:
+    output: true
+    permalink: /:collection/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: "docs"
+    values:
+      layout: "doc"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
