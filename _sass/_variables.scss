@@ -25,7 +25,7 @@ $content-width: 800px !default;
 $on-palm: 600px !default;
 $on-laptop: 800px !default;
 
-// Tag colors for creative pursuits
+// Tag colors for creative pursuits (Portfolio)
 $tag-colors: (
   "animation": $vibrant-coral,
   "gamedev": #9575CD,         // Light purple
@@ -44,3 +44,13 @@ $tag-colors: (
   "showcase": #AB47BC,         // Purple
   "behind-the-scenes": #78909C // Blue gray
 );
+
+// Blog post tag colors - visually appealing palette
+$blog-tag-colors: (
+  "research": #3F51B5,       // Indigo - scholarly/academic
+  "art": #E91E63,           // Pink - creative/artistic
+  "news": #009688,          // Teal - informative/current
+  "film": #673AB7,          // Deep Purple - cinematic
+  "music": #2196F3,         // Blue - melodic/rhythmic
+  "animation": #FF5722      // Deep Orange - dynamic/lively
+) !default;

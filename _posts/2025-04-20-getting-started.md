@@ -5,7 +5,7 @@ date: 2025-04-20 15:30:00 -0700
 categories: tutorial
 description: "A comprehensive guide to help you get started with the SolarSprout platform."
 image: "/assets/images/default-post.svg"
-tags: [tutorial, beginner, setup, getting-started]
+tags: [animation, art, film]
 ---
 
 This guide will walk you through the initial setup process for SolarSprout. Follow these steps to get your environment configured properly.

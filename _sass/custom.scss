@@ -144,15 +144,48 @@
 
 .post-tag {
   display: inline-block;
-  padding: 4px 12px;
+  padding: 5px 12px;
   border-radius: 15px;
   font-size: 12px;
+  font-weight: 600;
   text-decoration: none;
-  transition: background-color 0.2s ease;
+  color: white !important; /* Force white text color */
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-transform: lowercase;
+  letter-spacing: 0.5px;
+  border: none;
   
   &:hover {
-    opacity: 0.9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     text-decoration: none;
+    color: white !important; /* Ensure white text on hover too */
+  }
+  
+  // Apply specific background colors from the blog tag map
+  &.tag-research {
+    background-color: map-get(vars.$blog-tag-colors, 'research');
+  }
+  
+  &.tag-art {
+    background-color: map-get(vars.$blog-tag-colors, 'art');
+  }
+  
+  &.tag-news {
+    background-color: map-get(vars.$blog-tag-colors, 'news');
+  }
+  
+  &.tag-film {
+    background-color: map-get(vars.$blog-tag-colors, 'film');
+  }
+  
+  &.tag-music {
+    background-color: map-get(vars.$blog-tag-colors, 'music');
+  }
+  
+  &.tag-animation {
+    background-color: map-get(vars.$blog-tag-colors, 'animation');
   }
 }
 

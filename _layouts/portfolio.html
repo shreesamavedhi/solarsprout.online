@@ -1,0 +1,56 @@
+---
+layout: default
+---
+<article class="portfolio-item">
+  <header class="portfolio-header">
+    <h1 class="portfolio-title">{{ page.title | escape }}</h1>
+    {% if page.subtitle %}
+    <p class="portfolio-subtitle">{{ page.subtitle }}</p>
+    {% endif %}
+    
+    {% if page.tags %}
+    <div class="portfolio-tags">
+      {% for tag in page.tags %}
+        {% assign tag_slug = tag | slugify %}
+        {% assign tag_class = "tag-" | append: tag_slug %}
+        <span class="portfolio-tag {{ tag_class }}">{{ tag }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </header>
+
+  <div class="portfolio-content">
+    {{ content }}
+  </div>
+
+  {% if page.gallery %}
+  <div class="portfolio-gallery">
+    <h2>Gallery</h2>
+    <div class="gallery-grid">
+      {% for image in page.gallery %}
+      <div class="gallery-item">
+        <img src="{{ image.image_path | relative_url }}" alt="{{ image.title }}">
+        {% if image.title %}
+        <p class="image-caption">{{ image.title }}</p>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+  
+  {% if page.links %}
+  <div class="portfolio-links">
+    <h2>Links</h2>
+    <ul class="links-list">
+      {% for link in page.links %}
+      <li><a href="{{ link.url }}" target="_blank" class="external-link">{{ link.title }} <i class="fas fa-external-link-alt"></i></a></li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+  
+  <div class="portfolio-navigation">
+    <a href="{{ '/portfolio/' | relative_url }}" class="back-button">← Back to Portfolio</a>
+  </div>
+</article>

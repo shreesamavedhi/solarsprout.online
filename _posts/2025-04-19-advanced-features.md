@@ -5,7 +5,7 @@ date: 2025-04-19 10:15:00 -0700
 categories: advanced
 description: "Explore the advanced features and customization options available in SolarSprout."
 image: "/assets/images/default-post.svg"
-tags: [advanced, customization, features, documentation]
+tags: [music, research, news]
 ---
 
 Once you've mastered the basics, it's time to explore the advanced features that SolarSprout offers. This post covers customization options and power-user features.

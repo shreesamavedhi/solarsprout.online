@@ -19,9 +19,9 @@ header_pages:
 
 # Collections
 collections:
-  docs:
+  portfolio:
     output: true
-    permalink: /:collection/:path/
+    permalink: /portfolio/:path/
   tags:
     output: true
     permalink: /tag/:name/
@@ -29,9 +29,9 @@ collections:
 defaults:
   - scope:
       path: ""
-      type: "docs"
+      type: "portfolio"
     values:
-      layout: "doc"
+      layout: "portfolio"
   - scope:
       path: ""
       type: "posts"
