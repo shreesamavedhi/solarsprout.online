@@ -1,5 +1,5 @@
-title: SolarSprout Docs
-description: Documentation and Blog Site
+title: Solar Sprout
+description: Animation, Games, Music, Art & More by Shree Samavedhi
 baseurl: ""
 url: "https://solarsprout.online"
 
@@ -13,8 +13,8 @@ plugins:
 
 # Navigation
 header_pages:
-  - docs.md
   - blog.md
+  - portfolio.md
   - about.md
 
 # Collections

@@ -1,16 +1,19 @@
 @use "sass:color";
 
-// Earthy color palette for SolarSprout
-$leaf-green: #5A8F29 !default;      // Primary brand color
-$sunlight-yellow: #F9C846 !default; // Accent color for highlights
-$soil-brown: #6B4C35 !default;     // Dark accent color
-$sky-blue: #7DAFCA !default;       // Secondary accent color
-$sprout-green: #A0C55F !default;   // Light accent color
+// Creative color palette for SolarSprout
+$creative-purple: #7E57C2 !default;    // Primary brand color - creativity/imagination
+$sunlight-gold: #FFD54F !default;      // Accent color for highlights - inspiration/energy
+$deep-teal: #00897B !default;          // Secondary accent - growth/stability
+$vibrant-coral: #FF7043 !default;      // Accent for art/animation - passion/energy
+$midnight-blue: #303F9F !default;      // Accent for music/film - depth/emotion
+$sprout-green: #7CB342 !default;       // Keeping some green for the "Sprout" identity
+$soil-brown: #5D4037 !default;         // Earthy brown for contrast with bright colors
+$leaf-green: #7CB342 !default;         // For backward compatibility, same as sprout-green
 
 // Base colors
-$background-color: #FFFBF2 !default; // Warm off-white background
-$text-color: #3A3A3A !default;      // Soft black for better readability
-$brand-color: $leaf-green !default;  // Primary brand color
+$background-color: #FAFAFA !default; // Clean, slightly off-white background
+$text-color: #333333 !default;      // Soft black for better readability
+$brand-color: $creative-purple !default;  // Primary brand color
 
 // Gray colors
 $grey-color: #828282 !default;
@@ -22,18 +25,22 @@ $content-width: 800px !default;
 $on-palm: 600px !default;
 $on-laptop: 800px !default;
 
-// Tag colors with earthy tones
+// Tag colors for creative pursuits
 $tag-colors: (
-  "documentation": $leaf-green,
-  "introduction": $sprout-green,
-  "getting-started": $sunlight-yellow,
-  "tutorial": #8FB339,        // Lighter green
-  "beginner": #B5D99C,        // Pale green
-  "setup": $sky-blue,
-  "advanced": $soil-brown,
-  "customization": #9B7653,   // Medium brown
-  "features": #D4AC2B,        // Golden yellow
-  "sustainability": #3D8E33,  // Forest green
-  "energy": #E3B23C,         // Amber
-  "gardening": #7AA95C       // Sage green
+  "animation": $vibrant-coral,
+  "gamedev": #9575CD,         // Light purple
+  "music": $midnight-blue,
+  "film": #5C6BC0,            // Indigo
+  "art": #EC407A,             // Pink
+  "writing": $deep-teal,
+  "design": #26A69A,          // Teal
+  "3d": #7986CB,              // Blue
+  "pixel-art": #8D6E63,        // Brown
+  "digital-art": #FF9800,      // Orange
+  "traditional-art": #795548,  // Brown
+  "portfolio": $sunlight-gold,
+  "tutorial": $sprout-green,
+  "project": #42A5F5,          // Blue
+  "showcase": #AB47BC,         // Purple
+  "behind-the-scenes": #78909C // Blue gray
 );

@@ -37,7 +37,7 @@
 
 .banner-button {
   display: inline-block;
-  background-color: vars.$sunlight-yellow;
+  background-color: vars.$sunlight-gold;
   color: vars.$soil-brown;
   padding: 12px 30px;
   border-radius: 30px;
@@ -47,7 +47,7 @@
   transition: all 0.3s ease;
   
   &:hover {
-    background-color: color.scale(vars.$sunlight-yellow, $lightness: -10%);
+    background-color: color.scale(vars.$sunlight-gold, $lightness: -10%);
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   }

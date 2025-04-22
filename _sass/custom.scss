@@ -6,11 +6,12 @@
 // These styles will override Minima theme defaults
 
 .site-header {
-  border-top: 5px solid vars.$leaf-green;
-  border-bottom: 1px solid color.scale(vars.$leaf-green, $lightness: 75%);
+  border-top: 5px solid vars.$creative-purple;
+  border-bottom: 1px solid color.scale(vars.$creative-purple, $lightness: 75%);
   min-height: 55.95px;
   position: relative;
-  background-color: color.scale(vars.$background-color, $lightness: -2%);
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
 .site-title {
@@ -199,16 +200,69 @@
   @include mix.tag-color($name, $color);
 }
 
-// Documentation styles
-.doc-content {
-  h1, h2, h3, h4, h5, h6 {
-    margin-top: 2em;
-    margin-bottom: 1em;
+// Footer styles
+.site-footer {
+  background-color: #212121;
+  color: #f5f5f5;
+  padding: 60px 0 20px;
+  margin-top: 60px;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+.footer-col h3 {
+  color: vars.$sunlight-gold;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+}
+
+.footer-about p {
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.social-links, .footer-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  
+  li {
+    margin-bottom: 12px;
   }
   
-  code {
-    background-color: color.scale(vars.$grey-color-light, $lightness: 6%);
-    padding: 2px 5px;
-    border-radius: 3px;
+  a {
+    color: #f5f5f5;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    
+    i {
+      margin-right: 8px;
+      font-size: 1.2rem;
+    }
+    
+    &:hover {
+      color: vars.$vibrant-coral;
+    }
   }
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #aaa;
 }
