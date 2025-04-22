@@ -1,4 +1,5 @@
 @use "sass:color";
+@use "sass:map";
 @use "variables" as vars;
 @use "mixins" as mix;
 
@@ -165,27 +166,27 @@
   
   // Apply specific background colors from the blog tag map
   &.tag-research {
-    background-color: map-get(vars.$blog-tag-colors, 'research');
+    background-color: map.get(vars.$blog-tag-colors, 'research');
   }
   
   &.tag-art {
-    background-color: map-get(vars.$blog-tag-colors, 'art');
+    background-color: map.get(vars.$blog-tag-colors, 'art');
   }
   
   &.tag-news {
-    background-color: map-get(vars.$blog-tag-colors, 'news');
+    background-color: map.get(vars.$blog-tag-colors, 'news');
   }
   
   &.tag-film {
-    background-color: map-get(vars.$blog-tag-colors, 'film');
+    background-color: map.get(vars.$blog-tag-colors, 'film');
   }
   
   &.tag-music {
-    background-color: map-get(vars.$blog-tag-colors, 'music');
+    background-color: map.get(vars.$blog-tag-colors, 'music');
   }
   
   &.tag-animation {
-    background-color: map-get(vars.$blog-tag-colors, 'animation');
+    background-color: map.get(vars.$blog-tag-colors, 'animation');
   }
 }
 
