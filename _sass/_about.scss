@@ -1,0 +1,279 @@
+@use "sass:color";
+@use "variables" as vars;
+
+// About page styles
+.about-page {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-header {
+  text-align: center;
+  margin-bottom: 50px;
+  
+  h1 {
+    color: vars.$leaf-green;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .subtitle {
+    font-size: 1.2rem;
+    color: vars.$grey-color;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+}
+
+.about-section {
+  margin-bottom: 60px;
+}
+
+.about-image-container {
+  margin-bottom: 40px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+.about-content {
+  h2 {
+    color: vars.$soil-brown;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid color.scale(vars.$leaf-green, $lightness: 70%);
+  }
+  
+  p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    line-height: 1.7;
+  }
+}
+
+.mission-values {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.mission-card {
+  background-color: color.scale(vars.$background-color, $lightness: -3%);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  
+  h3 {
+    color: vars.$leaf-green;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+  }
+  
+  p {
+    margin-bottom: 0;
+    font-size: 1rem;
+  }
+}
+
+.journey-timeline {
+  margin-top: 50px;
+  position: relative;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 3px;
+    background-color: vars.$sprout-green;
+    transform: translateX(-50%);
+    
+    @media (max-width: 768px) {
+      left: 30px;
+    }
+  }
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 50px;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+  
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.timeline-content {
+  position: relative;
+  width: 45%;
+  padding: 25px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  
+  &::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    width: 20px;
+    height: 20px;
+    background-color: vars.$sunlight-yellow;
+    border: 4px solid vars.$sprout-green;
+    border-radius: 50%;
+  }
+  
+  @media (max-width: 768px) {
+    width: calc(100% - 60px);
+    margin-left: 60px;
+    
+    &::after {
+      left: -44px;
+    }
+  }
+  
+  h3 {
+    margin-top: 0;
+    color: vars.$soil-brown;
+    font-size: 1.3rem;
+  }
+  
+  .date {
+    display: block;
+    margin-bottom: 15px;
+    color: vars.$grey-color;
+    font-size: 0.9rem;
+  }
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+  float: left;
+  
+  &::after {
+    right: -44px;
+  }
+  
+  @media (max-width: 768px) {
+    float: none;
+    
+    &::after {
+      left: -44px;
+      right: auto;
+    }
+  }
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  float: right;
+  
+  &::after {
+    left: -44px;
+  }
+  
+  @media (max-width: 768px) {
+    float: none;
+  }
+}
+
+.contact-section {
+  background-color: color.scale(vars.$background-color, $lightness: -3%);
+  padding: 40px;
+  border-radius: 10px;
+  margin-top: 60px;
+  
+  h2 {
+    margin-top: 0;
+    color: vars.$soil-brown;
+    margin-bottom: 25px;
+  }
+  
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .contact-info {
+    p {
+      margin-bottom: 15px;
+      font-size: 1.1rem;
+    }
+    
+    .social-links {
+      margin-top: 20px;
+      
+      a {
+        display: inline-block;
+        margin-right: 15px;
+        color: vars.$leaf-green;
+        font-size: 1.5rem;
+        transition: color 0.3s ease;
+        
+        &:hover {
+          color: vars.$soil-brown;
+        }
+      }
+    }
+  }
+  
+  .contact-form {
+    .form-group {
+      margin-bottom: 20px;
+      
+      label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 500;
+      }
+      
+      input, textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 1rem;
+      }
+      
+      textarea {
+        min-height: 120px;
+      }
+    }
+    
+    button {
+      background-color: vars.$leaf-green;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      
+      &:hover {
+        background-color: color.scale(vars.$leaf-green, $lightness: -10%);
+      }
+    }
+  }
+}

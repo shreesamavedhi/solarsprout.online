@@ -6,10 +6,11 @@
 // These styles will override Minima theme defaults
 
 .site-header {
-  border-top: 5px solid #424242;
-  border-bottom: 1px solid #e8e8e8;
+  border-top: 5px solid vars.$leaf-green;
+  border-bottom: 1px solid color.scale(vars.$leaf-green, $lightness: 75%);
   min-height: 55.95px;
   position: relative;
+  background-color: color.scale(vars.$background-color, $lightness: -2%);
 }
 
 .site-title {

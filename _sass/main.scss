@@ -9,6 +9,8 @@
 
 // Import our custom styles
 @use "custom";
+@use "home";
+@use "about";
 
 // This file forwards all the styles needed for the site
 // It will be imported by the main style.scss file

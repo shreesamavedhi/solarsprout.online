@@ -1,9 +1,16 @@
 @use "sass:color";
 
+// Earthy color palette for SolarSprout
+$leaf-green: #5A8F29 !default;      // Primary brand color
+$sunlight-yellow: #F9C846 !default; // Accent color for highlights
+$soil-brown: #6B4C35 !default;     // Dark accent color
+$sky-blue: #7DAFCA !default;       // Secondary accent color
+$sprout-green: #A0C55F !default;   // Light accent color
+
 // Base colors
-$background-color: #fdfdfd !default;
-$text-color: #111 !default;
-$brand-color: #2a7ae2 !default;
+$background-color: #FFFBF2 !default; // Warm off-white background
+$text-color: #3A3A3A !default;      // Soft black for better readability
+$brand-color: $leaf-green !default;  // Primary brand color
 
 // Gray colors
 $grey-color: #828282 !default;
@@ -15,15 +22,18 @@ $content-width: 800px !default;
 $on-palm: 600px !default;
 $on-laptop: 800px !default;
 
-// Tag colors
+// Tag colors with earthy tones
 $tag-colors: (
-  "documentation": #2196F3,
-  "introduction": #4CAF50,
-  "getting-started": #FF9800,
-  "tutorial": #9C27B0,
-  "beginner": #00BCD4,
-  "setup": #607D8B,
-  "advanced": #F44336,
-  "customization": #795548,
-  "features": #673AB7
+  "documentation": $leaf-green,
+  "introduction": $sprout-green,
+  "getting-started": $sunlight-yellow,
+  "tutorial": #8FB339,        // Lighter green
+  "beginner": #B5D99C,        // Pale green
+  "setup": $sky-blue,
+  "advanced": $soil-brown,
+  "customization": #9B7653,   // Medium brown
+  "features": #D4AC2B,        // Golden yellow
+  "sustainability": #3D8E33,  // Forest green
+  "energy": #E3B23C,         // Amber
+  "gardening": #7AA95C       // Sage green
 );
