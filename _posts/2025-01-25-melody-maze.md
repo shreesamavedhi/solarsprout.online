@@ -4,7 +4,7 @@ title: "Melody Maze"
 date: 2025-01-25 16:20:00 -0700
 categories: portfolio
 description: "A music-based puzzle game with original soundtrack"
-image: "/assets/images/portfolio/game-2.jpg"
+image: "/assets/images/default/portfolio-placeholder.svg"
 tags: [gamedev, music, portfolio]
 ---
 

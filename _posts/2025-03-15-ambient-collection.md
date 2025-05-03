@@ -4,7 +4,7 @@ title: "Ambient Collection"
 date: 2025-03-15 09:45:00 -0700
 categories: portfolio
 description: "A series of ambient tracks for relaxation and focus"
-image: "/assets/images/portfolio/music-1.jpg"
+image: "/assets/images/default/portfolio-placeholder.svg"
 tags: [music, ambient, portfolio]
 ---
 

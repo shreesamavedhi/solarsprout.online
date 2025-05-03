@@ -4,7 +4,7 @@ title: "Pixel Adventure Game"
 date: 2025-03-20 11:00:00 -0700
 categories: portfolio
 description: "A retro-style platformer with hand-crafted pixel art"
-image: "/assets/images/portfolio/game-1.jpg"
+image: "/assets/images/default/portfolio-placeholder.svg"
 tags: [gamedev, pixel-art, portfolio]
 ---
 

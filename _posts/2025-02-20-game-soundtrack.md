@@ -4,7 +4,7 @@ title: "Game Soundtrack"
 date: 2025-02-20 13:15:00 -0700
 categories: portfolio
 description: "Original compositions for video game projects"
-image: "/assets/images/portfolio/music-2.jpg"
+image: "/assets/images/default/portfolio-placeholder.svg"
 tags: [music, soundtrack, portfolio]
 ---
 

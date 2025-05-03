@@ -4,7 +4,7 @@ title: "Traditional Sketches"
 date: 2025-01-15 11:45:00 -0700
 categories: portfolio
 description: "Pencil and ink drawings exploring various themes"
-image: "/assets/images/portfolio/art-2.jpg"
+image: "/assets/images/default/portfolio-placeholder.svg"
 tags: [art, traditional-art, portfolio]
 ---
 

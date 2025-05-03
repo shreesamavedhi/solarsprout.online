@@ -4,7 +4,7 @@ title: "Character Animation Study"
 date: 2025-04-15 10:00:00 -0700
 categories: portfolio
 description: "A short animation exploring character movement and expression"
-image: "/assets/images/portfolio/animation-1.jpg"
+image: "/assets/images/default/portfolio-placeholder.svg"
 tags: [animation, 2d, portfolio]
 ---
 
@@ -26,7 +26,7 @@ The final animation successfully demonstrates how small, deliberate movements ca
 
 ## Gallery
 
-![Character design sketch](/assets/images/portfolio/animation-1.jpg)
+![Character design sketch](/assets/images/default/portfolio-placeholder.svg)
 *Character design sketch*
 
 ![Animation keyframes](/assets/images/portfolio/animation-2.jpg)

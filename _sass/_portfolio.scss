@@ -200,18 +200,24 @@
 .portfolio-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  height: 40px; /* Fixed height */
+  gap: 6px;
+  height: 30px; /* Reduced fixed height */
   overflow: hidden;
+  align-items: center; /* Center tags vertically */
 }
 
 .portfolio-tag {
-  display: inline-block;
-  padding: 4px 12px;
-  border-radius: 15px;
-  font-size: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 10px;
+  height: 20px; /* Fixed height for all tags */
   color: white;
   text-decoration: none;
+  text-transform: lowercase;
+  white-space: nowrap;
 }
 
 // Animation section styling

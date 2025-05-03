@@ -21,7 +21,7 @@ permalink: /portfolio/
     <div class="portfolio-grid">
       <div class="portfolio-item">
         <div class="portfolio-image">
-          <img src="/assets/images/portfolio/film-1.jpg" alt="Film Project">
+          <img src="/assets/images/default/portfolio-placeholder.svg" alt="Film Project">
           <div class="overlay">
             <a href="{{ site.baseurl }}/portfolio/2025/04/15/animation-project/" class="view-button">Watch</a>
           </div>
@@ -30,15 +30,16 @@ permalink: /portfolio/
           <h3>Short Film: "Echoes"</h3>
           <p>A short narrative film exploring memory and perception</p>
           <div class="portfolio-tags">
-            <span class="portfolio-tag tag-film">Film</span>
-            <span class="portfolio-tag tag-narrative">Narrative</span>
+            <span class="portfolio-tag tag-animation">Animation</span>
+            <span class="portfolio-tag tag-2d">2D</span>
+            <span class="portfolio-tag tag-portfolio">Portfolio</span>
           </div>
         </div>
       </div>
       
       <div class="portfolio-item">
         <div class="portfolio-image">
-          <img src="/assets/images/portfolio/film-2.jpg" alt="Film Project">
+          <img src="/assets/images/default/portfolio-placeholder.svg" alt="Film Project">
           <div class="overlay">
             <a href="{{ site.baseurl }}/portfolio/2025/04/10/film-behind-the-scenes/" class="view-button">Watch</a>
           </div>
@@ -48,7 +49,8 @@ permalink: /portfolio/
           <p>Process videos showing how projects come together</p>
           <div class="portfolio-tags">
             <span class="portfolio-tag tag-film">Film</span>
-            <span class="portfolio-tag tag-behind-the-scenes">BTS</span>
+            <span class="portfolio-tag tag-behind-the-scenes">Behind-the-scenes</span>
+            <span class="portfolio-tag tag-portfolio">Portfolio</span>
           </div>
         </div>
       </div>
@@ -67,7 +69,7 @@ permalink: /portfolio/
     <div class="portfolio-grid">
       <div class="portfolio-item">
         <div class="portfolio-image">
-          <img src="/assets/images/portfolio/music-1.jpg" alt="Music Project">
+          <img src="/assets/images/default/portfolio-placeholder.svg" alt="Music Project">
           <div class="overlay">
             <a href="{{ site.baseurl }}/portfolio/2025/03/15/ambient-collection/" class="view-button">Listen</a>
           </div>
@@ -78,13 +80,14 @@ permalink: /portfolio/
           <div class="portfolio-tags">
             <span class="portfolio-tag tag-music">Music</span>
             <span class="portfolio-tag tag-ambient">Ambient</span>
+            <span class="portfolio-tag tag-portfolio">Portfolio</span>
           </div>
         </div>
       </div>
       
       <div class="portfolio-item">
         <div class="portfolio-image">
-          <img src="/assets/images/portfolio/music-2.jpg" alt="Music Project">
+          <img src="/assets/images/default/portfolio-placeholder.svg" alt="Music Project">
           <div class="overlay">
             <a href="{{ site.baseurl }}/portfolio/2025/02/20/game-soundtrack/" class="view-button">Listen</a>
           </div>
@@ -95,6 +98,7 @@ permalink: /portfolio/
           <div class="portfolio-tags">
             <span class="portfolio-tag tag-music">Music</span>
             <span class="portfolio-tag tag-soundtrack">Soundtrack</span>
+            <span class="portfolio-tag tag-portfolio">Portfolio</span>
           </div>
         </div>
       </div>
@@ -113,7 +117,7 @@ permalink: /portfolio/
     <div class="portfolio-grid">
       <div class="portfolio-item">
         <div class="portfolio-image">
-          <img src="/assets/images/portfolio/game-1.jpg" alt="Game Project">
+          <img src="/assets/images/default/portfolio-placeholder.svg" alt="Game Project">
           <div class="overlay">
             <a href="{{ site.baseurl }}/portfolio/2025/03/20/pixel-game/" class="view-button">View Project</a>
           </div>
@@ -124,13 +128,14 @@ permalink: /portfolio/
           <div class="portfolio-tags">
             <span class="portfolio-tag tag-gamedev">GameDev</span>
             <span class="portfolio-tag tag-pixel-art">Pixel Art</span>
+            <span class="portfolio-tag tag-portfolio">Portfolio</span>
           </div>
         </div>
       </div>
       
       <div class="portfolio-item">
         <div class="portfolio-image">
-          <img src="/assets/images/portfolio/game-2.jpg" alt="Game Project">
+          <img src="/assets/images/default/portfolio-placeholder.svg" alt="Game Project">
           <div class="overlay">
             <a href="{{ site.baseurl }}/portfolio/2025/01/25/melody-maze/" class="view-button">View Project</a>
           </div>
@@ -141,6 +146,7 @@ permalink: /portfolio/
           <div class="portfolio-tags">
             <span class="portfolio-tag tag-gamedev">GameDev</span>
             <span class="portfolio-tag tag-music">Music</span>
+            <span class="portfolio-tag tag-portfolio">Portfolio</span>
           </div>
         </div>
       </div>
@@ -159,7 +165,7 @@ permalink: /portfolio/
     <div class="portfolio-grid">
       <div class="portfolio-item">
         <div class="portfolio-image">
-          <img src="/assets/images/portfolio/art-1.jpg" alt="Art Project">
+          <img src="/assets/images/default/portfolio-placeholder.svg" alt="Art Project">
           <div class="overlay">
             <a href="{{ site.baseurl }}/portfolio/2025/02/10/digital-illustrations/" class="view-button">View Artwork</a>
           </div>
@@ -169,14 +175,15 @@ permalink: /portfolio/
           <p>Character designs and concept art</p>
           <div class="portfolio-tags">
             <span class="portfolio-tag tag-art">Art</span>
-            <span class="portfolio-tag tag-digital-art">Digital</span>
+            <span class="portfolio-tag tag-digital-art">Digital Art</span>
+            <span class="portfolio-tag tag-portfolio">Portfolio</span>
           </div>
         </div>
       </div>
       
       <div class="portfolio-item">
         <div class="portfolio-image">
-          <img src="/assets/images/portfolio/art-2.jpg" alt="Art Project">
+          <img src="/assets/images/default/portfolio-placeholder.svg" alt="Art Project">
           <div class="overlay">
             <a href="{{ site.baseurl }}/portfolio/2025/01/15/traditional-sketches/" class="view-button">View Artwork</a>
           </div>
@@ -186,7 +193,8 @@ permalink: /portfolio/
           <p>Pencil and ink drawings exploring various themes</p>
           <div class="portfolio-tags">
             <span class="portfolio-tag tag-art">Art</span>
-            <span class="portfolio-tag tag-traditional-art">Traditional</span>
+            <span class="portfolio-tag tag-traditional-art">Traditional Art</span>
+            <span class="portfolio-tag tag-portfolio">Portfolio</span>
           </div>
         </div>
       </div>

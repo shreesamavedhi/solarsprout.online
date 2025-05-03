@@ -4,7 +4,7 @@ title: "Behind the Scenes"
 date: 2025-04-10 14:30:00 -0700
 categories: portfolio
 description: "Process videos showing how projects come together"
-image: "/assets/images/portfolio/film-2.jpg"
+image: "/assets/images/default/portfolio-placeholder.svg"
 tags: [film, behind-the-scenes, portfolio]
 ---
 
