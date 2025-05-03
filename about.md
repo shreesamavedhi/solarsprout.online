@@ -105,8 +105,7 @@ permalink: /about/
     <div class="newsletter-container">
       <h2>Get In Touch</h2>
       <p>Have a question or want to collaborate? Drop me a message and I'll get back to you soon!</p>
-      <form class="newsletter-form contact-form" action="https://formspree.io/f/your-formspree-endpoint" method="POST">
-        <!-- Replace 'your-formspree-endpoint' with your actual endpoint ID from Formspree -->
+      <form class="newsletter-form contact-form" action="https://formspree.io/f/xnndplpj" method="POST">
         <div class="form-fields">
           <input type="text" name="name" placeholder="Your name" required>
           <input type="email" name="email" placeholder="Your email address" required>
