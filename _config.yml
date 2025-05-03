@@ -19,19 +19,11 @@ header_pages:
 
 # Collections
 collections:
-  portfolio:
-    output: true
-    permalink: /portfolio/:path/
   tags:
     output: true
     permalink: /tag/:name/
 
 defaults:
-  - scope:
-      path: ""
-      type: "portfolio"
-    values:
-      layout: "portfolio"
   - scope:
       path: ""
       type: "posts"

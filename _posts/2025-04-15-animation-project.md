@@ -1,20 +1,11 @@
 ---
-layout: portfolio
+layout: post
 title: "Character Animation Study"
-subtitle: "A short animation exploring character movement and expression"
-date: 2025-04-15
-featured_image: "/assets/images/portfolio/animation-1.jpg"
-tags: [animation, 2d]
-gallery:
-  - image_path: "/assets/images/portfolio/animation-1.jpg"
-    title: "Character design sketch"
-  - image_path: "/assets/images/portfolio/animation-2.jpg"
-    title: "Animation keyframes"
-links:
-  - title: "View on YouTube"
-    url: "https://www.youtube.com/@SolarSproutFilms"
-  - title: "Behind the Scenes"
-    url: "#"
+date: 2025-04-15 10:00:00 -0700
+categories: portfolio
+description: "A short animation exploring character movement and expression"
+image: "/assets/images/portfolio/animation-1.jpg"
+tags: [animation, 2d, portfolio]
 ---
 
 ## Project Overview
@@ -32,3 +23,16 @@ One of the biggest challenges was conveying complex emotions through minimal fac
 ## Outcome
 
 The final animation successfully demonstrates how small, deliberate movements can convey complex emotional states. This project helped me refine my understanding of character acting in animation and timing for emotional impact.
+
+## Gallery
+
+![Character design sketch](/assets/images/portfolio/animation-1.jpg)
+*Character design sketch*
+
+![Animation keyframes](/assets/images/portfolio/animation-2.jpg)
+*Animation keyframes*
+
+## Links
+
+- [View on YouTube](https://www.youtube.com/@SolarSproutFilms)
+- [Behind the Scenes](#)

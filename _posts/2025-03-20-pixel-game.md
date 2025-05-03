@@ -1,20 +1,11 @@
 ---
-layout: portfolio
+layout: post
 title: "Pixel Adventure Game"
-subtitle: "A retro-style platformer with hand-crafted pixel art"
-date: 2025-03-20
-featured_image: "/assets/images/portfolio/game-1.jpg"
-tags: [gamedev, pixel-art]
-gallery:
-  - image_path: "/assets/images/portfolio/game-1.jpg"
-    title: "Game environment concept"
-  - image_path: "/assets/images/portfolio/game-2.jpg"
-    title: "Character sprites"
-links:
-  - title: "Play on Itch.io"
-    url: "https://itch.io/"
-  - title: "Development Blog"
-    url: "#"
+date: 2025-03-20 11:00:00 -0700
+categories: portfolio
+description: "A retro-style platformer with hand-crafted pixel art"
+image: "/assets/images/portfolio/game-1.jpg"
+tags: [gamedev, pixel-art, portfolio]
 ---
 
 ## Project Overview
@@ -40,3 +31,16 @@ The visual style draws inspiration from 16-bit era games while incorporating mod
 ## Reception
 
 The game was featured in several indie game showcases and received positive feedback for its tight controls and charming art style. Players particularly enjoyed the hidden secrets and the satisfying platforming mechanics.
+
+## Gallery
+
+![Game environment concept](/assets/images/portfolio/game-1.jpg)
+*Game environment concept*
+
+![Character sprites](/assets/images/portfolio/game-2.jpg)
+*Character sprites*
+
+## Links
+
+- [Play on Itch.io](https://itch.io/)
+- [Development Blog](#)

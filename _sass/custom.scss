@@ -61,6 +61,33 @@
 }
 
 // Blog styles
+.category-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+  
+  .filter-button {
+    padding: 8px 16px;
+    background-color: #f5f5f5;
+    border-radius: 20px;
+    text-decoration: none;
+    color: vars.$text-color;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    
+    &:hover {
+      background-color: #e5e5e5;
+      transform: translateY(-2px);
+    }
+    
+    &.active {
+      background-color: vars.$moss-green;
+      color: white;
+    }
+  }
+}
+
 .post-list {
   display: flex;
   flex-direction: column;
@@ -197,6 +224,170 @@
 // Tag page styles
 .tag-page {
   margin-bottom: 40px;
+}
+
+// Portfolio item page styles
+.portfolio-item {
+  max-width: 800px;
+  margin: 0 auto 60px;
+  
+  .portfolio-header {
+    text-align: center;
+    margin-bottom: 40px;
+    
+    .portfolio-title {
+      font-size: 2.5rem;
+      color: vars.$rich-soil;
+      margin-bottom: 15px;
+    }
+    
+    .portfolio-subtitle {
+      font-size: 1.2rem;
+      color: vars.$grey-color;
+      margin-bottom: 20px;
+    }
+    
+    .portfolio-tags {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+  }
+  
+  .portfolio-content {
+    margin-bottom: 40px;
+    line-height: 1.8;
+    font-size: 1.05rem;
+    
+    h2 {
+      color: vars.$forest-green;
+      margin-top: 40px;
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+    }
+    
+    h3 {
+      color: vars.$moss-green;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      font-size: 1.4rem;
+    }
+    
+    p {
+      margin-bottom: 20px;
+    }
+    
+    ul, ol {
+      margin-bottom: 20px;
+      padding-left: 25px;
+      
+      li {
+        margin-bottom: 10px;
+      }
+    }
+  }
+  
+  .portfolio-gallery {
+    margin: 50px 0;
+    
+    h2 {
+      color: vars.$forest-green;
+      margin-bottom: 25px;
+      text-align: center;
+    }
+    
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    .gallery-item {
+      img {
+        width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      }
+      
+      .image-caption {
+        text-align: center;
+        margin-top: 10px;
+        font-size: 0.9rem;
+        color: vars.$grey-color;
+      }
+    }
+  }
+  
+  .portfolio-links {
+    margin: 40px 0;
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    
+    h2 {
+      color: vars.$forest-green;
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+    
+    .links-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      
+      li {
+        margin-bottom: 15px;
+        
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+      
+      .external-link {
+        display: inline-flex;
+        align-items: center;
+        color: vars.$moss-green;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+        
+        i {
+          margin-left: 8px;
+          font-size: 0.9rem;
+        }
+        
+        &:hover {
+          color: vars.$autumn-leaf;
+        }
+      }
+    }
+  }
+  
+  .portfolio-navigation {
+    margin-top: 50px;
+    text-align: center;
+    
+    .back-button {
+      display: inline-block;
+      background-color: vars.$clay;
+      color: vars.$text-color;
+      padding: 12px 25px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      
+      &:hover {
+        background-color: color.scale(vars.$clay, $lightness: -5%);
+        transform: translateY(-2px);
+      }
+    }
+  }
 }
 
 .tag-header {
