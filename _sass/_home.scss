@@ -209,9 +209,8 @@
 
 .view-all-button {
   display: inline-block;
-  background-color: transparent;
-  color: vars.$sage;
-  border: 2px solid vars.$sage;
+  background-color: vars.$moss-green;
+  color: white;
   padding: 10px 25px;
   border-radius: 30px;
   font-size: 1rem;
@@ -220,9 +219,9 @@
   transition: all 0.3s ease;
   
   &:hover {
-    background-color: vars.$sage;
-    color: white;
+    background-color: vars.$forest-green;
     transform: translateY(-2px);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
   }
 }
 
