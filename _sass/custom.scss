@@ -183,37 +183,41 @@
   border-radius: 12px;
   font-size: 10px;
   height: 20px;
-  color: white;
+  color: #222; /* Darker text color for better contrast */
   text-decoration: none;
   text-transform: lowercase;
   white-space: nowrap;
-  background-color: vars.$moss-green; /* Default tag color */
+  background-color: #e9ecef; /* Light default background */
+  font-weight: 700; /* Make text bolder for better readability */
+  border: 1px solid rgba(0,0,0,0.05); /* Subtle border */
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05); /* Subtle shadow by default */
   
   &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px); /* Raised appearance */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Enhanced shadow on hover */
     text-decoration: none;
-    color: white !important; /* Ensure white text on hover too */
+    color: #222 !important; /* Keep dark text on hover for better readability */
+    filter: brightness(1.05); /* Slightly brighter on hover */
   }
   
-  /* Tag color variations - same as portfolio tags */
-  &.tag-animation { background-color: vars.$autumn-leaf; }
-  &.tag-2d { background-color: color.scale(vars.$autumn-leaf, $lightness: -15%); }
-  &.tag-film { background-color: vars.$sage; }
-  &.tag-behind-the-scenes { background-color: color.scale(vars.$sage, $lightness: -15%); }
-  &.tag-music { background-color: vars.$stone; }
-  &.tag-ambient { background-color: color.scale(vars.$stone, $lightness: -15%); }
-  &.tag-soundtrack { background-color: color.scale(vars.$stone, $lightness: -20%); }
-  &.tag-gamedev { background-color: vars.$terracotta; }
-  &.tag-pixel-art { background-color: color.scale(vars.$terracotta, $lightness: -15%); }
-  &.tag-art { background-color: vars.$rich-soil; }
-  &.tag-digital-art { background-color: color.scale(vars.$rich-soil, $lightness: -15%); }
-  &.tag-traditional-art { background-color: color.scale(vars.$rich-soil, $lightness: -20%); }
-  &.tag-portfolio { background-color: vars.$clay; color: black; }
-  &.tag-tutorials { background-color: vars.$autumn-leaf; }
-  &.tag-announcements { background-color: vars.$terracotta; }
-  &.tag-research { background-color: color.scale(vars.$autumn-leaf, $lightness: 10%); }
-  &.tag-news { background-color: color.scale(vars.$terracotta, $lightness: 10%); }
+  /* Tag color variations - using a cohesive pastel color palette */
+  &.tag-animation { background-color: #FFD6A5; } /* Pastel orange */
+  &.tag-2d { background-color: #FFADAD; } /* Pastel pink */
+  &.tag-film { background-color: #BDB2FF; } /* Pastel purple */
+  &.tag-behind-the-scenes { background-color: #A0C4FF; } /* Pastel blue */
+  &.tag-music { background-color: #9BF6FF; } /* Pastel cyan */
+  &.tag-ambient { background-color: #CAFFBF; } /* Pastel green */
+  &.tag-soundtrack { background-color: #FDFFB6; } /* Pastel yellow */
+  &.tag-gamedev { background-color: #FFC6FF; } /* Pastel magenta */
+  &.tag-pixel-art { background-color: #FFFFFC; } /* Off-white */
+  &.tag-art { background-color: #E4C1F9; } /* Pastel lavender */
+  &.tag-digital-art { background-color: #D8E2DC; } /* Pastel gray-green */
+  &.tag-traditional-art { background-color: #FAD2E1; } /* Pastel pink */
+  &.tag-portfolio { background-color: #CDB4DB; } /* Pastel purple */
+  &.tag-tutorials { background-color: #FFC9B9; } /* Pastel peach */
+  &.tag-announcements { background-color: #B5EAD7; } /* Pastel mint */
+  &.tag-research { background-color: #C7CEEA; } /* Pastel periwinkle */
+  &.tag-news { background-color: #A2D2FF; } /* Pastel sky blue */
 }
 
 // Tag page styles

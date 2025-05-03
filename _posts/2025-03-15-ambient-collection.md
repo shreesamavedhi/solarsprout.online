@@ -4,7 +4,7 @@ title: "Ambient Collection"
 date: 2025-03-15 09:45:00 -0700
 categories: portfolio
 description: "A series of ambient tracks for relaxation and focus"
-image: "/assets/images/default/portfolio-placeholder.svg"
+image: "/assets/images/portfolio/music-1.svg"
 tags: [music, ambient, portfolio]
 ---
 
@@ -36,10 +36,10 @@ These ambient compositions have found applications in meditation practices, focu
 
 ## Gallery
 
-![Studio session for ambient tracks](/assets/images/portfolio/music-1.jpg)
+![Studio session for ambient tracks](/assets/images/portfolio/music-1.svg)
 *Studio session for ambient tracks*
 
-![Field recording equipment](/assets/images/portfolio/music-2.jpg)
+![Field recording equipment](/assets/images/portfolio/music-2.svg)
 *Field recording equipment*
 
 ## Links

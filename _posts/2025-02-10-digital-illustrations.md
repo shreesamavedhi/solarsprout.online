@@ -4,7 +4,7 @@ title: "Digital Illustrations"
 date: 2025-02-10 10:30:00 -0700
 categories: portfolio
 description: "Character designs and concept art"
-image: "/assets/images/default/portfolio-placeholder.svg"
+image: "/assets/images/portfolio/art-1.svg"
 tags: [art, digital-art, portfolio]
 ---
 
@@ -46,10 +46,10 @@ This portfolio represents an ongoing journey of artistic development. Each illus
 
 ## Gallery
 
-![Character design concept](/assets/images/portfolio/art-1.jpg)
+![Character design concept](/assets/images/portfolio/art-1.svg)
 *Character design concept*
 
-![Environment concept art](/assets/images/portfolio/art-2.jpg)
+![Environment concept art](/assets/images/portfolio/art-2.svg)
 *Environment concept art*
 
 ## Links

@@ -214,27 +214,38 @@
   border-radius: 12px;
   font-size: 10px;
   height: 20px; /* Fixed height for all tags */
-  color: white;
+  color: #222; /* Darker text color for better contrast */
   text-decoration: none;
   text-transform: lowercase;
   white-space: nowrap;
-  background-color: vars.$moss-green; /* Default tag color */
+  background-color: #e9ecef; /* Light default background */
+  font-weight: 700; /* Make text bolder for better readability */
+  transition: all 0.2s ease;
+  border: 1px solid rgba(0,0,0,0.05); /* Subtle border */
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05); /* Subtle shadow by default */
+  
+  &:hover {
+    color: #222; /* Keep dark text on hover for better readability */
+    transform: translateY(-2px); /* Raised appearance */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Enhanced shadow on hover */
+    filter: brightness(1.05); /* Slightly brighter on hover */
+  }
 }
 
-/* Tag color variations */
-.tag-animation { background-color: vars.$autumn-leaf; }
-.tag-2d { background-color: color.scale(vars.$autumn-leaf, $lightness: -15%); }
-.tag-film { background-color: vars.$sage; }
-.tag-behind-the-scenes { background-color: color.scale(vars.$sage, $lightness: -15%); }
-.tag-music { background-color: vars.$stone; }
-.tag-ambient { background-color: color.scale(vars.$stone, $lightness: -15%); }
-.tag-soundtrack { background-color: color.scale(vars.$stone, $lightness: -20%); }
-.tag-gamedev { background-color: vars.$terracotta; }
-.tag-pixel-art { background-color: color.scale(vars.$terracotta, $lightness: -15%); }
-.tag-art { background-color: vars.$rich-soil; }
-.tag-digital-art { background-color: color.scale(vars.$rich-soil, $lightness: -15%); }
-.tag-traditional-art { background-color: color.scale(vars.$rich-soil, $lightness: -20%); }
-.tag-portfolio { background-color: vars.$clay; color: black; }
+/* Tag color variations - using a cohesive pastel color palette */
+.tag-animation { background-color: #FFD6A5; } /* Pastel orange */
+.tag-2d { background-color: #FFADAD; } /* Pastel pink */
+.tag-film { background-color: #BDB2FF; } /* Pastel purple */
+.tag-behind-the-scenes { background-color: #A0C4FF; } /* Pastel blue */
+.tag-music { background-color: #9BF6FF; } /* Pastel cyan */
+.tag-ambient { background-color: #CAFFBF; } /* Pastel green */
+.tag-soundtrack { background-color: #FDFFB6; } /* Pastel yellow */
+.tag-gamedev { background-color: #FFC6FF; } /* Pastel magenta */
+.tag-pixel-art { background-color: #FFFFFC; } /* Off-white */
+.tag-art { background-color: #E4C1F9; } /* Pastel lavender */
+.tag-digital-art { background-color: #D8E2DC; } /* Pastel gray-green */
+.tag-traditional-art { background-color: #FAD2E1; } /* Pastel pink */
+.tag-portfolio { background-color: #CDB4DB; } /* Pastel purple */
 
 // Animation section styling
 #animation .section-header h2 {

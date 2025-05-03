@@ -4,7 +4,7 @@ title: "Game Soundtrack"
 date: 2025-02-20 13:15:00 -0700
 categories: portfolio
 description: "Original compositions for video game projects"
-image: "/assets/images/default/portfolio-placeholder.svg"
+image: "/assets/images/portfolio/music-2.svg"
 tags: [music, soundtrack, portfolio]
 ---
 
@@ -46,10 +46,10 @@ The ultimate goal of these soundtracks is to enhance player immersion and emotio
 
 ## Gallery
 
-![Composing session for game soundtrack](/assets/images/portfolio/music-2.jpg)
+![Composing session for game soundtrack](/assets/images/portfolio/music-2.svg)
 *Composing session for game soundtrack*
 
-![Game environment the music was created for](/assets/images/portfolio/game-1.jpg)
+![Game environment the music was created for](/assets/images/portfolio/game-1.svg)
 *Game environment the music was created for*
 
 ## Links

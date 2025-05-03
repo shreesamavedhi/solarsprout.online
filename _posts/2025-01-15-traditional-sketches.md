@@ -4,7 +4,7 @@ title: "Traditional Sketches"
 date: 2025-01-15 11:45:00 -0700
 categories: portfolio
 description: "Pencil and ink drawings exploring various themes"
-image: "/assets/images/default/portfolio-placeholder.svg"
+image: "/assets/images/portfolio/art-2.svg"
 tags: [art, traditional-art, portfolio]
 ---
 
@@ -46,10 +46,10 @@ I maintain several active sketchbooks organized by theme, medium, or chronology.
 
 ## Gallery
 
-![Pencil sketch study](/assets/images/portfolio/art-2.jpg)
+![Pencil sketch study](/assets/images/portfolio/art-2.svg)
 *Pencil sketch study*
 
-![Ink drawing detail](/assets/images/portfolio/art-1.jpg)
+![Ink drawing detail](/assets/images/portfolio/art-1.svg)
 *Ink drawing detail*
 
 ## Links
