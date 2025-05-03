@@ -293,3 +293,22 @@
     }
   }
 }
+
+.newsletter-embed {
+  max-width: 500px;
+  margin: 0 auto;
+  
+  iframe {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    
+    // Custom styling to match site aesthetic
+    // These will be applied via JavaScript since iframe content is from another domain
+    &::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+  }
+}

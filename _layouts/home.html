@@ -83,10 +83,9 @@ layout: default
     <div class="newsletter-container">
       <h2>{{ page.newsletter_title | default: "Stay Updated" }}</h2>
       <p>{{ page.newsletter_text | default: "Subscribe to my newsletter for the latest updates on sustainable living and solar energy." }}</p>
-      <form class="newsletter-form" action="https://formspree.io/f/mrbqprlg" method="POST">
-        <input type="email" name="email" placeholder="Your email address" required>
-        <button type="submit">Subscribe</button>
-      </form>
+      <div class="newsletter-embed">
+        <iframe src="https://embeds.beehiiv.com/0c4682c3-0c35-42ad-847f-29a5e3d9177c?slim=true" data-test-id="beehiiv-embed" height="52" frameborder="0" scrolling="no" style="margin: 0; border-radius: 0px !important; background-color: transparent;"></iframe>
+      </div>
     </div>
   </section>
   {% endif %}
