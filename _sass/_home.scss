@@ -97,6 +97,7 @@
 
 .about-content {
   flex: 1;
+  padding-right: 20px;
   
   h2 {
     color: vars.$rich-soil;
@@ -229,6 +230,7 @@
 .newsletter {
   background-color: vars.$terracotta;
   padding: 60px 0;
+  margin-top: 80px;
   margin-bottom: 60px;
   border-radius: 8px;
   color: white;
