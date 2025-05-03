@@ -179,10 +179,10 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 2px 8px;
+  padding: 3px 10px;
   border-radius: 12px;
-  font-size: 10px;
-  height: 20px;
+  font-size: 11px; /* Increased font size */
+  height: 22px; /* Slightly taller to accommodate larger font */
   color: #222; /* Darker text color for better contrast */
   text-decoration: none;
   text-transform: lowercase;
@@ -191,33 +191,34 @@
   font-weight: 700; /* Make text bolder for better readability */
   border: 1px solid rgba(0,0,0,0.05); /* Subtle border */
   box-shadow: 0 1px 2px rgba(0,0,0,0.05); /* Subtle shadow by default */
+  letter-spacing: 0.3px; /* Slightly improve letter spacing */
   
   &:hover {
     transform: translateY(-2px); /* Raised appearance */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Enhanced shadow on hover */
     text-decoration: none;
-    color: #222 !important; /* Keep dark text on hover for better readability */
+    color: white !important; /* White text on hover */
     filter: brightness(1.05); /* Slightly brighter on hover */
   }
   
-  /* Tag color variations - using a cohesive pastel color palette */
-  &.tag-animation { background-color: #FFD6A5; } /* Pastel orange */
-  &.tag-2d { background-color: #FFADAD; } /* Pastel pink */
-  &.tag-film { background-color: #BDB2FF; } /* Pastel purple */
-  &.tag-behind-the-scenes { background-color: #A0C4FF; } /* Pastel blue */
-  &.tag-music { background-color: #9BF6FF; } /* Pastel cyan */
-  &.tag-ambient { background-color: #CAFFBF; } /* Pastel green */
-  &.tag-soundtrack { background-color: #FDFFB6; } /* Pastel yellow */
-  &.tag-gamedev { background-color: #FFC6FF; } /* Pastel magenta */
-  &.tag-pixel-art { background-color: #FFFFFC; } /* Off-white */
-  &.tag-art { background-color: #E4C1F9; } /* Pastel lavender */
-  &.tag-digital-art { background-color: #D8E2DC; } /* Pastel gray-green */
-  &.tag-traditional-art { background-color: #FAD2E1; } /* Pastel pink */
-  &.tag-portfolio { background-color: #CDB4DB; } /* Pastel purple */
-  &.tag-tutorials { background-color: #FFC9B9; } /* Pastel peach */
-  &.tag-announcements { background-color: #B5EAD7; } /* Pastel mint */
-  &.tag-research { background-color: #C7CEEA; } /* Pastel periwinkle */
-  &.tag-news { background-color: #A2D2FF; } /* Pastel sky blue */
+  /* Tag color variations - using a soft pastel palette with adequate contrast */
+  &.tag-animation { background-color: #FFB86C; } /* Soft orange */
+  &.tag-2d { background-color: #FF9EB1; } /* Soft pink */
+  &.tag-film { background-color: #BDB2FF; } /* Soft purple */
+  &.tag-behind-the-scenes { background-color: #A0C4FF; } /* Soft blue */
+  &.tag-music { background-color: #9CDBFF; } /* Soft cyan */
+  &.tag-ambient { background-color: #B5EAD7; } /* Soft green */
+  &.tag-soundtrack { background-color: #F0E6A9; } /* Soft yellow */
+  &.tag-gamedev { background-color: #FFAAA7; } /* Soft coral */
+  &.tag-pixel-art { background-color: #C3C9E9; } /* Soft slate */
+  &.tag-art { background-color: #C8A4D4; } /* Soft lavender */
+  &.tag-digital-art { background-color: #A6B5C0; } /* Soft gray-blue */
+  &.tag-traditional-art { background-color: #E8A0BF; } /* Soft rose */
+  &.tag-portfolio { background-color: #B5B0C0; } /* Soft gray */
+  &.tag-tutorials { background-color: #FFC9B9; } /* Soft peach */
+  &.tag-announcements { background-color: #A8E6CF; } /* Soft mint */
+  &.tag-research { background-color: #C7CEEA; } /* Soft periwinkle */
+  &.tag-news { background-color: #A2D2FF; } /* Soft sky blue */
 }
 
 // Tag page styles
