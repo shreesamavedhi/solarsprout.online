@@ -1,0 +1,5 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#3D5A80"/>
+  <text x="400" y="300" font-family="Arial" font-size="48" text-anchor="middle" fill="white">Film Project 1</text>
+  <text x="400" y="360" font-family="Arial" font-size="24" text-anchor="middle" fill="white">Short Film: "Echoes"</text>
+</svg>

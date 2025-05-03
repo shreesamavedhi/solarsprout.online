@@ -23,7 +23,7 @@ permalink: /portfolio/
         <div class="portfolio-image">
           <img src="/assets/images/portfolio/film-1.jpg" alt="Film Project">
           <div class="overlay">
-            <a href="/2025/04/15/animation-project.html" class="view-button">Watch</a>
+            <a href="{{ site.baseurl }}/portfolio/2025/04/15/animation-project/" class="view-button">Watch</a>
           </div>
         </div>
         <div class="portfolio-info">
@@ -40,7 +40,7 @@ permalink: /portfolio/
         <div class="portfolio-image">
           <img src="/assets/images/portfolio/film-2.jpg" alt="Film Project">
           <div class="overlay">
-            <a href="/2025/04/10/film-behind-the-scenes.html" class="view-button">Watch</a>
+            <a href="{{ site.baseurl }}/portfolio/2025/04/10/film-behind-the-scenes/" class="view-button">Watch</a>
           </div>
         </div>
         <div class="portfolio-info">
@@ -69,7 +69,7 @@ permalink: /portfolio/
         <div class="portfolio-image">
           <img src="/assets/images/portfolio/music-1.jpg" alt="Music Project">
           <div class="overlay">
-            <a href="/2025/03/15/ambient-collection.html" class="view-button">Listen</a>
+            <a href="{{ site.baseurl }}/portfolio/2025/03/15/ambient-collection/" class="view-button">Listen</a>
           </div>
         </div>
         <div class="portfolio-info">
@@ -86,7 +86,7 @@ permalink: /portfolio/
         <div class="portfolio-image">
           <img src="/assets/images/portfolio/music-2.jpg" alt="Music Project">
           <div class="overlay">
-            <a href="/2025/02/20/game-soundtrack.html" class="view-button">Listen</a>
+            <a href="{{ site.baseurl }}/portfolio/2025/02/20/game-soundtrack/" class="view-button">Listen</a>
           </div>
         </div>
         <div class="portfolio-info">
@@ -115,7 +115,7 @@ permalink: /portfolio/
         <div class="portfolio-image">
           <img src="/assets/images/portfolio/game-1.jpg" alt="Game Project">
           <div class="overlay">
-            <a href="/2025/03/20/pixel-game.html" class="view-button">View Project</a>
+            <a href="{{ site.baseurl }}/portfolio/2025/03/20/pixel-game/" class="view-button">View Project</a>
           </div>
         </div>
         <div class="portfolio-info">
@@ -132,7 +132,7 @@ permalink: /portfolio/
         <div class="portfolio-image">
           <img src="/assets/images/portfolio/game-2.jpg" alt="Game Project">
           <div class="overlay">
-            <a href="/2025/01/25/melody-maze.html" class="view-button">View Project</a>
+            <a href="{{ site.baseurl }}/portfolio/2025/01/25/melody-maze/" class="view-button">View Project</a>
           </div>
         </div>
         <div class="portfolio-info">
@@ -161,7 +161,7 @@ permalink: /portfolio/
         <div class="portfolio-image">
           <img src="/assets/images/portfolio/art-1.jpg" alt="Art Project">
           <div class="overlay">
-            <a href="/2025/02/10/digital-illustrations.html" class="view-button">View Artwork</a>
+            <a href="{{ site.baseurl }}/portfolio/2025/02/10/digital-illustrations/" class="view-button">View Artwork</a>
           </div>
         </div>
         <div class="portfolio-info">
@@ -178,7 +178,7 @@ permalink: /portfolio/
         <div class="portfolio-image">
           <img src="/assets/images/portfolio/art-2.jpg" alt="Art Project">
           <div class="overlay">
-            <a href="/2025/01/15/traditional-sketches.html" class="view-button">View Artwork</a>
+            <a href="{{ site.baseurl }}/portfolio/2025/01/15/traditional-sketches/" class="view-button">View Artwork</a>
           </div>
         </div>
         <div class="portfolio-info">

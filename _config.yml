@@ -27,6 +27,13 @@ defaults:
   - scope:
       path: ""
       type: "posts"
+      categories: ["portfolio"]
+    values:
+      layout: "post"
+      permalink: /portfolio/:year/:month/:day/:title/
+  - scope:
+      path: ""
+      type: "posts"
     values:
       layout: "post"
   - scope:
