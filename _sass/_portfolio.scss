@@ -218,7 +218,23 @@
   text-decoration: none;
   text-transform: lowercase;
   white-space: nowrap;
+  background-color: vars.$moss-green; /* Default tag color */
 }
+
+/* Tag color variations */
+.tag-animation { background-color: vars.$autumn-leaf; }
+.tag-2d { background-color: color.scale(vars.$autumn-leaf, $lightness: -15%); }
+.tag-film { background-color: vars.$sage; }
+.tag-behind-the-scenes { background-color: color.scale(vars.$sage, $lightness: -15%); }
+.tag-music { background-color: vars.$stone; }
+.tag-ambient { background-color: color.scale(vars.$stone, $lightness: -15%); }
+.tag-soundtrack { background-color: color.scale(vars.$stone, $lightness: -20%); }
+.tag-gamedev { background-color: vars.$terracotta; }
+.tag-pixel-art { background-color: color.scale(vars.$terracotta, $lightness: -15%); }
+.tag-art { background-color: vars.$rich-soil; }
+.tag-digital-art { background-color: color.scale(vars.$rich-soil, $lightness: -15%); }
+.tag-traditional-art { background-color: color.scale(vars.$rich-soil, $lightness: -20%); }
+.tag-portfolio { background-color: vars.$clay; color: black; }
 
 // Animation section styling
 #animation .section-header h2 {
