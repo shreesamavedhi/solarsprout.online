@@ -12,7 +12,7 @@ gallery:
     title: "Animation keyframes"
 links:
   - title: "View on YouTube"
-    url: "https://youtube.com/"
+    url: "https://www.youtube.com/@SolarSproutFilms"
   - title: "Behind the Scenes"
     url: "#"
 ---

@@ -6,8 +6,8 @@ permalink: /about/
 
 <div class="about-page">
   <div class="about-header">
-    <h1>About Solar Sprout</h1>
-    <p class="subtitle">Creative explorations in animation, games, music, art, and more</p>
+    <h1>Behind the Name</h1>
+    <p class="subtitle">Creative explorations in film, music, games, art, and more</p>
   </div>
   
   <div class="about-section">
@@ -19,7 +19,7 @@ permalink: /about/
       <h2>Hello, I'm Shree</h2>
       <p>Welcome to Solar Sprout! I'm Shree Samavedhi, a multidisciplinary artist and creator passionate about bringing ideas to life through various creative mediums. What started as casual experimentation with different art forms has blossomed into a lifelong journey of creative exploration.</p>
       
-      <p>By day, I work in tech, but by night (and weekends!), I transform into Solar Sprout—creating animations, developing indie games, composing music, filming videos, and crafting both digital and traditional art. I believe that creativity flourishes when it's allowed to cross boundaries between different mediums and disciplines.</p>
+      <p>By day, I work in tech, but by night (and weekends!), I transform into Solar Sprout—composing music, filming videos, developing indie games, and crafting both digital and traditional art. I believe that creativity flourishes when it's allowed to cross boundaries between different mediums and disciplines.</p>
       
       <p>This site serves as both a portfolio of my work and a blog where I share my creative process, tutorials, and thoughts on art and technology. Whether you're a fellow creator looking for inspiration or simply curious about my work, I hope you'll find something here that resonates with you.</p>
       

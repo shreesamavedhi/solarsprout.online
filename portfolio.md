@@ -7,14 +7,13 @@ permalink: /portfolio/
 <div class="portfolio-page">
   <div class="portfolio-header">
     <h1>Creative Portfolio</h1>
-    <p class="subtitle">A showcase of my work across animation, games, music, film, and art</p>
+    <p class="subtitle">A showcase of my work across film, music, games, and art</p>
   </div>
-  
-  <!-- Animation Section -->
-  <section class="portfolio-section" id="animation">
+  <!-- Film Section -->
+  <section class="portfolio-section" id="film">
     <div class="section-header">
-      <h2>Animation</h2>
-      <a href="https://youtube.com/" class="platform-link" target="_blank">
+      <h2>Film</h2>
+      <a href="https://www.youtube.com/@SolarSproutFilms" class="platform-link" target="_blank">
         <i class="fab fa-youtube"></i> View on YouTube
       </a>
     </div>
@@ -22,34 +21,80 @@ permalink: /portfolio/
     <div class="portfolio-grid">
       <div class="portfolio-item">
         <div class="portfolio-image">
-          <img src="/assets/images/portfolio/animation-1.jpg" alt="Animation Project">
+          <img src="/assets/images/portfolio/film-1.jpg" alt="Film Project">
           <div class="overlay">
-            <a href="#" class="view-button">View Project</a>
+            <a href="#" class="view-button">Watch</a>
           </div>
         </div>
         <div class="portfolio-info">
-          <h3>Character Animation Study</h3>
-          <p>A short animation exploring character movement and expression</p>
+          <h3>Short Film: "Echoes"</h3>
+          <p>A short narrative film exploring memory and perception</p>
           <div class="portfolio-tags">
-            <span class="portfolio-tag tag-animation">Animation</span>
-            <span class="portfolio-tag tag-2d">2D</span>
+            <span class="portfolio-tag tag-film">Film</span>
+            <span class="portfolio-tag tag-narrative">Narrative</span>
           </div>
         </div>
       </div>
       
       <div class="portfolio-item">
         <div class="portfolio-image">
-          <img src="/assets/images/portfolio/animation-2.jpg" alt="Animation Project">
+          <img src="/assets/images/portfolio/film-2.jpg" alt="Film Project">
           <div class="overlay">
-            <a href="#" class="view-button">View Project</a>
+            <a href="#" class="view-button">Watch</a>
           </div>
         </div>
         <div class="portfolio-info">
-          <h3>Environmental Animation</h3>
-          <p>Animated natural elements like water, fire, and wind</p>
+          <h3>Behind the Scenes</h3>
+          <p>Process videos showing how projects come together</p>
           <div class="portfolio-tags">
-            <span class="portfolio-tag tag-animation">Animation</span>
-            <span class="portfolio-tag tag-effects">Effects</span>
+            <span class="portfolio-tag tag-film">Film</span>
+            <span class="portfolio-tag tag-behind-the-scenes">BTS</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Music Section -->
+  <section class="portfolio-section" id="music">
+    <div class="section-header">
+      <h2>Music</h2>
+      <a href="https://spotify.com/" class="platform-link" target="_blank">
+        <i class="fab fa-spotify"></i> Listen on Spotify
+      </a>
+    </div>
+    
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <div class="portfolio-image">
+          <img src="/assets/images/portfolio/music-1.jpg" alt="Music Project">
+          <div class="overlay">
+            <a href="#" class="view-button">Listen</a>
+          </div>
+        </div>
+        <div class="portfolio-info">
+          <h3>Ambient Collection</h3>
+          <p>A series of ambient tracks for relaxation and focus</p>
+          <div class="portfolio-tags">
+            <span class="portfolio-tag tag-music">Music</span>
+            <span class="portfolio-tag tag-ambient">Ambient</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="portfolio-item">
+        <div class="portfolio-image">
+          <img src="/assets/images/portfolio/music-2.jpg" alt="Music Project">
+          <div class="overlay">
+            <a href="#" class="view-button">Listen</a>
+          </div>
+        </div>
+        <div class="portfolio-info">
+          <h3>Game Soundtrack</h3>
+          <p>Original compositions for video game projects</p>
+          <div class="portfolio-tags">
+            <span class="portfolio-tag tag-music">Music</span>
+            <span class="portfolio-tag tag-soundtrack">Soundtrack</span>
           </div>
         </div>
       </div>
@@ -102,56 +147,10 @@ permalink: /portfolio/
     </div>
   </section>
   
-  <!-- Music Section -->
-  <section class="portfolio-section" id="music">
-    <div class="section-header">
-      <h2>Music</h2>
-      <a href="https://spotify.com/" class="platform-link" target="_blank">
-        <i class="fab fa-spotify"></i> Listen on Spotify
-      </a>
-    </div>
-    
-    <div class="portfolio-grid">
-      <div class="portfolio-item">
-        <div class="portfolio-image">
-          <img src="/assets/images/portfolio/music-1.jpg" alt="Music Project">
-          <div class="overlay">
-            <a href="#" class="view-button">Listen</a>
-          </div>
-        </div>
-        <div class="portfolio-info">
-          <h3>Ambient Collection</h3>
-          <p>A series of ambient tracks for relaxation and focus</p>
-          <div class="portfolio-tags">
-            <span class="portfolio-tag tag-music">Music</span>
-            <span class="portfolio-tag tag-ambient">Ambient</span>
-          </div>
-        </div>
-      </div>
-      
-      <div class="portfolio-item">
-        <div class="portfolio-image">
-          <img src="/assets/images/portfolio/music-2.jpg" alt="Music Project">
-          <div class="overlay">
-            <a href="#" class="view-button">Listen</a>
-          </div>
-        </div>
-        <div class="portfolio-info">
-          <h3>Game Soundtrack</h3>
-          <p>Original compositions for video game projects</p>
-          <div class="portfolio-tags">
-            <span class="portfolio-tag tag-music">Music</span>
-            <span class="portfolio-tag tag-soundtrack">Soundtrack</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  
   <!-- Art Section -->
   <section class="portfolio-section" id="art">
     <div class="section-header">
-      <h2>Art & Illustration</h2>
+      <h2>Art & Animation</h2>
       <a href="https://instagram.com/" class="platform-link" target="_blank">
         <i class="fab fa-instagram"></i> View on Instagram
       </a>
@@ -188,52 +187,6 @@ permalink: /portfolio/
           <div class="portfolio-tags">
             <span class="portfolio-tag tag-art">Art</span>
             <span class="portfolio-tag tag-traditional-art">Traditional</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- Film Section -->
-  <section class="portfolio-section" id="film">
-    <div class="section-header">
-      <h2>Film & Video</h2>
-      <a href="https://youtube.com/" class="platform-link" target="_blank">
-        <i class="fab fa-youtube"></i> View on YouTube
-      </a>
-    </div>
-    
-    <div class="portfolio-grid">
-      <div class="portfolio-item">
-        <div class="portfolio-image">
-          <img src="/assets/images/portfolio/film-1.jpg" alt="Film Project">
-          <div class="overlay">
-            <a href="#" class="view-button">Watch</a>
-          </div>
-        </div>
-        <div class="portfolio-info">
-          <h3>Short Film: "Echoes"</h3>
-          <p>A short narrative film exploring memory and perception</p>
-          <div class="portfolio-tags">
-            <span class="portfolio-tag tag-film">Film</span>
-            <span class="portfolio-tag tag-narrative">Narrative</span>
-          </div>
-        </div>
-      </div>
-      
-      <div class="portfolio-item">
-        <div class="portfolio-image">
-          <img src="/assets/images/portfolio/film-2.jpg" alt="Film Project">
-          <div class="overlay">
-            <a href="#" class="view-button">Watch</a>
-          </div>
-        </div>
-        <div class="portfolio-info">
-          <h3>Behind the Scenes</h3>
-          <p>Process videos showing how projects come together</p>
-          <div class="portfolio-tags">
-            <span class="portfolio-tag tag-film">Film</span>
-            <span class="portfolio-tag tag-behind-the-scenes">BTS</span>
           </div>
         </div>
       </div>
