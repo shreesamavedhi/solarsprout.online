@@ -101,7 +101,7 @@ permalink: /about/
     </div>
   </div>
   
-  <div class="about-section newsletter get-in-touch">
+  <div id="contact" class="about-section newsletter get-in-touch">
     <div class="newsletter-container">
       <h2>Get In Touch</h2>
       <p>Have a question or want to collaborate? Drop me a message and I'll get back to you soon!</p>
