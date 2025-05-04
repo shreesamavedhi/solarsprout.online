@@ -70,20 +70,42 @@
 }
 
 .mission-card {
-  background-color: vars.$clay;
+  background-color: color.scale(vars.$background-color, $lightness: -2%);
   padding: 30px;
   border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid color.scale(vars.$clay, $lightness: 10%);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  }
   
   h3 {
     color: vars.$forest-green;
     margin-bottom: 15px;
     font-size: 1.4rem;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 10px;
+    
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 40px;
+      height: 2px;
+      background-color: vars.$moss-green;
+    }
   }
   
   p {
     margin-bottom: 0;
     font-size: 1rem;
+    color: color.scale(vars.$text-color, $lightness: 10%);
+    line-height: 1.6;
   }
 }
 
