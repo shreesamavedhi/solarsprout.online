@@ -3,10 +3,11 @@ layout: post
 title: "Wizard Wars Game"
 date: 2025-05-14 16:43:00 -0600
 categories: portfolio
-description: "A Boss-Rush/Card Game"
+description: "My submission for the 2024 WinterMelon Game Jam. I created a boss-rush and card-game combo, in which I solo-developed using Love2D, Aseprite, and Fl Studio."
 image: "/assets/images/portfolio/wizard-wars.png"
 tags: [gamedev, pixel-art, portfolio]
 ---
+
 <div style="position: absolute; left: 50px; top: 1100px; margin: 0; width: 300px; text-align: left;">
   <img style="width: 60%; image-rendering: pixelated; margin-top: 10px;" src="/assets/images/posts/wizard-wars/enemy.png" />
 </div>
@@ -16,36 +17,13 @@ tags: [gamedev, pixel-art, portfolio]
 </div>
 
 ### Quick Links
-<div class="quick-links">
-  <a href="https://solarsprout.itch.io/wizard-wars" class="quick-link"><i class="fas fa-gamepad"></i> Play on Itch.io</a>
-  <a href="https://www.youtube.com/watch?v=knTAH2j8QMs" class="quick-link"><i class="fas fa-play-circle"></i> Watch Gameplay</a>
-</div>
-
-<style>
-.no-margin-bottom {
-  margin-bottom: 0.5rem;
-}
-.quick-links {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 2rem;
-}
-.quick-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 1rem;
-  background: #f5f5f5;
-  border-radius: 4px;
-  text-decoration: none;
-  color: inherit;
-  transition: background 0.2s;
-}
-.quick-link:hover {
-  background: #e5e5e5;
-  text-decoration: none;
-}
-</style>
+{% assign quick_links = ""
+  | append: '{"url": "https://solarsprout.itch.io/wizard-wars", "icon": "gamepad", "text": "Play on Itch.io"}'
+  | append: '|'
+  | append: '{"url": "https://www.youtube.com/watch?v=knTAH2j8QMs", "icon": "play-circle", "text": "Watch Gameplay"}'
+  | split: '|'
+%}
+{% include quick-links.html links=quick_links %}
 
 ## Reflections
 
@@ -91,7 +69,11 @@ The game was developed using Lua and Love2D as the framework. This framework- I 
 
 Pixel art backgrounds and animations were created using Aseprite. Having a tablet that replicates the windows screen would have been a lifesaver for this. But, seeing as I didn't have those tools at the time, I made this art with keyboard and mouse. It was rough, but got the job done. I chose pixel art as a way to keep things more simple, and I think that was a good choice. 
 
-Music and sounds were composed using Fl Studio and Fl Studio Cloud samples. Not much I can say about this- these were the last things I added to the game, and were a bit rushed. Pumped out a layering melody/bassline for the main theme, and found some nice sounds for selecting cards, or buying items from the shop. 
+Music and sounds were composed using Fl Studio and Fl Studio Cloud samples. Here's a preview of the main theme:
+
+{% include audio-player.html audio_file='/assets/music/posts/wizard-wars/wizard.wav' title='Wizard Wars Main Theme' type='audio/wav' %}
+
+The music was one of the last things I added to the game. I focused on creating a layered melody/bassline for the main theme, and found some nice sounds for selecting cards and buying items from the shop.
 
 ## Gallery
 

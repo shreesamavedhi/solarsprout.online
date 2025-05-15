@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
@@ -24,7 +25,25 @@ layout: default
       {% endfor %}
     </div>
     {% endif %}
+
+    {% if page.description %}
+    <div class="post-description">
+      {{ page.description }}
+    </div>
+    {% endif %}
   </header>
+
+  <style>
+    .post-description {
+      font-size: 1.1em;
+      line-height: 1.5;
+      color: #666;
+      margin: 1.5rem 0;
+      font-style: italic;
+      border-left: 4px solid #eee;
+      padding-left: 1rem;
+    }
+  </style>
 
   <div class="post-content e-content" itemprop="articleBody">
     {{ content }}

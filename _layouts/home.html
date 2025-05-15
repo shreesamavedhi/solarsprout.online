@@ -59,7 +59,7 @@ layout: default
             <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
           </h3>
           <div class="post-excerpt">
-            {{ post.excerpt | strip_html | truncatewords: 30 }}
+            {{ post.description | default: post.excerpt | strip_html | truncatewords: 30 }}
           </div>
           <div class="post-tags">
             {% for tag in post.tags %}
