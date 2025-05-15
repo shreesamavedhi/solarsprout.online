@@ -117,14 +117,14 @@ permalink: /portfolio/
     <div class="portfolio-grid">
       <div class="portfolio-item">
         <div class="portfolio-image">
-          <img src="/assets/images/portfolio/game-2.svg" alt="Game Project">
+          <img src="/assets/images/portfolio/wizard-wars.png" alt="Game Project">
           <div class="overlay">
-            <a href="{{ site.baseurl }}/portfolio/2025/03/20/pixel-game/" class="view-button">View Project</a>
+            <a href="{{ site.baseurl }}/portfolio/2025/05/14/wizard-wars/" class="view-button">View Project</a>
           </div>
         </div>
         <div class="portfolio-info">
-          <h3>Pixel Adventure</h3>
-          <p>A retro-style platformer with hand-crafted pixel art</p>
+          <h3>Wizard Wars</h3>
+          <p>A turn-based strategy game with magic and monsters</p>
           <div class="portfolio-tags">
             <a href="/tag/gamedev" class="portfolio-tag tag-gamedev">GameDev</a>
             <a href="/tag/pixel-art" class="portfolio-tag tag-pixel-art">Pixel Art</a>
