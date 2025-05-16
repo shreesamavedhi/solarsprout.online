@@ -17,12 +17,19 @@ tags: [gamedev, pixel-art, portfolio]
 </div>
 
 ### Quick Links
-{% assign quick_links = ""
-  | append: '{"url": "https://solarsprout.itch.io/wizard-wars", "icon": "gamepad", "text": "Play on Itch.io"}'
-  | append: '|'
-  | append: '{"url": "https://www.youtube.com/watch?v=knTAH2j8QMs", "icon": "play-circle", "text": "Watch Gameplay"}'
-  | split: '|'
-%}
+{% assign quick_links = '' | split: '' %}
+
+{% assign link1 = '' | split: '' %}
+{% assign link1 = link1 | push: 'https://solarsprout.itch.io/wizard-wars' %}
+{% assign link1 = link1 | push: 'gamepad' %}
+{% assign link1 = link1 | push: 'Play on Itch.io' %}
+
+{% assign link2 = '' | split: '' %}
+{% assign link2 = link2 | push: 'https://www.youtube.com/watch?v=knTAH2j8QMs' %}
+{% assign link2 = link2 | push: 'play-circle' %}
+{% assign link2 = link2 | push: 'Watch Gameplay' %}
+
+{% assign quick_links = quick_links | push: link1 | push: link2 %}
 {% include quick-links.html links=quick_links %}
 
 ## Reflections
@@ -73,7 +80,7 @@ Music and sounds were composed using Fl Studio and Fl Studio Cloud samples. Here
 
 {% include audio-player.html audio_file='/assets/music/posts/wizard-wars/wizard.wav' title='Wizard Wars Main Theme' type='audio/wav' %}
 
-The music was one of the last things I added to the game. I focused on creating a layered melody/bassline for the main theme, and found some nice sounds for selecting cards and buying items from the shop.
+The music was one of the last things I added to the game, and was a bit rushed. I focused on creating a layered melody and drum line for the main theme, and then found some nice sounds for selecting cards and buying items from the shop.
 
 ## Gallery
 

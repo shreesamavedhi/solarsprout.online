@@ -1,8 +1,8 @@
 {% if include.links %}
 <div class="quick-links">
   {% for link in include.links %}
-    <a href="{{ link.url }}" class="quick-link">
-      <i class="fas fa-{{ link.icon }}"></i> {{ link.text }}
+    <a href="{{ link[0] }}" class="quick-link">
+      <i class="fa-solid fa-{{ link[1] }}"></i> {{ link[2] }}
     </a>
   {% endfor %}
 </div>
