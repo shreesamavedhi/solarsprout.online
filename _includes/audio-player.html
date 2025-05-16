@@ -1,39 +1,724 @@
 {% if include.audio_file %}
-<div class="audio-player-container">
-  <h3><i class="fas fa-music"></i> {{ include.title | default: "Audio Player" }}</h3>
-  <audio controls class="custom-audio-player">
-    <source src="{{ include.audio_file }}" type="{{ include.type | default: 'audio/wav' }}">
-    Your browser does not support the audio element.
-  </audio>
+<div class="enhanced-audio-player" id="player-{{ include.audio_file | slugify }}">
+  <div class="player-header">
+    <h3><i class="fas fa-music"></i> {{ include.title | default: "Audio Player" }}</h3>
+  </div>
+  <div class="player-controls">
+    <button class="play-button" aria-label="Play">
+      <i class="fas fa-play"></i>
+    </button>
+    <div class="progress-container">
+      <div class="loading-indicator">Loading audio...</div>
+      <div class="error-container" style="display: none;">
+        <span class="error-message">Error loading audio</span>
+        <button class="retry-button">Retry</button>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill"></div>
+        <div class="buffer-bar"></div>
+      </div>
+      <div class="time-display">
+        <span class="current-time">0:00</span>
+        <span class="duration">0:00</span>
+      </div>
+    </div>
+    <div class="volume-control">
+      <button class="volume-button" aria-label="Volume">
+        <i class="fas fa-volume-up"></i>
+      </button>
+      <div class="volume-slider">
+        <div class="volume-fill"></div>
+      </div>
+    </div>
+  </div>
 </div>
 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const playerId = 'player-{{ include.audio_file | slugify }}';
+  const playerContainer = document.getElementById(playerId);
+  if (!playerContainer) return;
+  
+  // Create audio element programmatically with better error handling
+  let audio = new Audio();
+  
+  // Set up error handling before setting the source
+  audio.addEventListener('error', function(e) {
+    console.error('Initial audio loading error:', e);
+  });
+  
+  // Set preload mode
+  audio.preload = 'auto'; // Enable buffer tracking
+  
+  // Now set the source
+  audio.src = '{{ include.audio_file }}';
+  
+  // Start loading the audio
+  audio.load();
+  
+  // Add a console log for debugging
+  console.log('Audio player initialized for: {{ include.audio_file }}');
+  
+  const playButton = playerContainer.querySelector('.play-button');
+  const progressBar = playerContainer.querySelector('.progress-bar');
+  const progressFill = playerContainer.querySelector('.progress-fill');
+  const bufferBar = playerContainer.querySelector('.buffer-bar');
+  const currentTimeDisplay = playerContainer.querySelector('.current-time');
+  const durationDisplay = playerContainer.querySelector('.duration');
+  const loadingIndicator = playerContainer.querySelector('.loading-indicator');
+  const errorContainer = playerContainer.querySelector('.error-container');
+  const errorMessage = playerContainer.querySelector('.error-message');
+  const retryButton = playerContainer.querySelector('.retry-button');
+  const volumeButton = playerContainer.querySelector('.volume-button');
+  const volumeSlider = playerContainer.querySelector('.volume-slider');
+  const volumeFill = playerContainer.querySelector('.volume-fill');
+  
+  // Initially show loading and hide progress
+  progressBar.style.display = 'none';
+  loadingIndicator.style.display = 'block';
+  
+  // Format time in MM:SS
+  function formatTime(seconds) {
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = Math.floor(seconds % 60);
+    return `${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
+  }
+  
+  // Loading events
+  audio.addEventListener('loadstart', () => {
+    loadingIndicator.style.display = 'block';
+    progressBar.style.display = 'none';
+  });
+  
+  audio.addEventListener('canplay', () => {
+    loadingIndicator.style.display = 'none';
+    progressBar.style.display = 'block';
+    durationDisplay.textContent = formatTime(audio.duration);
+  });
+  
+  audio.addEventListener('waiting', () => {
+    loadingIndicator.style.display = 'block';
+  });
+  
+  audio.addEventListener('playing', () => {
+    loadingIndicator.style.display = 'none';
+    progressBar.style.display = 'block';
+    playButton.innerHTML = '<i class="fas fa-pause"></i>';
+  });
+  
+  // Play/Pause functionality
+  playButton.addEventListener('click', () => {
+    if (audio.paused) {
+      audio.play().catch(error => {
+        console.error('Error playing audio:', error);
+        loadingIndicator.textContent = 'Error loading audio';
+      });
+      playButton.innerHTML = '<i class="fas fa-pause"></i>';
+    } else {
+      audio.pause();
+      playButton.innerHTML = '<i class="fas fa-play"></i>';
+    }
+  });
+  
+  // Update progress bar
+  audio.addEventListener('timeupdate', () => {
+    const progress = (audio.currentTime / audio.duration) * 100;
+    progressFill.style.width = `${progress}%`;
+    currentTimeDisplay.textContent = formatTime(audio.currentTime);
+  });
+  
+  // Click on progress bar to seek with safety checks
+  progressBar.addEventListener('click', (e) => {
+    const rect = progressBar.getBoundingClientRect();
+    const pos = (e.clientX - rect.left) / rect.width;
+    
+    // Check if we have buffered data at the position we're trying to seek to
+    let canSeek = false;
+    const targetTime = pos * audio.duration;
+    
+    // Check if we're trying to seek within the buffered range
+    if (audio.buffered && audio.buffered.length > 0) {
+      for (let i = 0; i < audio.buffered.length; i++) {
+        if (targetTime >= audio.buffered.start(i) && targetTime <= audio.buffered.end(i)) {
+          canSeek = true;
+          break;
+        }
+      }
+    }
+    
+    if (canSeek) {
+      // Safe to seek
+      audio.currentTime = targetTime;
+    } else {
+      // Show a temporary message that we're loading this section
+      const originalText = loadingIndicator.textContent;
+      loadingIndicator.textContent = 'Loading this section...';
+      loadingIndicator.style.display = 'block';
+      
+      // Try to load more of the audio
+      const wasPlaying = !audio.paused;
+      if (wasPlaying) {
+        audio.pause();
+      }
+      
+      // Set a timeout to prevent UI from being stuck if loading fails
+      const loadingTimeout = setTimeout(() => {
+        loadingIndicator.style.display = 'none';
+        loadingIndicator.textContent = originalText;
+      }, 5000);
+      
+      // Listen for when more data is loaded
+      const progressHandler = () => {
+        // Check again if we can seek now
+        let canSeekNow = false;
+        if (audio.buffered && audio.buffered.length > 0) {
+          for (let i = 0; i < audio.buffered.length; i++) {
+            if (targetTime >= audio.buffered.start(i) && targetTime <= audio.buffered.end(i)) {
+              canSeekNow = true;
+              break;
+            }
+          }
+        }
+        
+        if (canSeekNow) {
+          // Clear the timeout and remove this handler
+          clearTimeout(loadingTimeout);
+          audio.removeEventListener('progress', progressHandler);
+          
+          // Now we can seek safely
+          audio.currentTime = targetTime;
+          loadingIndicator.style.display = 'none';
+          
+          // Resume playback if it was playing before
+          if (wasPlaying) {
+            audio.play().catch(error => {
+              console.error('Error resuming playback:', error);
+            });
+          }
+        }
+      };
+      
+      audio.addEventListener('progress', progressHandler);
+    }
+  });
+  
+  // Volume control
+  volumeButton.addEventListener('click', () => {
+    if (audio.volume > 0) {
+      audio.volume = 0;
+      volumeButton.innerHTML = '<i class="fas fa-volume-mute"></i>';
+      volumeFill.style.width = '0%';
+    } else {
+      audio.volume = 1;
+      volumeButton.innerHTML = '<i class="fas fa-volume-up"></i>';
+      volumeFill.style.width = '100%';
+    }
+  });
+  
+  volumeSlider.addEventListener('click', (e) => {
+    const rect = volumeSlider.getBoundingClientRect();
+    const pos = (e.clientX - rect.left) / rect.width;
+    audio.volume = pos;
+    volumeFill.style.width = `${pos * 100}%`;
+    
+    if (pos === 0) {
+      volumeButton.innerHTML = '<i class="fas fa-volume-mute"></i>';
+    } else if (pos < 0.5) {
+      volumeButton.innerHTML = '<i class="fas fa-volume-down"></i>';
+    } else {
+      volumeButton.innerHTML = '<i class="fas fa-volume-up"></i>';
+    }
+  });
+  
+  // Handle audio end
+  audio.addEventListener('ended', () => {
+    playButton.innerHTML = '<i class="fas fa-play"></i>';
+    progressFill.style.width = '0%';
+    audio.currentTime = 0;
+  });
+  
+  // Buffer progress tracking
+  audio.addEventListener('progress', () => {
+    if (audio.buffered.length > 0) {
+      const bufferedEnd = audio.buffered.end(audio.buffered.length - 1);
+      const duration = audio.duration;
+      if (duration > 0) {
+        const loadPercentage = (bufferedEnd / duration) * 100;
+        bufferBar.style.width = `${loadPercentage}%`;
+      }
+    }
+  });
+
+  // Error handling with improved recovery option
+  audio.addEventListener('error', (e) => {
+    // Only show error if it's a genuine error, not just a seeking issue
+    const errorCode = e.target.error ? e.target.error.code : 0;
+    let errorMsg = 'Error loading audio';
+    let isFatal = true; // Assume error is fatal by default
+    
+    switch(errorCode) {
+      case 1: 
+        errorMsg = 'Audio loading aborted'; 
+        // This might be recoverable
+        isFatal = false;
+        break;
+      case 2: 
+        errorMsg = 'Network error'; 
+        // Network errors are often temporary
+        isFatal = false;
+        break;
+      case 3: 
+        errorMsg = 'Audio decoding failed'; 
+        // This could be due to seeking to an unloaded section
+        isFatal = false;
+        break;
+      case 4: 
+        errorMsg = 'Audio format not supported'; 
+        // This is likely a real format issue
+        isFatal = true;
+        break;
+    }
+    
+    console.error('Audio error:', errorMsg, 'Code:', errorCode);
+    
+    // If we were previously able to play, then this is likely a seeking error, not a format error
+    if (errorCode === 4 && audio.readyState > 0) {
+      errorMsg = 'Error loading this section of audio';
+      isFatal = false;
+    }
+    
+    // For non-fatal errors, try auto-recovery first
+    if (!isFatal) {
+      // Try to recover automatically for non-fatal errors
+      const currentSrc = audio.src;
+      const currentTime = audio.currentTime;
+      const wasPlaying = !audio.paused;
+      
+      // Only show the error UI if we're not already showing it
+      // This prevents error message flashing
+      if (errorContainer.style.display !== 'block') {
+        errorMessage.textContent = errorMsg + ' - Attempting to recover...';
+        loadingIndicator.style.display = 'none';
+        errorContainer.style.display = 'block';
+      }
+      
+      // Try to recover by resetting but not changing the source
+      setTimeout(() => {
+        // Reset the audio element but keep the source
+        audio.pause();
+        
+        // Try to reload without changing the source
+        audio.load();
+        
+        // Set up a one-time canplay handler to restore position if possible
+        const canPlayHandler = () => {
+          // Hide error container
+          errorContainer.style.display = 'none';
+          progressBar.style.display = 'block';
+          
+          // Try to restore position if possible, otherwise start from beginning
+          try {
+            // Only seek if we have some data
+            if (audio.readyState >= 1) {
+              // Try to find a safe position to seek to
+              let safePosition = 0;
+              
+              // Check buffered ranges
+              if (audio.buffered && audio.buffered.length > 0) {
+                // Find the buffered range closest to our target position
+                let closestDistance = Infinity;
+                
+                for (let i = 0; i < audio.buffered.length; i++) {
+                  const start = audio.buffered.start(i);
+                  const end = audio.buffered.end(i);
+                  
+                  // If our target is within this range, use it
+                  if (currentTime >= start && currentTime <= end) {
+                    safePosition = currentTime;
+                    break;
+                  }
+                  
+                  // Otherwise, find the closest point in this range
+                  const distToStart = Math.abs(currentTime - start);
+                  const distToEnd = Math.abs(currentTime - end);
+                  const closestInThisRange = distToStart < distToEnd ? start : end;
+                  const distance = Math.min(distToStart, distToEnd);
+                  
+                  if (distance < closestDistance) {
+                    closestDistance = distance;
+                    safePosition = closestInThisRange;
+                  }
+                }
+              }
+              
+              // Seek to the safe position
+              audio.currentTime = safePosition;
+            }
+          } catch (seekError) {
+            console.error('Error seeking during recovery:', seekError);
+            // If seeking fails, we'll just start from the beginning
+          }
+          
+          // Resume playback if it was playing before
+          if (wasPlaying) {
+            audio.play().catch(playError => {
+              console.error('Error resuming playback after recovery:', playError);
+              // If play fails, show the error UI again
+              errorMessage.textContent = 'Unable to resume playback';
+              loadingIndicator.style.display = 'none';
+              progressBar.style.display = 'none';
+              errorContainer.style.display = 'block';
+            });
+          }
+          
+          // Remove this one-time handler
+          audio.removeEventListener('canplay', canPlayHandler);
+        };
+        
+        audio.addEventListener('canplay', canPlayHandler);
+        
+        // Set a timeout in case canplay never fires
+        setTimeout(() => {
+          // If we still have the error showing, try the manual retry button
+          if (errorContainer.style.display === 'block') {
+            errorMessage.textContent = errorMsg + ' - Please try the retry button';
+          }
+        }, 3000);
+      }, 500);
+    } else {
+      // For fatal errors, just show the error UI
+      errorMessage.textContent = errorMsg;
+      loadingIndicator.style.display = 'none';
+      progressBar.style.display = 'none';
+      errorContainer.style.display = 'block';
+    }
+  });
+  
+  // Retry button functionality with complete reset
+  retryButton.addEventListener('click', () => {
+    console.log('Retry button clicked - performing complete reset');
+    errorContainer.style.display = 'none';
+    loadingIndicator.textContent = 'Reloading audio...';
+    loadingIndicator.style.display = 'block';
+    
+    // Store the current state
+    const wasPlaying = !audio.paused;
+    let startPosition = 0; // Default to beginning
+    
+    try {
+      // Try to get a valid position to start from
+      // If currentTime is causing issues, we'll start from 0
+      if (audio.currentTime > 0 && !isNaN(audio.currentTime) && isFinite(audio.currentTime)) {
+        startPosition = Math.max(0, audio.currentTime - 2); // Back up 2 seconds for safety
+      }
+    } catch (e) {
+      console.error('Error getting current time:', e);
+      // Keep startPosition at 0
+    }
+    
+    // Completely destroy and recreate the audio element
+    // This is more reliable than trying to reset the existing element
+    try {
+      // First, stop and unload the current audio
+      audio.pause();
+      audio.src = '';
+      
+      // Create a completely new audio element
+      const newAudio = new Audio();
+      
+      // Set up the new audio element before setting source
+      newAudio.preload = 'auto';
+      
+      // Set up basic event listeners on the new element
+      newAudio.addEventListener('loadstart', () => {
+        console.log('New audio - loadstart event');
+        loadingIndicator.style.display = 'block';
+        progressBar.style.display = 'none';
+      });
+      
+      newAudio.addEventListener('canplay', () => {
+        console.log('New audio - canplay event');
+        loadingIndicator.style.display = 'none';
+        progressBar.style.display = 'block';
+        
+        // Try to set the position safely
+        try {
+          // Only seek if we have data and the duration is valid
+          if (newAudio.readyState >= 1 && !isNaN(newAudio.duration) && isFinite(newAudio.duration)) {
+            // Make sure we don't seek past the end
+            const safePosition = Math.min(startPosition, newAudio.duration - 0.1);
+            newAudio.currentTime = Math.max(0, safePosition);
+          }
+        } catch (seekError) {
+          console.error('Error seeking in new audio:', seekError);
+          // If seeking fails, we'll just play from the beginning
+        }
+        
+        // Update duration display
+        if (!isNaN(newAudio.duration) && isFinite(newAudio.duration)) {
+          durationDisplay.textContent = formatTime(newAudio.duration);
+        }
+        
+        // Play if it was playing before
+        if (wasPlaying) {
+          newAudio.play().catch(playError => {
+            console.error('Error playing new audio:', playError);
+          });
+        }
+      });
+      
+      // Set up the error handler for the new audio element
+      newAudio.addEventListener('error', (e) => {
+        console.error('New audio - error event:', e);
+        const errorCode = e.target.error ? e.target.error.code : 0;
+        let errorMsg = 'Error loading audio';
+        
+        switch(errorCode) {
+          case 1: errorMsg = 'Audio loading aborted'; break;
+          case 2: errorMsg = 'Network error'; break;
+          case 3: errorMsg = 'Audio decoding failed'; break;
+          case 4: errorMsg = 'Audio format not supported'; break;
+        }
+        
+        errorMessage.textContent = errorMsg + ' - Try refreshing the page';
+        loadingIndicator.style.display = 'none';
+        progressBar.style.display = 'none';
+        errorContainer.style.display = 'block';
+      });
+      
+      // Copy all the other event listeners we need
+      ['waiting', 'playing', 'timeupdate', 'progress', 'ended'].forEach(eventName => {
+        if (audio[`on${eventName}`]) {
+          newAudio[`on${eventName}`] = audio[`on${eventName}`];
+        }
+      });
+      
+      // Now set the source and load
+      newAudio.src = '{{ include.audio_file }}';
+      newAudio.load();
+      
+      // Replace the old audio element with the new one
+      audio = newAudio;
+      
+      // Update UI elements to reference the new audio
+      playButton.onclick = () => {
+        if (audio.paused) {
+          audio.play().catch(error => {
+            console.error('Error playing audio:', error);
+            loadingIndicator.textContent = 'Error loading audio';
+          });
+          playButton.innerHTML = '<i class="fas fa-pause"></i>';
+        } else {
+          audio.pause();
+          playButton.innerHTML = '<i class="fas fa-play"></i>';
+        }
+      };
+      
+      // Set a timeout in case the audio never reaches canplay state
+      setTimeout(() => {
+        if (loadingIndicator.style.display === 'block') {
+          // If we're still showing loading after 10 seconds, show a more helpful message
+          loadingIndicator.textContent = 'Still loading... You may need to refresh the page.';
+          
+          // Add a refresh button
+          const refreshButton = document.createElement('button');
+          refreshButton.textContent = 'Refresh Page';
+          refreshButton.style.marginTop = '5px';
+          refreshButton.style.padding = '3px 8px';
+          refreshButton.style.background = '#5D4037';
+          refreshButton.style.color = 'white';
+          refreshButton.style.border = 'none';
+          refreshButton.style.borderRadius = '4px';
+          refreshButton.style.cursor = 'pointer';
+          refreshButton.onclick = () => window.location.reload();
+          
+          loadingIndicator.appendChild(document.createElement('br'));
+          loadingIndicator.appendChild(refreshButton);
+        }
+      }, 10000);
+      
+    } catch (error) {
+      console.error('Critical error during audio reset:', error);
+      errorMessage.textContent = 'Unable to reload audio - Please refresh the page';
+      loadingIndicator.style.display = 'none';
+      errorContainer.style.display = 'block';
+    }
+  });
+});
+</script>
+
 <style>
-.audio-player-container {
+.enhanced-audio-player {
   background: #f8f9fa;
   padding: 1.5rem;
   border-radius: 8px;
   margin: 1.5rem 0;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
-.audio-player-container h3 {
+.player-header h3 {
   margin: 0 0 1rem 0;
   color: #333;
   font-size: 1.2em;
+  display: flex;
+  align-items: center;
 }
 
-.audio-player-container h3 i {
+.player-header h3 i {
   margin-right: 0.5rem;
   color: #666;
 }
 
-.custom-audio-player {
-  width: 100%;
-  margin: 0;
+.player-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
-.custom-audio-player:focus {
-  outline: none;
+.play-button {
+  background: #5D4037; /* Rich soil color from website palette */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  flex-shrink: 0;
+}
+
+.play-button:hover {
+  background: #7CB342; /* Moss green from website palette */
+}
+
+.progress-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.loading-indicator {
+  color: #666;
+  font-size: 0.9em;
+  text-align: center;
+  padding: 5px;
+  background: #eee;
+  border-radius: 4px;
+}
+
+.error-container {
+  color: #a94442;
+  font-size: 0.9em;
+  text-align: center;
+  padding: 5px;
+  background: #f2dede;
+  border-radius: 4px;
+  margin-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.retry-button {
+  background: #5D4037; /* Rich soil color */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  font-size: 0.8em;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  align-self: center;
+}
+
+.retry-button:hover {
+  background: #7CB342; /* Moss green */
+}
+
+.progress-bar {
+  height: 8px;
+  background: #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #7CB342; /* Moss green from website palette */
+  width: 0%;
+  transition: width 0.1s linear;
+  position: relative;
+  z-index: 2;
+}
+
+.buffer-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: rgba(124, 179, 66, 0.3); /* Moss green with transparency */
+  width: 0%;
+  z-index: 1;
+}
+
+.time-display {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8em;
+  color: #666;
+}
+
+.volume-control {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.volume-button {
+  background: none;
+  border: none;
+  color: #666;
+  cursor: pointer;
+  font-size: 1.1em;
+}
+
+.volume-slider {
+  width: 60px;
+  height: 5px;
+  background: #ddd;
+  border-radius: 2px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.volume-fill {
+  height: 100%;
+  background: #7CB342; /* Moss green from website palette */
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .player-controls {
+    flex-wrap: wrap;
+  }
+  
+  .progress-container {
+    order: 3;
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .volume-control {
+    margin-left: auto;
+  }
 }
 </style>
 {% endif %}
