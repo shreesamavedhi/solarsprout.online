@@ -73,7 +73,7 @@ Pixel art backgrounds and animations were created using Aseprite. Having a table
 
 Music and sounds were composed using Fl Studio and Fl Studio Cloud samples. Here's a preview of the main theme:
 
-{% include audio-player.html audio_file='/assets/music/posts/wizard-wars/wizard.wav' title='Wizard Wars Main Theme' type='audio/wav' %}
+{% include audio-player.html audio_file='/assets/music/posts/wizard-wars/wizardwars.mp3' title='Wizard Wars Main Theme' type='audio/mpeg' %}
 
 The music was one of the last things I added to the game, and was a bit rushed. I focused on creating a layered melody and drum line for the main theme, and then found some nice sounds for selecting cards and buying items from the shop.
 
