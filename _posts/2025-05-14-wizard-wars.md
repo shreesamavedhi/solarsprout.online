@@ -4,7 +4,7 @@ title: "Wizard Wars Game"
 date: 2025-05-14 16:43:00 -0600
 categories: portfolio
 description: "My submission for the 2024 WinterMelon Game Jam. I created a boss-rush and card-game combo, in which I solo-developed using Love2D, Aseprite, and Fl Studio."
-image: "/assets/images/portfolio/wizard-wars.png"
+image: "/assets/images/posts/wizard-wars/cover.png"
 tags: [gamedev, pixel-art, portfolio]
 ---
 
@@ -13,12 +13,12 @@ tags: [gamedev, pixel-art, portfolio]
 
 {% assign link1 = '' | split: '' %}
 {% assign link1 = link1 | push: 'https://solarsprout.itch.io/wizard-wars' %}
-{% assign link1 = link1 | push: 'gamepad' %}
+{% assign link1 = link1 | push: 'fa-brands fa-itch-io' %}
 {% assign link1 = link1 | push: 'Play on Itch.io' %}
 
 {% assign link2 = '' | split: '' %}
 {% assign link2 = link2 | push: 'https://www.youtube.com/watch?v=knTAH2j8QMs' %}
-{% assign link2 = link2 | push: 'play-circle' %}
+{% assign link2 = link2 | push: 'fa-brands fa-youtube' %}
 {% assign link2 = link2 | push: 'Watch Gameplay' %}
 
 {% assign quick_links = quick_links | push: link1 | push: link2 %}

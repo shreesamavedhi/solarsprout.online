@@ -69,35 +69,17 @@ permalink: /portfolio/
     <div class="portfolio-grid">
       <div class="portfolio-item">
         <div class="portfolio-image">
-          <img src="/assets/images/portfolio/music-2.svg" alt="Music Project">
+          <img src="/assets/images/posts/would-you-wonder-at-all/cover.png" alt="would you wonder at all - Single">
           <div class="overlay">
-            <a href="{{ site.baseurl }}/portfolio/2025/03/15/ambient-collection/" class="view-button">Listen</a>
+            <a href="{{ site.baseurl }}/portfolio/2025/05/20/would-you-wonder-at-all/" class="view-button">Listen</a>
           </div>
         </div>
         <div class="portfolio-info">
-          <h3>Ambient Collection</h3>
-          <p>A series of ambient tracks for relaxation and focus</p>
+          <h3>'would you wonder at all'</h3>
+          <p>A quiet bedroom-pop single</p>
           <div class="portfolio-tags">
             <a href="/tag/music" class="portfolio-tag tag-music">Music</a>
-            <a href="/tag/ambient" class="portfolio-tag tag-ambient">Ambient</a>
-            <a href="/tag/portfolio" class="portfolio-tag tag-portfolio">Portfolio</a>
-          </div>
-        </div>
-      </div>
-      
-      <div class="portfolio-item">
-        <div class="portfolio-image">
-          <img src="/assets/images/portfolio/music-2.svg" alt="Music Project">
-          <div class="overlay">
-            <a href="{{ site.baseurl }}/portfolio/2025/02/20/game-soundtrack/" class="view-button">Listen</a>
-          </div>
-        </div>
-        <div class="portfolio-info">
-          <h3>Game Soundtrack</h3>
-          <p>Original compositions for video game projects</p>
-          <div class="portfolio-tags">
-            <a href="/tag/music" class="portfolio-tag tag-music">Music</a>
-            <a href="/tag/soundtrack" class="portfolio-tag tag-soundtrack">Soundtrack</a>
+            <a href="/tag/single" class="portfolio-tag tag-single">Single</a>
             <a href="/tag/portfolio" class="portfolio-tag tag-portfolio">Portfolio</a>
           </div>
         </div>
@@ -117,35 +99,17 @@ permalink: /portfolio/
     <div class="portfolio-grid">
       <div class="portfolio-item">
         <div class="portfolio-image">
-          <img src="/assets/images/portfolio/wizard-wars.png" alt="Game Project">
+          <img src="/assets/images/posts/wizard-wars/cover.png" alt="Game Project">
           <div class="overlay">
             <a href="{{ site.baseurl }}/portfolio/2025/05/14/wizard-wars/" class="view-button">View Project</a>
           </div>
         </div>
         <div class="portfolio-info">
           <h3>Wizard Wars</h3>
-          <p>A turn-based strategy game with magic and monsters</p>
+          <p>A boss-rush card game, featuring wizards and spells! Created during the 2024 WinterMelon Game Jam.</p>
           <div class="portfolio-tags">
             <a href="/tag/gamedev" class="portfolio-tag tag-gamedev">GameDev</a>
             <a href="/tag/pixel-art" class="portfolio-tag tag-pixel-art">Pixel Art</a>
-            <a href="/tag/portfolio" class="portfolio-tag tag-portfolio">Portfolio</a>
-          </div>
-        </div>
-      </div>
-      
-      <div class="portfolio-item">
-        <div class="portfolio-image">
-          <img src="/assets/images/portfolio/game-2.svg" alt="Game Project">
-          <div class="overlay">
-            <a href="{{ site.baseurl }}/portfolio/2025/01/25/melody-maze/" class="view-button">View Project</a>
-          </div>
-        </div>
-        <div class="portfolio-info">
-          <h3>Melody Maze</h3>
-          <p>A music-based puzzle game with original soundtrack</p>
-          <div class="portfolio-tags">
-            <a href="/tag/gamedev" class="portfolio-tag tag-gamedev">GameDev</a>
-            <a href="/tag/music" class="portfolio-tag tag-music">Music</a>
             <a href="/tag/portfolio" class="portfolio-tag tag-portfolio">Portfolio</a>
           </div>
         </div>

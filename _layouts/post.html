@@ -1,11 +1,20 @@
 ---
 layout: default
 ---
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  {% if page.image %}
+  <div class="post-hero" style="position: relative; height: 400px; margin: -30px -30px 30px -30px; overflow: hidden; background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('{{ page.image }}') center/cover no-repeat;">
+    <div style="position: absolute; bottom: 40px; left: 40px; right: 40px; color: white;">
+      <h1 class="post-title p-name" itemprop="name headline" style="color: white; margin: 0; font-size: 2.5em; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">{{ page.title | escape }}</h1>
+    </div>
+  </div>
+  {% endif %}
 
-  <header class="post-header">
+  <header class="post-header" {% if page.image %}style="margin-top: 0;"{% endif %}>
+    {% unless page.image %}
     <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+    {% endunless %}
     <p class="post-meta">
       <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
