@@ -8,14 +8,6 @@ image: "/assets/images/portfolio/wizard-wars.png"
 tags: [gamedev, pixel-art, portfolio]
 ---
 
-<div style="position: absolute; left: 50px; top: 1100px; margin: 0; width: 300px; text-align: left;">
-  <img style="width: 60%; image-rendering: pixelated; margin-top: 10px;" src="/assets/images/posts/wizard-wars/enemy.png" />
-</div>
-
-<div style="position: absolute; right: 50px; top: 300px; margin: 0; width: 300px; text-align: right;">
-  <img style="width: 80%; image-rendering: pixelated;" src="/assets/images/posts/wizard-wars/wizard.png" />
-</div>
-
 ### Quick Links
 {% assign quick_links = '' | split: '' %}
 
@@ -33,14 +25,15 @@ tags: [gamedev, pixel-art, portfolio]
 {% include quick-links.html links=quick_links %}
 
 ## Reflections
+<div style="overflow: auto;">
+<img src="/assets/images/posts/wizard-wars/wizard.png" alt="Wizard character sprite" style="width: 200px; image-rendering: pixelated; float: right; margin: 0 0 15px 15px;">
+<p style="margin-bottom: 1em;">"Wizard Wars" is a game I developed while participating in the 2024 WinterMelon Game Jam-- the first ever game jam I have participated in. While I had some game development experience (if you could call watching videos of other developers craft a miniscule feature of their games, "experience"), I didn't have a good understanding of what I was in for.</p>
 
-"Wizard Wars" is a game I developed while participating in the 2024 WinterMelon Game Jam-- the first ever game jam I have participated in. While I had some game development experience (if you could call watching videos of other developers craft a miniscule feature of their games, "experience"), I didn't have a good understanding of what I was in for. 
+<p style="margin-bottom: 1em;">The only piece of advice I had gathered from the discord, in between the absolute chaos of anxiety, pompousness, and self-deprecation in the vast majority of messages, was this: "Start small".</p>
 
-The only piece of advise I had gathered from the discord, in between the absolute chaos of anxiety, pompousness, and self-deprecation in the vast majority of messages, was this: "Start small". 
+<p style="margin-bottom: 1em;">Of course, a reasonable person would hear this and decide to, like the advice states, start small. Maybe join a group, keep the core of the idea simple, and only add on additional content if additional time exists.</p>
 
-Of course, a reasonable person would hear this and decide to, like the advise states, start small. Maybe join a group, keep the core of the idea simple, and only add on additional content if additional time exists. 
-
-Unfortunately, as it turns out, part of my motivation for entering such a game was to transcend the realm of reasonable. I was here to push myself to some unknown limit, by solo-developing not only the software, but also all the pixel-art and music/sound design.
+<p style="margin-bottom: 1em;">Unfortunately, as it turns out, part of my motivation for entering such a game was to transcend the realm of reasonable. I was here to push myself to some unknown limit, by solo-developing not only the software, but also all the pixel-art and music/sound design.</p></div>
 
 There was an itch in me to get a sense of all aspects of game development, as a precursor to any future game development I might do. At that time, I was newly pumped to try and create my own indie game, and was hoping these game jams would be a series of stepping stones I would need to understand what it takes to achieve that goal. 
 
@@ -50,13 +43,15 @@ So...what was this idea?
 
 ## Project Overview
 
-Wizard Wars is a game where you control a spell wielding wizard, who's on a mission to defeat a series of enemies. 
+<p style="margin-bottom: 1em;">Wizard Wars is a game where you control a spell wielding wizard, who's on a mission to defeat a series of enemies.</p>
 
-Wizards, of course, are courteous beings, and will not attack you if you are not attacking them. Thus, arose the two distinct fight phases every wizard must prepare for: attack, and defense. 
+<p style="margin-bottom: 1em;">Wizards, of course, are courteous beings, and will not attack you if you are not attacking them. Thus, arose the two distinct fight phases every wizard must prepare for: attack, and defense.</p>
 
-Unfortunately for you, the wizard you control can only perform one spell outright- shooting pellets from a spinning circle. If you want different spells, you'll have to use all your cards at your disposal.
+<div style="overflow: auto;">
+<img src="/assets/images/posts/wizard-wars/enemy.png" alt="Enemy character sprite" style="width: 150px; image-rendering: pixelated; float: left; margin: 5px 15px 15px 0;">
+<p style="margin-bottom: 1em;">Unfortunately for you, the wizard you control can only perform one spell outright- shooting pellets from a spinning circle. If you want different spells, you'll have to use all your cards at your disposal.</p>
 
-How does one know what spell to cast? Well thankfully you have a special sight that's able to see exactly what number your cards must add to, hosted right on top of either the enemy or yourself.
+<p style="margin-bottom: 1em;">How does one know what spell to cast? Well thankfully you have a special sight that's able to see exactly what number your cards must add to, hosted right on top of either the enemy or yourself.</p></div>
 
 If you cast during attack phase, you'll be surprised that all your bullets will propel straight towards the enemy, as if it were being magnetized. And if you cast during defense phase, well you'll have a sudden ability to dodge all the bullets coming at you, as if they're being repelled. 
 
