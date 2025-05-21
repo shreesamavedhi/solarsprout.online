@@ -32,3 +32,6 @@ Desktop.ini
 .DS_Store
 .AppleDouble
 .LSOverride
+
+#VsCode
+.vscode
