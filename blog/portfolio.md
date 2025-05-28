@@ -8,8 +8,6 @@ permalink: /blog/portfolio/
   <div class="category-filter">
     <a href="/blog/" class="filter-button">All Posts</a>
     <a href="/blog/portfolio/" class="filter-button active">Portfolio</a>
-    <a href="/blog/tutorials/" class="filter-button">Tutorials</a>
-    <a href="/blog/announcements/" class="filter-button">Announcements</a>
   </div>
   
   {%- if site.posts.size > 0 -%}

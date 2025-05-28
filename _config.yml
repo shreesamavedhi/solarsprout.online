@@ -49,3 +49,8 @@ defaults:
 # Build settings
 markdown: kramdown
 highlighter: rouge
+
+# Sass/SCSS
+sass:
+  sass_dir: _sass
+  style: compressed

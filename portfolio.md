@@ -61,7 +61,7 @@ permalink: /portfolio/
   <section class="portfolio-section" id="music">
     <div class="section-header">
       <h2>Music</h2>
-      <a href="https://spotify.com/" class="platform-link" target="_blank">
+      <a href="https://open.spotify.com/artist/6LskQdnSNWP1q6QyxlvRaL?si=dp_rYRa8SIeHCI33ZYcVpg" class="platform-link" target="_blank">
         <i class="fab fa-spotify"></i> Listen on Spotify
       </a>
     </div>
@@ -69,7 +69,7 @@ permalink: /portfolio/
     <div class="portfolio-grid">
       <div class="portfolio-item">
         <div class="portfolio-image">
-          <img src="/assets/images/posts/would-you-wonder-at-all/cover.png" alt="would you wonder at all - Single">
+          <img src="/assets/images/posts/would-you-wonder-at-all/cover.png" alt="would you wonder at all - cover">
           <div class="overlay">
             <a href="{{ site.baseurl }}/portfolio/2025/05/20/would-you-wonder-at-all/" class="view-button">Listen</a>
           </div>
@@ -91,7 +91,7 @@ permalink: /portfolio/
   <section class="portfolio-section" id="gamedev">
     <div class="section-header">
       <h2>Game Development</h2>
-      <a href="https://itch.io/" class="platform-link" target="_blank">
+      <a href="https://solarsprout.itch.io/" class="platform-link" target="_blank">
         <i class="fab fa-itch-io"></i> View on Itch.io
       </a>
     </div>
@@ -99,7 +99,7 @@ permalink: /portfolio/
     <div class="portfolio-grid">
       <div class="portfolio-item">
         <div class="portfolio-image">
-          <img src="/assets/images/posts/wizard-wars/cover.png" alt="Game Project">
+          <img src="/assets/images/posts/wizard-wars/cover.png" alt="wizard wars - cover">
           <div class="overlay">
             <a href="{{ site.baseurl }}/portfolio/2025/05/14/wizard-wars/" class="view-button">View Project</a>
           </div>
@@ -121,7 +121,7 @@ permalink: /portfolio/
   <section class="portfolio-section" id="art">
     <div class="section-header">
       <h2>Art & Animation</h2>
-      <a href="https://instagram.com/" class="platform-link" target="_blank">
+      <a href="https://www.instagram.com/solar.sprout.insta/" class="platform-link" target="_blank">
         <i class="fab fa-instagram"></i> View on Instagram
       </a>
     </div>

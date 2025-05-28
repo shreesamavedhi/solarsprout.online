@@ -2,27 +2,18 @@
 layout: post
 title: "'would you wonder at all'"
 date: 2025-05-20 13:15:00 -0700
-categories: portfolio
+categories: [music, portfolio]
 description: "A quiet bedroom-pop single."
 image: "/assets/images/posts/would-you-wonder-at-all/cover.png"
 tags: [music, single, portfolio]
 ---
 
 ### Quick Links
-{% assign quick_links = '' | split: '' %}
+<iframe src="https://open.spotify.com/embed/track/7fZtiVHFsGr4OL15ocguAS" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 
-{% assign link1 = '' | split: '' %}
-{% assign link1 = link1 | push: 'https://open.spotify.com/track/7fZtiVHFsGr4OL15ocguAS?si=84e98eaec6a444dc' %}
-{% assign link1 = link1 | push: 'fa-brands fa-spotify' %}
-{% assign link1 = link1 | push: 'Listen on Spotify' %}
-
-{% assign quick_links = quick_links | push: link1 %}
-{% include quick-links.html links=quick_links %}
-
+<br>
 ## Project Overview
-I've been in the "music world" for quite some time. When I was a kid, I started with classical indian singing, pivoted to western piano, and then continued my journey playing the violin throughout grade-school. I played in official orchestras, but also in fringe bands. Since then, I've picked up a few more skills- playing electric and bass guitar, drums, and of course, producing music. 
-
-
+I've been parading in the "music world" for quite some time. When I was a kid, I started with classical indian singing, pivoted to western piano, and then continued my journey playing the violin throughout grade-school. I played in official orchestras, but also in fringe bands. Since then, I've picked up a few more skills- playing electric and bass guitar, drums, and of course, producing music. 
 
 I believe it was during my time in high school when I first tried my hand at composition- at that time I was trying to create orchestral pieces. I loved the creativity I was able to put into it, but, even at that time, I remember thinking to myself that I haven't "cracked the code". The secret recipe that makes music fun to listen to- finding the right places for the right instruments at the right time. 
 
@@ -36,6 +27,11 @@ The idea for this song all started with a simple chords loop. I had recently acq
 Up until this point, I hadn't been able to complete a full song- and there was a reason for that. At that point (and arguably still), I didn't really know how to structurally build a song. While it's theoretically easy to understand concepts like part A, part B, chorus, etc., I often would get too distracted with taking the music in unique directions to mind those. By which point, I'd be stuck in a never-ending tirade of perfecting minor sections, or losing sense of the general direction of the song. So, for this song I used a song reference to help guide the tempo and part markers.
 
 "Little Dark Age" by MGMT (excellent song btw) may have the exact opposite feel and genre for what I was going for, but what it did wonderfully was provide a clear direction for the song. After mapping out the tempo, parts, and general structure, I was ready to add on whatever else I needed to, to fill in those sections.
+
+## Artwork
+There's a lot more than just the music composition that needs to happen in order to release a song. One of those things is taking the artwork for your single, EP, or Album. I wanted to crate an art piece that was unique, but also not too complicated- for the sole reason of trying to finish this project as quick as possible. The idea I came up with was to take a picture, print out that picture, and take another picture with objects surrounding the printout. Creating a multi-medium piece allowed me to re-imagine the other-worldy feel of the song.
+
+<img src="/assets/images/posts/would-you-wonder-at-all/cover.png" alt="Would You Wonder At All - Cover Art" width="400">
 
 ## Reflections
 As I mentioned earlier, majority of this song was composed in a weekend. I took the week following to record all the vocals, and attempt to mix it with the limited working knowledge I had. Do I still enjoy this song? I probably wouldn't say so. While I enjoyed making it, the real value the song holds for me is providing me with motivation to improve. There are a ton of things I would have changed about the song if I were to remake it, but retrospectively, I'm glad I was able to try something new. It's often hard for beginners to put themselves out there, and for that I'm grateful. 
