@@ -2,10 +2,10 @@
 layout: post
 title: "'would you wonder at all'"
 date: 2025-05-20 13:15:00 -0700
-categories: [music, portfolio]
+categories: [Music, Portfolio]
 description: "A quiet bedroom-pop single."
 image: "/assets/images/posts/would-you-wonder-at-all/cover.png"
-tags: [music, single, portfolio]
+tags: [music, single, portfolio, photography, animation]
 ---
 
 ### Quick Links
@@ -21,6 +21,7 @@ Post-college, rediscovering my passion for music production has definitely been 
 
 "would you wonder at all" was my first step into this journey. Taking a single weekend to adventure into, what I hope to be, a lifetime of musical fascination and discovery. 
 
+<br>
 ## Composition Approach
 The idea for this song all started with a simple chords loop. I had recently acquired a new keyboard (FL Keys) which had a neat feature to play a variety of chords using the pads. After fiddling for awhile with different chords and rhythms, I found something I absolutely loved. 
 
@@ -28,11 +29,22 @@ Up until this point, I hadn't been able to complete a full song- and there was a
 
 "Little Dark Age" by MGMT (excellent song btw) may have the exact opposite feel and genre for what I was going for, but what it did wonderfully was provide a clear direction for the song. After mapping out the tempo, parts, and general structure, I was ready to add on whatever else I needed to, to fill in those sections.
 
+<br>
 ## Artwork
 There's a lot more than just the music composition that needs to happen in order to release a song. One of those things is taking the artwork for your single, EP, or Album. I wanted to crate an art piece that was unique, but also not too complicated- for the sole reason of trying to finish this project as quick as possible. The idea I came up with was to take a picture, print out that picture, and take another picture with objects surrounding the printout. Creating a multi-medium piece allowed me to re-imagine the other-worldy feel of the song.
 
 <img src="/assets/images/posts/would-you-wonder-at-all/cover.png" alt="Would You Wonder At All - Cover Art" width="400">
 
+<br>
+## Animation
+I wanted to create an animation that could play in Spotify song previews. In order to do so, I used OpenToonz and hand drew most of the frames (while of course copy-pasting reusable aspects). This type of animation yields a much more "homemade" feel. 
+
+<video width="400" controls preload="auto" playsinline>
+  <source src="/assets/videos/posts/would-you-wonder-at-all/wonderAtAll.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<br>
 ## Reflections
 As I mentioned earlier, majority of this song was composed in a weekend. I took the week following to record all the vocals, and attempt to mix it with the limited working knowledge I had. Do I still enjoy this song? I probably wouldn't say so. While I enjoyed making it, the real value the song holds for me is providing me with motivation to improve. There are a ton of things I would have changed about the song if I were to remake it, but retrospectively, I'm glad I was able to try something new. It's often hard for beginners to put themselves out there, and for that I'm grateful. 
 

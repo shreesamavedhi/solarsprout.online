@@ -7,7 +7,16 @@ permalink: /blog/
 <div class="blog-posts">
   <div class="category-filter">
     <a href="/blog/" class="filter-button {% if page.url == '/blog/' %}active{% endif %}">All Posts</a>
-    <a href="/blog/portfolio/" class="filter-button {% if page.url == '/blog/portfolio/' %}active{% endif %}">Portfolio</a>
+    {% assign categories = site.posts | map: 'categories' | flatten | uniq | sort %}
+    {% for category in categories %}
+      {% assign words = category | split: ' ' %}
+      {% capture capitalized_category %}
+        {% for word in words %}
+          {{ word | capitalize }}
+        {% endfor %}
+      {% endcapture %}
+      <a href="/blog/{{ category | downcase }}/" class="filter-button {% if page.url contains category %}active{% endif %}">{{ capitalized_category | strip }}</a>
+    {% endfor %}
   </div>
   
   {%- if site.posts.size > 0 -%}

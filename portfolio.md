@@ -18,42 +18,9 @@ permalink: /portfolio/
       </a>
     </div>
     
-    <div class="portfolio-grid">
-      <div class="portfolio-item">
-        <div class="portfolio-image">
-          <img src="/assets/images/portfolio/film-2.svg" alt="Film Project">
-          <div class="overlay">
-            <a href="{{ site.baseurl }}/portfolio/2025/04/15/animation-project/" class="view-button">Watch</a>
-          </div>
-        </div>
-        <div class="portfolio-info">
-          <h3>Short Film: "Echoes"</h3>
-          <p>A short narrative film exploring memory and perception</p>
-          <div class="portfolio-tags">
-            <a href="/tag/animation" class="portfolio-tag tag-animation">Animation</a>
-            <a href="/tag/2d" class="portfolio-tag tag-2d">2D</a>
-            <a href="/tag/portfolio" class="portfolio-tag tag-portfolio">Portfolio</a>
-          </div>
-        </div>
-      </div>
-      
-      <div class="portfolio-item">
-        <div class="portfolio-image">
-          <img src="/assets/images/portfolio/film-2.svg" alt="Film Project">
-          <div class="overlay">
-            <a href="{{ site.baseurl }}/portfolio/2025/04/10/film-behind-the-scenes/" class="view-button">Watch</a>
-          </div>
-        </div>
-        <div class="portfolio-info">
-          <h3>Behind the Scenes</h3>
-          <p>Process videos showing how projects come together</p>
-          <div class="portfolio-tags">
-            <a href="/tag/film" class="portfolio-tag tag-film">Film</a>
-            <a href="/tag/behind-the-scenes" class="portfolio-tag tag-behind-the-scenes">Behind-the-scenes</a>
-            <a href="/tag/portfolio" class="portfolio-tag tag-portfolio">Portfolio</a>
-          </div>
-        </div>
-      </div>
+    <div class="coming-soon-banner">
+      <h3>Coming Soon</h3>
+      <p>Film projects are in development. Stay tuned!</p>
     </div>
   </section>
 
@@ -67,23 +34,12 @@ permalink: /portfolio/
     </div>
     
     <div class="portfolio-grid">
-      <div class="portfolio-item">
-        <div class="portfolio-image">
-          <img src="/assets/images/posts/would-you-wonder-at-all/cover.png" alt="would you wonder at all - cover">
-          <div class="overlay">
-            <a href="{{ site.baseurl }}/portfolio/2025/05/20/would-you-wonder-at-all/" class="view-button">Listen</a>
-          </div>
-        </div>
-        <div class="portfolio-info">
-          <h3>'would you wonder at all'</h3>
-          <p>A quiet bedroom-pop single</p>
-          <div class="portfolio-tags">
-            <a href="/tag/music" class="portfolio-tag tag-music">Music</a>
-            <a href="/tag/single" class="portfolio-tag tag-single">Single</a>
-            <a href="/tag/portfolio" class="portfolio-tag tag-portfolio">Portfolio</a>
-          </div>
-        </div>
-      </div>
+      {% include portfolio-item.html 
+        title="'would you wonder at all'"
+        image="/assets/images/posts/would-you-wonder-at-all/cover.png"
+        alt="would you wonder at all - Music"
+        link="/portfolio/2025/05/20/would-you-wonder-at-all/"
+        button_text="Listen" %}
     </div>
   </section>
   
@@ -97,23 +53,12 @@ permalink: /portfolio/
     </div>
     
     <div class="portfolio-grid">
-      <div class="portfolio-item">
-        <div class="portfolio-image">
-          <img src="/assets/images/posts/wizard-wars/cover.png" alt="wizard wars - cover">
-          <div class="overlay">
-            <a href="{{ site.baseurl }}/portfolio/2025/05/14/wizard-wars/" class="view-button">View Project</a>
-          </div>
-        </div>
-        <div class="portfolio-info">
-          <h3>Wizard Wars</h3>
-          <p>A boss-rush card game, featuring wizards and spells! Created during the 2024 WinterMelon Game Jam.</p>
-          <div class="portfolio-tags">
-            <a href="/tag/gamedev" class="portfolio-tag tag-gamedev">GameDev</a>
-            <a href="/tag/pixel-art" class="portfolio-tag tag-pixel-art">Pixel Art</a>
-            <a href="/tag/portfolio" class="portfolio-tag tag-portfolio">Portfolio</a>
-          </div>
-        </div>
-      </div>
+      {% include portfolio-item.html 
+        title="Wizard Wars Game"
+        image="/assets/images/posts/wizard-wars/cover.png"
+        alt="wizard wars - Game"
+        link="/portfolio/2025/05/14/wizard-wars/"
+        button_text="View Project" %}
     </div>
   </section>
   
@@ -127,41 +72,27 @@ permalink: /portfolio/
     </div>
     
     <div class="portfolio-grid">
-      <div class="portfolio-item">
-        <div class="portfolio-image">
-          <img src="/assets/images/portfolio/art-2.svg" alt="Art Project">
-          <div class="overlay">
-            <a href="{{ site.baseurl }}/portfolio/2025/02/10/digital-illustrations/" class="view-button">View Artwork</a>
-          </div>
-        </div>
-        <div class="portfolio-info">
-          <h3>Digital Illustrations</h3>
-          <p>Character designs and concept art</p>
-          <div class="portfolio-tags">
-            <a href="/tag/art" class="portfolio-tag tag-art">Art</a>
-            <a href="/tag/digital-art" class="portfolio-tag tag-digital-art">Digital Art</a>
-            <a href="/tag/portfolio" class="portfolio-tag tag-portfolio">Portfolio</a>
-          </div>
-        </div>
-      </div>
-      
-      <div class="portfolio-item">
-        <div class="portfolio-image">
-          <img src="/assets/images/portfolio/art-2.svg" alt="Art Project">
-          <div class="overlay">
-            <a href="{{ site.baseurl }}/portfolio/2025/01/15/traditional-sketches/" class="view-button">View Artwork</a>
-          </div>
-        </div>
-        <div class="portfolio-info">
-          <h3>Traditional Sketches</h3>
-          <p>Pencil and ink drawings exploring various themes</p>
-          <div class="portfolio-tags">
-            <a href="/tag/art" class="portfolio-tag tag-art">Art</a>
-            <a href="/tag/traditional-art" class="portfolio-tag tag-traditional-art">Traditional Art</a>
-            <a href="/tag/portfolio" class="portfolio-tag tag-portfolio">Portfolio</a>
-          </div>
-        </div>
-      </div>
+      {% include portfolio-item.html 
+        title="Headspace"
+        image="/assets/images/posts/headspace/cover.jpg"
+        alt="Headspace - Artwork"
+        link="/portfolio/2025/05/27/headspace/"
+        button_text="View Artwork" %}
+
+      {% include portfolio-item.html 
+        title="Time Lost Her Arrow"
+        image="/assets/images/posts/time-lost-her-arrow/cover.jpg"
+        alt="Time Lost Her Arrow - Artwork"
+        link="/portfolio/2025/05/27/time-lost-her-arrow/"
+        button_text="View Artwork" %}
+
+      {% include portfolio-item.html 
+        title="The Lifecycle"
+        image="/assets/images/posts/the-lifecycle/cover.jpg"
+        alt="The Lifecycle - Artwork"
+        link="/portfolio/2025/05/27/the-lifecycle/"
+        button_text="View Artwork" %}
+
     </div>
   </section>
   

@@ -88,6 +88,31 @@
   }
 }
 
+.coming-soon-banner {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: color.adjust(vars.$clay, $lightness: 45%);
+  border-radius: 10px;
+  margin: 40px auto;
+  max-width: 600px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+  
+  h3 {
+    color: vars.$forest-green;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  p {
+    color: vars.$grey-color;
+    font-size: 1.1rem;
+    margin: 0;
+    line-height: 1.5;
+  }
+}
+
 .portfolio-item {
   background-color: white;
   border-radius: 10px;
@@ -214,48 +239,13 @@
   }
 }
 
-.portfolio-tag {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 3px 10px;
-  border-radius: 12px;
-  font-size: 11px; /* Increased font size */
-  height: 22px; /* Slightly taller to accommodate larger font */
-  color: #222; /* Darker text color for better contrast */
-  text-decoration: none;
-  text-transform: lowercase;
-  white-space: nowrap;
-  background-color: #e9ecef; /* Light default background */
-  font-weight: 700; /* Make text bolder for better readability */
-  transition: all 0.2s ease;
-  border: 1px solid rgba(0,0,0,0.05); /* Subtle border */
-  box-shadow: 0 1px 2px rgba(0,0,0,0.05); /* Subtle shadow by default */
-  letter-spacing: 0.3px; /* Slightly improve letter spacing */
-  
-  &:hover {
-    color: white; /* White text on hover */
-    transform: translateY(-2px); /* Raised appearance */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Enhanced shadow on hover */
-    filter: brightness(1.05); /* Slightly brighter on hover */
-    text-decoration: none; /* Explicitly prevent underline */
-  }
+.portfolio-tags {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
-/* Tag color variations - using a soft pastel palette with adequate contrast */
-.tag-animation { background-color: #FFB86C; } /* Soft orange */
-.tag-2d { background-color: #FF9EB1; } /* Soft pink */
-.tag-film { background-color: #BDB2FF; } /* Soft purple */
-.tag-behind-the-scenes { background-color: #A0C4FF; } /* Soft blue */
-.tag-music { background-color: #9CDBFF; } /* Soft cyan */
-.tag-ambient { background-color: #B5EAD7; } /* Soft green */
-.tag-soundtrack { background-color: #F0E6A9; } /* Soft yellow */
-.tag-gamedev { background-color: #FFAAA7; } /* Soft coral */
-.tag-pixel-art { background-color: #C3C9E9; } /* Soft slate */
-.tag-art { background-color: #C8A4D4; } /* Soft lavender */
-.tag-digital-art { background-color: #A6B5C0; } /* Soft gray-blue */
-.tag-traditional-art { background-color: #E8A0BF; } /* Soft rose */
-.tag-portfolio { background-color: #B5B0C0; } /* Soft gray */
 
 // Animation section styling
 #animation .section-header h2 {

@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "The Lifecycle"
-date: 2025-05-02 17:36:56 -0700
-categories: [art, portfolio]
+date: 2025-05-27 17:36:56 -0700
+categories: [Art, Portfolio]
 tags: [art, pencil, marker, conceptual]
 image: "/assets/images/posts/the-lifecycle/cover.jpg"
 ---

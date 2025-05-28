@@ -180,7 +180,7 @@
   align-items: center;
 }
 
-.post-tag {
+.post-tag, .portfolio-tag {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -224,6 +224,15 @@
   &.tag-announcements { background-color: #A8E6CF; } /* Soft mint */
   &.tag-research { background-color: #C7CEEA; } /* Soft periwinkle */
   &.tag-news { background-color: #A2D2FF; } /* Soft sky blue */
+
+  /* New tag colors for art mediums and concepts */
+  &.tag-conceptual { background-color: #D4B499; } /* Warm taupe */
+  &.tag-pencil { background-color: #8B9A7E; } /* Muted sage */
+  &.tag-marker { background-color: #E8B4BC; } /* Dusty rose */
+  &.tag-painting { background-color: #92A8D1; } /* Dusty blue */
+  &.tag-acrylic { background-color: #B4A7D6; } /* Muted wisteria */
+  &.tag-comic { background-color: #D5A6BD; } /* Dusty mauve */
+  &.tag-single { background-color: #9DAB86; } /* Olive sage */
 }
 
 // Tag page styles

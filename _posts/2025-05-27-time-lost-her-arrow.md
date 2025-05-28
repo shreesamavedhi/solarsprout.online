@@ -2,7 +2,7 @@
 layout: post
 title: "Time Lost Her Arrow"
 date: 2025-05-27 17:36:56 -0700
-categories: [art, portfolio]
+categories: [Art, Portfolio]
 tags: [art, conceptual, pencil]
 image: "/assets/images/posts/time-lost-her-arrow/cover.jpg"
 ---
