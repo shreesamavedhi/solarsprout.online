@@ -7,7 +7,7 @@ banner_button_text: View Portfolio
 banner_button_url: /portfolio/
 show_about: true
 about_title: About Me
-about_image: /assets/images/about-image.jpg
+about_image: /assets/images/about-crop.png
 about_content: |
   Hi, I'm Shree Samavedhi, but you can call me Solar Sprout! I'm a multidisciplinary artist exploring the intersections of filmmaking, music composition, game development, and visual arts.
   

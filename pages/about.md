@@ -12,7 +12,7 @@ permalink: /about/
   
   <div class="about-section">
     <div class="about-image-container">
-      <img src="/assets/images/about-image.jpg" alt="Shree Samavedhi - Solar Sprout">
+      <img src="/assets/images/about.png" alt="Shree Samavedhi - Solar Sprout">
     </div>
     
     <div class="about-content">

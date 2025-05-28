@@ -40,6 +40,20 @@ permalink: /portfolio/
         alt="would you wonder at all - Music"
         link="/posts/2024/08/08/would-you-wonder-at-all/"
         button_text="Listen" %}
+        
+      {% include portfolio-item.html 
+        title="'not-so-simple'"
+        image="/assets/images/posts/not-so-simple/cover.png"
+        alt="not so simple - Music"
+        link="/posts/2024/09/05/not-so-simple/"
+        button_text="Listen" %}
+        
+      {% include portfolio-item.html 
+        title="Fire&Dreams"
+        image="/assets/images/posts/fire-and-dreams/cover.jpg"
+        alt="Fire&Dreams - Music"
+        link="/posts/2024/11/27/fire-and-dreams/"
+        button_text="Listen" %}
     </div>
     
     <div class="carousel-controls">
