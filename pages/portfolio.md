@@ -33,13 +33,22 @@ permalink: /portfolio/
       </a>
     </div>
     
-    <div class="portfolio-grid">
+    <div class="portfolio-grid" id="music-carousel">
       {% include portfolio-item.html 
         title="'would you wonder at all'"
         image="/assets/images/posts/would-you-wonder-at-all/cover.png"
         alt="would you wonder at all - Music"
         link="/posts/2024/08/08/would-you-wonder-at-all/"
         button_text="Listen" %}
+    </div>
+    
+    <div class="carousel-controls">
+      <button class="carousel-prev" aria-label="Previous items" data-target="music-carousel">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button class="carousel-next" aria-label="Next items" data-target="music-carousel">
+        <i class="fas fa-chevron-right"></i>
+      </button>
     </div>
   </section>
   
@@ -52,13 +61,22 @@ permalink: /portfolio/
       </a>
     </div>
     
-    <div class="portfolio-grid">
+    <div class="portfolio-grid" id="gamedev-carousel">
       {% include portfolio-item.html 
         title="Wizard Wars Game"
         image="/assets/images/posts/wizard-wars/cover.png"
         alt="wizard wars - Game"
         link="/posts/2024/12/30/wizard-wars/"
         button_text="View Project" %}
+    </div>
+    
+    <div class="carousel-controls">
+      <button class="carousel-prev" aria-label="Previous items" data-target="gamedev-carousel">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button class="carousel-next" aria-label="Next items" data-target="gamedev-carousel">
+        <i class="fas fa-chevron-right"></i>
+      </button>
     </div>
   </section>
   
@@ -71,7 +89,7 @@ permalink: /portfolio/
       </a>
     </div>
     
-    <div class="portfolio-grid">
+    <div class="portfolio-grid" id="art-carousel">
       {% include portfolio-item.html 
         title="Headspace"
         image="/assets/images/posts/headspace/cover.jpg"
@@ -92,7 +110,15 @@ permalink: /portfolio/
         alt="Nearsighted - Artwork"
         link="/posts/2021/11/12/nearsighted/"
         button_text="View Artwork" %}
-
+    </div>
+    
+    <div class="carousel-controls">
+      <button class="carousel-prev" aria-label="Previous items" data-target="art-carousel">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button class="carousel-next" aria-label="Next items" data-target="art-carousel">
+        <i class="fas fa-chevron-right"></i>
+      </button>
     </div>
   </section>
   

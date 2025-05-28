@@ -27,6 +27,42 @@
 
 .portfolio-section {
   margin-bottom: 80px;
+  position: relative; /* For absolute positioning of carousel controls */
+  
+  /* Carousel navigation controls */
+  .carousel-controls {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    gap: 10px;
+    
+    button {
+      background-color: vars.$clay;
+      color: white;
+      border: none;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      
+      &:hover {
+        background-color: vars.$moss-green;
+      }
+      
+      &:focus {
+        outline: none;
+      }
+      
+      &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+    }
+  }
 }
 
 .section-header {
@@ -72,19 +108,43 @@
 }
 
 .portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
   gap: 30px;
-  grid-auto-rows: 1fr; /* Ensure all rows have the same height */
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px 0;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  scrollbar-width: thin; /* Firefox */
+  
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  &::-webkit-scrollbar {
+    height: 6px;
+  }
+  
+  &::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+  }
   
   /* Force all portfolio items to be the same size */
   & > * {
-    width: 100%;
+    flex: 0 0 calc(50% - 15px); /* Two items visible at once with gap in between */
+    min-width: calc(50% - 15px);
+    max-width: calc(50% - 15px);
     height: 450px; /* Fixed height for all items */
   }
   
   @media (max-width: 768px) {
-    grid-template-columns: 1fr;
+    & > * {
+      flex: 0 0 calc(100% - 15px);
+      min-width: calc(100% - 15px);
+      max-width: calc(100% - 15px);
+    }
   }
 }
 
