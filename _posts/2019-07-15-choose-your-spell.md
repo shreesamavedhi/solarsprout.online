@@ -1,8 +1,9 @@
 ---
 layout: post
 title: "Choose Your Spell"
-date: 2025-05-27 17:36:56 -0700
-categories: [Art, Portfolio]
+date: 2019-07-15
+time: false
+categories: [Art, portfolio]
 tags: [art, comic, pencil]
 image: "/assets/images/posts/choose-your-spell/cover.jpg"
 ---

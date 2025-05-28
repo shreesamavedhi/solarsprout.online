@@ -1,8 +1,9 @@
 ---
 layout: post
 title: "'would you wonder at all'"
-date: 2025-05-20 13:15:00 -0700
-categories: [Music, Portfolio]
+date: 2024-08-08
+time: false
+categories: [Music, portfolio]
 description: "A quiet bedroom-pop single."
 image: "/assets/images/posts/would-you-wonder-at-all/cover.png"
 tags: [music, single, portfolio, photography, animation]

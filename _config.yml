@@ -16,9 +16,9 @@ safe: false
 
 # Navigation
 header_pages:
-  - blog.md
-  - portfolio.md
-  - about.md
+  - pages/blog.md
+  - pages/portfolio.md
+  - pages/about.md
 
 # Collections
 collections:
@@ -30,10 +30,9 @@ defaults:
   - scope:
       path: ""
       type: "posts"
-      categories: ["portfolio"]
     values:
       layout: "post"
-      permalink: /portfolio/:year/:month/:day/:title/
+      permalink: /posts/:year/:month/:day/:title/
   - scope:
       path: ""
       type: "posts"

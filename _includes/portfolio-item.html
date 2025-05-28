@@ -9,7 +9,7 @@
   <div class="portfolio-info">
     <h3>{{ include.title }}</h3>
     {% if post %}
-      <p>{{ post.description | truncate: 120 }}</p>
+      <p>{{ post.description | truncate: 100 }}</p>
       <div class="portfolio-tags">
         {% for tag in post.tags %}
           <a href="/tag/{{ tag | slugify }}" class="portfolio-tag tag-{{ tag | slugify }}">{{ tag | capitalize }}</a>

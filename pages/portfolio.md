@@ -38,7 +38,7 @@ permalink: /portfolio/
         title="'would you wonder at all'"
         image="/assets/images/posts/would-you-wonder-at-all/cover.png"
         alt="would you wonder at all - Music"
-        link="/portfolio/2025/05/20/would-you-wonder-at-all/"
+        link="/posts/2024/08/08/would-you-wonder-at-all/"
         button_text="Listen" %}
     </div>
   </section>
@@ -57,7 +57,7 @@ permalink: /portfolio/
         title="Wizard Wars Game"
         image="/assets/images/posts/wizard-wars/cover.png"
         alt="wizard wars - Game"
-        link="/portfolio/2025/05/14/wizard-wars/"
+        link="/posts/2024/12/30/wizard-wars/"
         button_text="View Project" %}
     </div>
   </section>
@@ -76,21 +76,21 @@ permalink: /portfolio/
         title="Headspace"
         image="/assets/images/posts/headspace/cover.jpg"
         alt="Headspace - Artwork"
-        link="/portfolio/2025/05/27/headspace/"
+        link="/posts/2020/12/17/headspace/"
         button_text="View Artwork" %}
 
       {% include portfolio-item.html 
         title="Time Lost Her Arrow"
         image="/assets/images/posts/time-lost-her-arrow/cover.jpg"
         alt="Time Lost Her Arrow - Artwork"
-        link="/portfolio/2025/05/27/time-lost-her-arrow/"
+        link="/posts/2020/11/29/time-lost-her-arrow/"
         button_text="View Artwork" %}
 
       {% include portfolio-item.html 
-        title="The Lifecycle"
-        image="/assets/images/posts/the-lifecycle/cover.jpg"
-        alt="The Lifecycle - Artwork"
-        link="/portfolio/2025/05/27/the-lifecycle/"
+        title="Nearsighted"
+        image="/assets/images/posts/nearsighted/cover.jpg"
+        alt="Nearsighted - Artwork"
+        link="/posts/2021/11/12/nearsighted/"
         button_text="View Artwork" %}
 
     </div>
