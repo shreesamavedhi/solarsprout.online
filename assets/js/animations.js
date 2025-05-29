@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Elements to animate on the Blog page
   const blogElements = document.querySelectorAll(
     '.blog-header, .blog-header h1, .blog-header .subtitle, ' +
-    '.blog-search-container, .category-filter, .post-row, .pagination'
+    '.blog-search-container, .category-filter, .post-row, .pagination, .view-options'
   );
   
   // Contact buttons need special handling to ensure they only animate once
