@@ -1,0 +1,192 @@
+@use "sass:color";
+@use "variables" as vars;
+
+// Portfolio page animations
+@keyframes fadeInUp {
+  from { 
+    opacity: 0; 
+    transform: translateY(30px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+@keyframes fadeInLeft {
+  from { 
+    opacity: 0; 
+    transform: translateX(-30px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateX(0); 
+  }
+}
+
+@keyframes fadeInRight {
+  from { 
+    opacity: 0; 
+    transform: translateX(30px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateX(0); 
+  }
+}
+
+@keyframes scaleIn {
+  from { 
+    opacity: 0; 
+    transform: scale(0.9); 
+  }
+  to { 
+    opacity: 1; 
+    transform: scale(1); 
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes expandWidth {
+  from {
+    width: 0;
+  }
+  to {
+    width: 60px;
+  }
+}
+
+// Portfolio Header Animations
+.portfolio-header {
+  opacity: 0;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+  animation-play-state: paused;
+  
+  &.animate {
+    animation-name: fadeInUp;
+    animation-play-state: running;
+  }
+  
+  h1 {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease 0.2s forwards;
+  }
+  
+  .subtitle {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease 0.4s forwards;
+  }
+}
+
+// Portfolio Section Animations
+.portfolio-section {
+  opacity: 0;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+  animation-play-state: paused;
+  
+  &.animate {
+    animation-name: fadeInUp;
+    animation-play-state: running;
+  }
+  
+  // Section header is now part of the main section animation
+  
+  // Portfolio grid is now part of the main section animation
+  .portfolio-grid {
+    .portfolio-item {
+      .portfolio-image {
+        .overlay {
+          transition: opacity 0.5s ease;
+        }
+        
+        .view-button {
+          transition: transform 0.5s ease, background-color 0.3s ease;
+        }
+      }
+    }
+  }
+  
+  // Carousel controls are now part of the main section animation
+}
+
+// Coming Soon Banner Animation
+.coming-soon-banner {
+  opacity: 0;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+  animation-play-state: paused;
+  
+  &.animate {
+    animation-name: scaleIn;
+    animation-play-state: running;
+  }
+  
+  h3 {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease 0.2s forwards;
+  }
+  
+  p {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease 0.4s forwards;
+  }
+}
+
+// Contact Section Animation
+.contact-section {
+  opacity: 0;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+  animation-play-state: paused;
+  
+  &.animate {
+    animation-name: fadeInUp;
+    animation-play-state: running;
+  }
+  
+  h2 {
+    &:after {
+      width: 0;
+      animation: expandWidth 0.8s ease 0.6s forwards;
+    }
+  }
+  
+  p {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease 0.4s forwards;
+  }
+  
+  .contact-button {
+    /* Initial state */
+    opacity: 0;
+    
+    /* Animation that plays once when the section comes into view */
+    &.animate, .animate & {
+      animation: fadeInUp 0.8s ease 0.6s forwards;
+      opacity: 1;
+    }
+    
+    /* Hover state - no animation, just style changes */
+    &:hover {
+      background-color: vars.$forest-green;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    }
+  }
+}

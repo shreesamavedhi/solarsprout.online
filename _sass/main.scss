@@ -10,8 +10,10 @@
 // Import our custom styles
 @use "custom";
 @use "home";
+@use "home_animations";
 @use "about";
 @use "portfolio";
+@use "portfolio_animations";
 
 // This file forwards all the styles needed for the site
 // It will be imported by the main style.scss file

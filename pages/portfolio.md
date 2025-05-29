@@ -66,34 +66,6 @@ permalink: /portfolio/
     </div>
   </section>
   
-  <!-- Game Development Section -->
-  <section class="portfolio-section" id="gamedev">
-    <div class="section-header">
-      <h2>Game Development</h2>
-      <a href="https://solarsprout.itch.io/" class="platform-link" target="_blank">
-        <i class="fab fa-itch-io"></i> View on Itch.io
-      </a>
-    </div>
-    
-    <div class="portfolio-grid" id="gamedev-carousel">
-      {% include portfolio-item.html 
-        title="Wizard Wars Game"
-        image="/assets/images/posts/wizard-wars/cover.png"
-        alt="wizard wars - Game"
-        link="/posts/2024/12/30/wizard-wars/"
-        button_text="View Project" %}
-    </div>
-    
-    <div class="carousel-controls">
-      <button class="carousel-prev" aria-label="Previous items" data-target="gamedev-carousel">
-        <i class="fas fa-chevron-left"></i>
-      </button>
-      <button class="carousel-next" aria-label="Next items" data-target="gamedev-carousel">
-        <i class="fas fa-chevron-right"></i>
-      </button>
-    </div>
-  </section>
-  
   <!-- Art Section -->
   <section class="portfolio-section" id="art">
     <div class="section-header">
@@ -131,6 +103,34 @@ permalink: /portfolio/
         <i class="fas fa-chevron-left"></i>
       </button>
       <button class="carousel-next" aria-label="Next items" data-target="art-carousel">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+  </section>
+
+  <!-- Game Development Section -->
+  <section class="portfolio-section" id="gamedev">
+    <div class="section-header">
+      <h2>Game Development</h2>
+      <a href="https://solarsprout.itch.io/" class="platform-link" target="_blank">
+        <i class="fab fa-itch-io"></i> View on Itch.io
+      </a>
+    </div>
+    
+    <div class="portfolio-grid" id="gamedev-carousel">
+      {% include portfolio-item.html 
+        title="Wizard Wars Game"
+        image="/assets/images/posts/wizard-wars/cover.png"
+        alt="wizard wars - Game"
+        link="/posts/2024/12/30/wizard-wars/"
+        button_text="View Project" %}
+    </div>
+    
+    <div class="carousel-controls">
+      <button class="carousel-prev" aria-label="Previous items" data-target="gamedev-carousel">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button class="carousel-next" aria-label="Next items" data-target="gamedev-carousel">
         <i class="fas fa-chevron-right"></i>
       </button>
     </div>

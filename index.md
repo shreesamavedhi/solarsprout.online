@@ -18,14 +18,3 @@ show_newsletter: true
 newsletter_title: Stay Connected
 newsletter_text: Subscribe for updates on my latest projects, behind-the-scenes content, and creative insights.
 ---
-
-## Welcome to My Creative Universe
-
-As Solar Sprout, I believe that creativity thrives when it's allowed to cross boundaries between different mediums and disciplines. My work explores the connections between visual art, interactive experiences, sound, and storytelling. Whether you're a fellow creator looking for inspiration or simply curious about my work, I hope you'll find something here that resonates with you.
-
-### What You'll Find Here
-
-- **Film & Video**: Short films, interviews, and exploring topics in pop culture
-- **Music Compositions**: Original tracks, game soundtracks, and ambient works
-- **Game Development**: Indie games with unique mechanics and pixel art aesthetics
-- **Art Gallery**: Digital illustrations, character animations, concept art, and traditional painting

@@ -39,55 +39,6 @@ permalink: /about/
   
   <div class="about-section">
     <div class="about-content">
-      <h2>My Creative Journey</h2>
-      <p>My path as Solar Sprout has been filled with exploration, learning, and many late nights. Here are some key milestones along the way:</p>
-      
-      <div class="journey-timeline">
-        <div class="timeline-item">
-          <div class="timeline-content">
-            <span class="date">2018</span>
-            <h3>First Animation</h3>
-            <p>Created my first short animated loop and fell in love with bringing characters to life through movement.</p>
-          </div>
-        </div>
-        
-        <div class="timeline-item">
-          <div class="timeline-content">
-            <span class="date">2019</span>
-            <h3>Game Development</h3>
-            <p>Completed my first indie game jam, creating a small but complete game in just 48 hours.</p>
-          </div>
-        </div>
-        
-        <div class="timeline-item">
-          <div class="timeline-content">
-            <span class="date">2020</span>
-            <h3>Music Production</h3>
-            <p>Released my first EP of original music compositions, combining electronic and acoustic elements.</p>
-          </div>
-        </div>
-        
-        <div class="timeline-item">
-          <div class="timeline-content">
-            <span class="date">2021</span>
-            <h3>Digital Art Store</h3>
-            <p>Launched an online store selling prints and digital downloads of my artwork and illustrations.</p>
-          </div>
-        </div>
-        
-        <div class="timeline-item">
-          <div class="timeline-content">
-            <span class="date">2022</span>
-            <h3>Solar Sprout Launch</h3>
-            <p>Established Solar Sprout as my creative identity and began actively sharing my work across platforms.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="about-section">
-    <div class="about-content">
       <h2>What I Create</h2>
       <p>As Solar Sprout, I work across several creative disciplines:</p>
       
