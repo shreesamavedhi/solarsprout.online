@@ -57,7 +57,7 @@ permalink: /portfolio/
 
       {% include portfolio-item.html 
         title="Time Lost Her Arrow"
-        image="/assets/images/posts/time-lost-her-arrow/cover.jpg"
+        image="/assets/images/posts/time-lost-her-arrow/cover.png"
         alt="Time Lost Her Arrow - Artwork"
         link="/posts/2020/11/29/time-lost-her-arrow/"
         button_text="View Artwork" %}

@@ -4,11 +4,15 @@ title: "Choose Your Spell"
 date: 2019-07-15
 time: false
 categories: [Art, portfolio]
+description: "A 4-page comic panel exploring the moment of choice when a wizard decides which spell to cast."
 tags: [art, comic, pencil]
 image: "/assets/images/posts/choose-your-spell/cover.jpg"
 ---
 
-A 4-page comic panel exploring the moment of choice when a wizard decides which spell to cast.
+
+## Project Overview
+
+I created this quick comic strip back in high school, as a way to practice and improve my pencil drawing skills. Coincidentally, some of the ideas for this comic- mainly a wizard using cards to cast spells- have stuck with me all these years, and became incorporated in one of my more recent projects. Check out my [Wizard Wars Game](/2024/12/30/wizard-wars.html) to see how these concepts evolved! 
 
 <!-- Slider main container -->
 <div class="swiper">
