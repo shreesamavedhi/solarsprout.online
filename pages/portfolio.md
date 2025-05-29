@@ -28,7 +28,7 @@ permalink: /portfolio/
         button_text="Listen" %}
 
       {% include portfolio-item.html 
-        title="Fire&Dreams"
+        title="'Fire&Dreams'"
         image="/assets/images/posts/fire-and-dreams/cover.jpg"
         alt="Fire&Dreams - Music"
         link="/posts/2024/11/27/fire-and-dreams/"

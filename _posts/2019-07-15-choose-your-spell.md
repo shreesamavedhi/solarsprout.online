@@ -3,7 +3,7 @@ layout: post
 title: "Choose Your Spell"
 date: 2019-07-15
 time: false
-categories: [Art, portfolio]
+categories: [Art, Portfolio]
 description: "A 4-page comic panel exploring the moment of choice when a wizard decides which spell to cast."
 tags: [art, comic, pencil]
 image: "/assets/images/posts/choose-your-spell/cover.jpg"

@@ -3,7 +3,7 @@ layout: post
 title: "Time Lost Her Arrow"
 date: 2020-11-29
 time: false
-categories: [Art, portfolio]
+categories: [Art, Portfolio]
 description: "A surreal drawing, culminating ideas of fate and the ability to live in the moment"
 tags: [art, conceptual, pencil]
 image: "/assets/images/posts/time-lost-her-arrow/cover.png"
