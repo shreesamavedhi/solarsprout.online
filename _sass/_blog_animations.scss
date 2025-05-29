@@ -4,11 +4,11 @@
 
 .blog-header {
   opacity: 0;
-  animation-duration: 0.8s;
+  animation-duration: 0.6s;
   animation-fill-mode: forwards;
   animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   animation-play-state: paused;
-  animation-delay: 0.2s;
+  animation-delay: 0.1s;
   
   &.animate {
     animation-name: scaleIn;
@@ -17,40 +17,40 @@
   
   &:before {
     opacity: 0;
-    animation: scaleIn 1.2s ease 0.3s forwards;
+    animation: scaleIn 0.8s ease 0.2s forwards;
     transform-origin: center;
   }
   
   h1 {
     opacity: 0;
-    animation: fadeInUp 0.8s ease 0.5s forwards;
+    animation: fadeInUp 0.6s ease 0.3s forwards;
     
     &:after {
       width: 0;
       opacity: 1;
-      animation: expandWidth 0.6s ease 1s forwards;
+      animation: expandWidth 0.4s ease 0.6s forwards;
     }
   }
   
   .subtitle {
     opacity: 0;
-    animation: fadeInUp 0.8s ease 0.7s forwards;
+    animation: fadeInUp 0.6s ease 0.4s forwards;
   }
 }
 
 .blog-search-container {
   opacity: 0;
-  animation: fadeInUp 0.8s ease 0.4s forwards;
+  animation: fadeInUp 0.6s ease 0.2s forwards;
 }
 
 .category-filter {
   .filter-button {
     opacity: 0;
-    animation: scaleIn 0.6s ease forwards;
+    animation: scaleIn 0.4s ease forwards;
     
     @for $i from 1 through 10 {
       &:nth-child(#{$i}) {
-        animation-delay: #{0.5 + ($i * 0.1)}s;
+        animation-delay: #{0.3 + ($i * 0.05)}s;
       }
     }
   }
@@ -59,17 +59,29 @@
 .post-list {
   .post-row {
     opacity: 0;
-    animation: fadeInUp 0.8s ease forwards;
+    animation: fadeInUp 0.6s ease forwards;
     
-    @for $i from 1 through 10 {
+    // Only animate the first 5 posts that are visible
+    @for $i from 1 through 5 {
       &:nth-child(#{$i}) {
-        animation-delay: #{0.7 + ($i * 0.1)}s;
+        animation-delay: #{0.4 + ($i * 0.05)}s;
       }
+    }
+    
+    // Set all posts beyond the first 5 to be visible immediately
+    &:nth-child(n+6) {
+      opacity: 1;
+      animation: none;
     }
   }
 }
 
 .pagination {
   opacity: 0;
-  animation: fadeInUp 0.8s ease 1.5s forwards;
+  animation: fadeInUp 0.6s ease 0.7s forwards;
+}
+
+// Add will-change hints for better performance
+.post-row, .blog-header, .category-filter .filter-button {
+  will-change: opacity, transform;
 }
