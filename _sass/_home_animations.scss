@@ -215,15 +215,15 @@
   
   .view-all {
     opacity: 0;
-    animation-duration: 0.8s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease;
-    animation-play-state: paused;
+    animation: scaleIn 0.5s ease-out forwards;
+    animation-delay: 0.3s;
     
-    &.animate {
-      animation-name: fadeInUp;
-      animation-play-state: running;
-      animation-delay: 0.7s;
+    a {
+      transition: transform 0.2s ease;
+      
+      &:hover {
+        transform: scale(1.05);
+      }
     }
   }
 }
