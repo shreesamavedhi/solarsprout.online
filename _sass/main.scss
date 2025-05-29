@@ -2,19 +2,32 @@
 @use "variables" as vars;
 @use "mixins" as mix;
 
-// Import our modernized Minima theme components
+// Theme components
 @use "minima-base";
 @use "minima-layout";
 @use "minima-syntax-highlighting";
 
-// Import our custom styles
+// Shared animations
+@use "animations";
+
+// Custom styles
 @use "custom";
+
+// Home page
 @use "home";
 @use "home_animations";
+
+// About page
 @use "about";
+@use "about_animations";
+
+// Portfolio page
 @use "portfolio";
 @use "portfolio_animations";
-@use "blog";
 
-// This file forwards all the styles needed for the site
-// It will be imported by the main style.scss file
+// Blog page
+@use "blog";
+@use "blog_animations";
+
+// Components
+@use "gallery";

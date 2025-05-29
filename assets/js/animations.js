@@ -19,6 +19,12 @@ document.addEventListener('DOMContentLoaded', function() {
     '.contact-section, .contact-section p'
   );
   
+  // Elements to animate on the Blog page
+  const blogElements = document.querySelectorAll(
+    '.blog-header, .blog-header h1, .blog-header .subtitle, ' +
+    '.blog-search-container, .category-filter, .post-row, .pagination'
+  );
+  
   // Contact buttons need special handling to ensure they only animate once
   const contactButtons = document.querySelectorAll('.contact-button');
   
@@ -35,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   
   // Observe all elements
-  const allElements = [...aboutElements, ...homeElements, ...portfolioElements];
+  const allElements = [...aboutElements, ...homeElements, ...portfolioElements, ...blogElements];
   allElements.forEach(element => {
     observer.observe(element);
   });
