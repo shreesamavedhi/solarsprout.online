@@ -1,0 +1,22 @@
+{% comment %}
+  Optimized image include
+  
+  Parameters:
+  - src: Image source path (required)
+  - alt: Alt text for the image (required)
+  - class: Additional CSS classes (optional)
+  - width: Original image width (optional)
+  - height: Original image height (optional)
+  - sizes: Sizes attribute for responsive images (optional)
+{% endcomment %}
+
+<img 
+  src="{{ include.src }}" 
+  alt="{{ include.alt }}" 
+  {% if include.class %}class="{{ include.class }}"{% endif %}
+  {% if include.width %}width="{{ include.width }}"{% endif %}
+  {% if include.height %}height="{{ include.height }}"{% endif %}
+  {% if include.sizes %}sizes="{{ include.sizes }}"{% endif %}
+  loading="lazy"
+  decoding="async"
+>

@@ -1,7 +1,7 @@
 {% assign post = site.posts | where: "title", include.title | first %}
 <div class="portfolio-item">
   <div class="portfolio-image">
-    <img src="{{ include.image }}" alt="{{ include.alt }}">
+    {% include optimized-image.html src=include.image alt=include.alt class="portfolio-thumbnail" %}
     <div class="overlay">
       <a href="{{ include.link }}" class="view-button">{{ include.button_text }}</a>
     </div>

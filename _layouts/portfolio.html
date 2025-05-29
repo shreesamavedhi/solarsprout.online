@@ -29,7 +29,7 @@ layout: default
     <div class="gallery-grid">
       {% for image in page.gallery %}
       <div class="gallery-item">
-        <img src="{{ image.image_path | relative_url }}" alt="{{ image.title }}">
+        {% include optimized-image.html src=image.image_path|relative_url alt=image.title class="gallery-image" %}
         {% if image.title %}
         <p class="image-caption">{{ image.title }}</p>
         {% endif %}
