@@ -14,12 +14,21 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  
+  @media (max-width: 576px) {
+    padding: 0 15px;
+    box-sizing: border-box;
+  }
 }
 
 .search-input-wrapper {
   position: relative;
   width: 100%;
   max-width: 600px;
+  
+  @media (max-width: 576px) {
+    max-width: 100%;
+  }
 }
 
 #blog-search-input {
@@ -31,6 +40,12 @@
   background-color: white;
   transition: all 0.3s ease;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+  
+  @media (max-width: 576px) {
+    padding: 10px 40px 10px 15px;
+    font-size: 0.95rem;
+  }
   
   &:focus {
     outline: none;
@@ -56,6 +71,11 @@
   font-size: 0.9rem;
   opacity: 0.7;
   transition: opacity 0.3s ease;
+  
+  @media (max-width: 576px) {
+    right: 10px;
+    padding: 4px;
+  }
   
   &:hover {
     opacity: 1;
@@ -96,7 +116,12 @@
   text-align: center;
   margin-bottom: 60px;
   position: relative;
-  padding: 60px 20px;
+  padding: 40px 20px;
+  
+  @media (max-width: 576px) {
+    padding: 30px 15px;
+    margin-bottom: 40px;
+  }
   
   &:before {
     content: '';
@@ -119,6 +144,11 @@
     position: relative;
     display: inline-block;
     
+    @media (max-width: 576px) {
+      font-size: 2.2rem;
+      margin-bottom: 15px;
+    }
+    
     &:after {
       content: '';
       position: absolute;
@@ -137,6 +167,12 @@
     max-width: 700px;
     margin: 20px auto 0;
     line-height: 1.6;
+    
+    @media (max-width: 576px) {
+      font-size: 1.1rem;
+      margin: 15px auto 0;
+      padding: 0 10px;
+    }
   }
 }
 
@@ -147,6 +183,12 @@
   gap: 12px;
   margin-bottom: 40px;
   justify-content: center;
+  padding: 0 15px;
+  
+  @media (max-width: 576px) {
+    gap: 8px;
+    margin-bottom: 30px;
+  }
   
   .filter-button {
     padding: 10px 20px;
@@ -155,6 +197,11 @@
     text-decoration: none;
     color: vars.$text-color;
     font-size: 0.95rem;
+    
+    @media (max-width: 576px) {
+      padding: 8px 16px;
+      font-size: 0.9rem;
+    }
     transition: all 0.3s ease;
     border: 1px solid rgba(vars.$clay, 0.1);
     
@@ -182,6 +229,14 @@
   
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
+    gap: 30px;
+    margin-top: 30px;
+  }
+  
+  @media (max-width: 576px) {
+    gap: 25px;
+    margin-top: 25px;
+    padding: 0 15px;
   }
 }
 
@@ -196,6 +251,11 @@
   background-color: white;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
   height: 100%;
+  
+  @media (max-width: 576px) {
+    border-radius: 15px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.06);
+  }
   
   &:hover {
     transform: translateY(-8px);

@@ -6,6 +6,10 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+  
+  @media (max-width: 576px) {
+    padding: 0 15px;
+  }
 }
 
 .portfolio-header {
@@ -13,6 +17,11 @@
   margin-bottom: 30px;
   position: relative;
   padding: 40px 20px;
+  
+  @media (max-width: 576px) {
+    padding: 30px 15px;
+    margin-bottom: 25px;
+  }
   
   &:before {
     content: '';
@@ -35,6 +44,11 @@
     position: relative;
     display: inline-block;
     
+    @media (max-width: 576px) {
+      font-size: 2.2rem;
+      margin-bottom: 15px;
+    }
+    
     &:after {
       content: '';
       position: absolute;
@@ -53,15 +67,34 @@
     max-width: 700px;
     margin: 20px auto 0;
     line-height: 1.6;
+    
+    @media (max-width: 576px) {
+      font-size: 1.1rem;
+      line-height: 1.5;
+      margin: 15px auto 0;
+    }
   }
 }
 
 .portfolio-section {
-  margin-bottom: 30px;
-  position: relative; /* For absolute positioning of carousel controls */
+  margin-bottom: 15px;
   padding: 15px;
   border-radius: 15px;
   transition: background-color 0.3s ease;
+  
+  @media (max-width: 768px) {
+    margin-bottom: 10px;
+    padding: 12px;
+  }
+  
+  @media (max-width: 576px) {
+    margin-bottom: 5px;
+    padding: 8px;
+  }
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
   
   /* Carousel navigation controls */
   .carousel-controls {
@@ -100,39 +133,39 @@
 }
 
 .section-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 15px;
-  border-bottom: none;
-  padding-bottom: 10px;
-  position: relative;
+  margin-bottom: 30px;
+  text-align: center;
+  
+  @media (max-width: 768px) {
+    margin-bottom: 25px;
+  }
+  
+  @media (max-width: 576px) {
+    margin-bottom: 15px;
+  }
   
   h2 {
-    color: vars.$forest-green;
-    font-size: 2rem;
-    margin: 0;
-    position: relative;
-    padding-bottom: 10px;
+    color: vars.$rich-soil;
+    font-size: 2.2rem;
+    margin-bottom: 15px;
     
-    &:after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 60px;
-      height: 2px;
-      background-color: currentColor;
+    @media (max-width: 576px) {
+      font-size: 1.8rem;
+      margin-bottom: 12px;
     }
   }
   
   .platform-link {
     display: inline-flex;
     align-items: center;
-    color: vars.$moss-green;
+    color: vars.$clay;
     text-decoration: none;
-    font-weight: 500;
+    font-size: 1.1rem;
     transition: color 0.3s ease;
+    
+    @media (max-width: 576px) {
+      font-size: 1rem;
+    }
     
     i {
       margin-right: 8px;
@@ -157,9 +190,20 @@
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 25px;
-  padding: 10px 0;
+  gap: 40px;
+  margin-bottom: 40px;
   overflow: visible;
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-bottom: 35px;
+  }
+  
+  @media (max-width: 576px) {
+    gap: 25px;
+    margin-bottom: 30px;
+  }
   
   /* Hide scrollbar for Chrome, Safari and Opera */
   &::-webkit-scrollbar {
@@ -247,6 +291,11 @@
   width: 100%;
   position: relative; /* For absolute positioning of children if needed */
   
+  @media (max-width: 576px) {
+    border-radius: 15px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.06);
+  }
+  
   &:hover {
     transform: translateY(-8px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
@@ -258,6 +307,10 @@
   position: relative;
   overflow: hidden;
   width: 100%;
+  
+  @media (max-width: 576px) {
+    height: 220px;
+  }
   
   img {
     width: 100%;
@@ -290,6 +343,11 @@
     transform: translateY(20px);
     transition: transform 0.3s ease, background-color 0.3s ease;
     
+    @media (max-width: 576px) {
+      padding: 8px 16px;
+      font-size: 0.95rem;
+    }
+    
     &:hover {
       background-color: vars.$forest-green;
     }
@@ -311,58 +369,66 @@
 }
 
 .portfolio-info {
-  padding: 30px;
+  padding: 25px;
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Distribute content evenly */
-  box-sizing: border-box;
-  background: linear-gradient(to bottom, rgba(255,255,255,0.95), rgba(255,255,255,1));
+  
+  @media (max-width: 576px) {
+    padding: 20px;
+  }
   
   h3 {
-    margin-top: 0;
-    margin-bottom: 15px;
-    color: vars.$text-color;
     font-size: 1.4rem;
-    font-weight: 600;
-    line-height: 1.3;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    line-clamp: 2;
-    -webkit-box-orient: vertical;
+    color: vars.$rich-soil;
+    margin-bottom: 12px;
+    
+    @media (max-width: 576px) {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
   }
   
   p {
     color: vars.$grey-color;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     line-height: 1.6;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    line-clamp: 3;
-    -webkit-box-orient: vertical;
+    flex-grow: 1;
+    
+    @media (max-width: 576px) {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin-bottom: 12px;
+    }
   }
   
   .portfolio-tags {
     margin-top: auto; /* Push tags to the bottom */
-    height: 40px; /* Fixed height for tags */
-    overflow: hidden;
   }
 }
 
 .portfolio-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
-  height: 30px; /* Reduced fixed height */
-  overflow: hidden;
-  align-items: center; /* Center tags vertically */
+  gap: 8px;
+  margin-top: auto;
+  
+  @media (max-width: 576px) {
+    gap: 6px;
+  }
   
   a {
-    text-decoration: none; /* Prevent underline on portfolio page tags */
+    text-decoration: none;
     
     &:hover {
-      text-decoration: none; /* Explicitly prevent underline on hover */
+      text-decoration: none;
+    }
+  }
+  
+  .portfolio-tag {
+    @media (max-width: 576px) {
+      font-size: 0.85rem;
+      padding: 2px 8px;
     }
   }
 }
@@ -402,66 +468,53 @@
 
 // Contact section styling
 .contact-section {
-  background: linear-gradient(135deg, rgba(vars.$moss-green, 0.05) 0%, rgba(vars.$forest-green, 0.1) 100%);
-  padding: 60px 40px;
-  border-radius: 20px;
   text-align: center;
-  margin-top: 60px;
-  position: relative;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  overflow: hidden;
-  
-  &:before {
-    content: '';
-    position: absolute;
-    top: -30px;
-    right: -30px;
-    width: 150px;
-    height: 150px;
-    background: rgba(vars.$clay, 0.08);
-    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-    z-index: 0;
-  }
-  
-  &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-  }
+  padding: 40px 20px;
+  margin-top: 10px;
+  background: linear-gradient(135deg, rgba(vars.$clay, 0.05) 0%, rgba(vars.$moss-green, 0.08) 100%);
   
   h2 {
-    color: vars.$forest-green;
-    margin-top: 0;
-    margin-bottom: 25px;
-    font-size: 2.5rem;
-    font-weight: 600;
-    position: relative;
-    padding-bottom: 20px;
-    display: inline-block;
-    z-index: 1;
-    
-    &:after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 60px;
-      height: 2px;
-      background-color: vars.$moss-green;
-    }
+    font-size: 2rem;
+    margin-bottom: 15px;
   }
   
   p {
-    margin-bottom: 40px;
-    font-size: 1.3rem;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-    color: color.scale(vars.$text-color, $lightness: 10%);
-    line-height: 1.7;
-    z-index: 1;
-    position: relative;
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+  }
+  
+  @media (max-width: 768px) {
+    padding: 30px 20px;
+    margin-top: 5px;
+    
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 12px;
+    }
+    
+    p {
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    padding: 20px 15px;
+    margin-top: 0;
+    
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+    
+    p {
+      font-size: 0.95rem;
+      margin-bottom: 15px;
+    }
+  }
+  
+  &:last-child {
+    margin-bottom: 0;
   }
 }
 
@@ -470,19 +523,26 @@
   background-color: vars.$moss-green;
   color: white;
   padding: 15px 40px;
-  border-radius: 50px;
+  border-radius: 30px;
   text-decoration: none;
-  font-weight: 600;
-  font-size: 1.2rem;
+  font-weight: 500;
+  font-size: 1.1rem;
   transition: all 0.3s ease;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  position: relative;
-  z-index: 1;
-  letter-spacing: 0.5px;
+  
+  @media (max-width: 768px) {
+    padding: 12px 35px;
+    font-size: 1rem;
+  }
+  
+  @media (max-width: 576px) {
+    padding: 10px 30px;
+    font-size: 0.95rem;
+    border-radius: 25px;
+  }
   
   &:hover {
     background-color: vars.$forest-green;
-    transform: translateY(-5px);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(vars.$moss-green, 0.2);
   }
 }

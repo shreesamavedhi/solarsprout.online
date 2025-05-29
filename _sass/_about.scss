@@ -33,6 +33,11 @@
 .about-page {
   max-width: 900px;
   margin: 0 auto;
+  padding: 0 20px;
+
+  @media (max-width: 768px) {
+    padding: 0 15px;
+  }
 }
 
 .about-header {
@@ -50,6 +55,10 @@
     color: vars.$rich-soil;
     font-size: 3rem;
     margin-bottom: 20px;
+
+    @media (max-width: 768px) {
+      font-size: 2.2rem;
+    }
   }
   
   .subtitle {
@@ -58,10 +67,15 @@
     max-width: 700px;
     margin: 0 auto;
     overflow: hidden;
-    white-space: nowrap;
+    white-space: normal;
     display: inline-block;
-    animation: typing 3.5s steps(40, end) 1s forwards;
-    width: 0;
+    animation: fadeIn 1s ease forwards;
+    width: auto;
+
+    @media (max-width: 768px) {
+      font-size: 1.1rem;
+      padding: 0 10px;
+    }
   }
 }
 
@@ -70,6 +84,14 @@
   opacity: 0;
   animation: fadeIn 0.8s ease forwards;
   animation-play-state: paused;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 20px;
+  }
   
   &.animate {
     animation-play-state: running;
@@ -134,13 +156,13 @@
 }
 
 .mission-values {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
   gap: 30px;
   margin-top: 40px;
-  
+
   @media (max-width: 768px) {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+    gap: 20px;
   }
 }
 
@@ -310,13 +332,17 @@
   margin-bottom: 0;
   border-radius: 8px;
   background-color: vars.$terracotta;
-  padding: 40px 0;
+  padding: 40px;
   color: white;
   position: relative;
   overflow: hidden;
   opacity: 0;
   animation: fadeIn 0.8s ease forwards;
   animation-play-state: paused;
+
+  @media (max-width: 768px) {
+    padding: 30px 20px;
+  }
   
   &.animate {
     animation-play-state: running;
@@ -337,13 +363,14 @@
   
   // Override newsletter styles for about page
   .newsletter-container {
+    width: 100%;
     max-width: 600px;
     margin: 0 auto;
-    text-align: center;
-    padding: 0 20px;
+    text-align: left;
+    padding: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     
     h2 {
       margin-bottom: 20px;
@@ -363,8 +390,8 @@
     flex-direction: column;
     width: 100%;
     max-width: 500px;
-    margin: 0 auto;
-    align-items: center;
+    margin: 0;
+    text-align: left;
     
     .form-fields {
       display: flex;
@@ -379,11 +406,13 @@
     textarea {
       width: 100%;
       padding: 12px 15px;
-      border: none;
+      border: 1px solid rgba(255, 255, 255, 0.2);
       border-radius: 8px;
       font-size: 1rem;
       font-family: inherit;
       background-color: white;
+      box-sizing: border-box;
+      text-align: left;
     }
     
     textarea {
@@ -548,12 +577,15 @@
   
   // Contact form container
   .contact-form-container {
-    flex: 1;
-    padding: 40px;
+    width: 100%;
+    padding: 30px;
     background-color: white;
+    border-radius: 6px;
+    box-sizing: border-box;
+    overflow: hidden;
     
     @media (max-width: 768px) {
-      padding: 30px 25px;
+      padding: 20px;
     }
   }
   

@@ -19,7 +19,7 @@ permalink: /portfolio/
       </a>
     </div>
     
-    <div class="portfolio-grid" id="music-carousel">
+    <div class="portfolio-grid">
       {% include portfolio-item.html 
         title="'would you wonder at all'"
         image="/assets/images/posts/would-you-wonder-at-all/cover.png"
@@ -35,14 +35,7 @@ permalink: /portfolio/
         button_text="Listen" %}
     </div>
     
-    <div class="carousel-controls">
-      <button class="carousel-prev" aria-label="Previous items" data-target="music-carousel">
-        <i class="fas fa-chevron-left"></i>
-      </button>
-      <button class="carousel-next" aria-label="Next items" data-target="music-carousel">
-        <i class="fas fa-chevron-right"></i>
-      </button>
-    </div>
+
   </section>
   
   <!-- Art Section -->
@@ -54,7 +47,7 @@ permalink: /portfolio/
       </a>
     </div>
     
-    <div class="portfolio-grid" id="art-carousel">
+    <div class="portfolio-grid">
       {% include portfolio-item.html 
         title="Headspace"
         image="/assets/images/posts/headspace/cover.jpg"
@@ -70,14 +63,7 @@ permalink: /portfolio/
         button_text="View Artwork" %}
     </div>
     
-    <div class="carousel-controls">
-      <button class="carousel-prev" aria-label="Previous items" data-target="art-carousel">
-        <i class="fas fa-chevron-left"></i>
-      </button>
-      <button class="carousel-next" aria-label="Next items" data-target="art-carousel">
-        <i class="fas fa-chevron-right"></i>
-      </button>
-    </div>
+
   </section>
 
   <!-- Game Development Section -->
@@ -89,7 +75,7 @@ permalink: /portfolio/
       </a>
     </div>
     
-    <div class="portfolio-grid" id="gamedev-carousel">
+    <div class="portfolio-grid">
       {% include portfolio-item.html 
         title="Wizard Wars Game"
         image="/assets/images/posts/wizard-wars/cover.png"
@@ -98,14 +84,7 @@ permalink: /portfolio/
         button_text="View Project" %}
     </div>
     
-    <div class="carousel-controls">
-      <button class="carousel-prev" aria-label="Previous items" data-target="gamedev-carousel">
-        <i class="fas fa-chevron-left"></i>
-      </button>
-      <button class="carousel-next" aria-label="Next items" data-target="gamedev-carousel">
-        <i class="fas fa-chevron-right"></i>
-      </button>
-    </div>
+
   </section>
 
   <!-- Film Section -->
