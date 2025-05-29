@@ -102,10 +102,13 @@ permalink: /portfolio/
     </div>
   </section>
   
+  <!-- Spacer for mobile -->
+  <div class="mobile-spacer"></div>
+  
   <!-- Contact Section -->
   <section class="contact-section">
     <h2>Let's Work Together</h2>
     <p>Interested in collaborating on a project? Get in touch!</p>
-    <a href="/about#contact" class="contact-button">Contact Me</a>
+    <a href="/about?section=contact" class="contact-button">Contact Me</a>
   </section>
 </div>

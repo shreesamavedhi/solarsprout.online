@@ -8,6 +8,10 @@
   padding: 0 20px;
   width: 100%;
   box-sizing: border-box;
+  
+  @media (max-width: 576px) {
+    padding: 0 10px;
+  }
 }
 
 // Blog search container
@@ -19,7 +23,8 @@
   box-sizing: border-box;
   
   @media (max-width: 576px) {
-    padding: 0 15px;
+    padding: 0 5px;
+    margin-bottom: 20px;
   }
 }
 
@@ -187,6 +192,7 @@
   
   @media (max-width: 576px) {
     margin-bottom: 15px;
+    justify-content: center;
   }
 }
 
@@ -239,7 +245,9 @@
   
   @media (max-width: 576px) {
     gap: 8px;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
+    padding: 0 5px;
+    width: 100%;
   }
   
   .filter-button {
@@ -290,7 +298,8 @@
   @media (max-width: 576px) {
     gap: 25px;
     margin-top: 25px;
-    padding: 0 15px;
+    padding: 0 5px;
+    width: 100%;
   }
   
   // Compact view styles
@@ -299,6 +308,14 @@
     gap: 20px;
     width: 100%;
     min-width: 0;
+    
+    @media (max-width: 576px) {
+      gap: 15px;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
     
     .post-row {
       flex-direction: row;
@@ -309,8 +326,15 @@
       min-width: 0;
       
       @media (max-width: 576px) {
-        flex-direction: column;
-        max-height: none;
+        flex-direction: row;
+        max-height: 120px;
+        padding-right: 0;
+        margin-bottom: 5px;
+        border-radius: 12px;
+        width: calc(100% - 10px);
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
       }
       
       &:hover {
@@ -323,7 +347,8 @@
       min-width: 0;
       
       @media (max-width: 576px) {
-        flex: 0 0 150px;
+        flex: 0 0 100px;
+        height: 100%;
       }
     }
     
@@ -334,19 +359,33 @@
       width: calc(100% - 200px);
       
       @media (max-width: 576px) {
-        width: 100%;
+        padding: 10px 10px 10px 15px;
+        width: calc(100% - 100px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
       }
     }
     
     .post-title {
       font-size: 1.2rem;
       margin-bottom: 10px;
+      
+      @media (max-width: 576px) {
+        font-size: 1rem;
+        margin-bottom: 5px;
+        line-height: 1.2;
+      }
     }
     
     .post-excerpt {
       margin-bottom: 10px;
       -webkit-line-clamp: 2;
       line-clamp: 2;
+      
+      @media (max-width: 576px) {
+        display: none;
+      }
     }
   }
 }
@@ -408,6 +447,13 @@
   margin-bottom: 12px;
   display: block;
   font-weight: 500;
+  
+  .post-list[data-current-view="compact"] & {
+    @media (max-width: 576px) {
+      font-size: 0.8rem;
+      margin-bottom: 5px;
+    }
+  }
 }
 
 // Enhanced post title
@@ -449,6 +495,12 @@
   flex-wrap: wrap;
   gap: 8px;
   align-items: center;
+  
+  .post-list[data-current-view="compact"] & {
+    @media (max-width: 576px) {
+      display: none;
+    }
+  }
 }
 
 

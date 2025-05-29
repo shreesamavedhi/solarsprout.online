@@ -1,4 +1,30 @@
+// Handle contact section scroll position immediately
+const urlParams = new URLSearchParams(window.location.search);
+if (urlParams.get('section') === 'contact') {
+  // Set this before any content loads
+  document.documentElement.style.scrollBehavior = 'auto';
+  window.addEventListener('load', function() {
+    const contactSection = document.querySelector('.get-in-touch');
+    if (contactSection) {
+      const offsetY = contactSection.offsetTop - 200;
+      window.scrollTo(0, offsetY);
+      contactSection.classList.add('animate', 'animate-fast');
+      // Clean up URL
+      history.replaceState(null, '', '/about');
+    }
+  });
+}
+
 document.addEventListener('DOMContentLoaded', function() {
+  // Check if we're redirected to contact section
+  if (window.location.hash === '#contact') {
+    const contactSection = document.querySelector('.get-in-touch');
+    if (contactSection) {
+      // Add a special class for faster animation
+      contactSection.classList.add('animate', 'animate-fast');
+    }
+  }
+
   // Elements to animate on the About page
   const aboutElements = document.querySelectorAll('.about-section, .about-header, .about-image-container, .mission-card, .timeline-item, .about-content h2, .get-in-touch');
   

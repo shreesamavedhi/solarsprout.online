@@ -117,6 +117,21 @@
 }
 
 .get-in-touch {
+  &.animate-fast {
+    animation-duration: 0.3s !important;
+    animation-delay: 0s !important;
+    
+    .newsletter-container {
+      animation-duration: 0.3s !important;
+      animation-delay: 0s !important;
+      
+      h2, p, .newsletter-form {
+        animation-duration: 0.3s !important;
+        animation-delay: 0.1s !important;
+      }
+    }
+  }
+
   opacity: 0;
   animation: fadeInUp 0.8s ease 2.8s forwards;
 }
