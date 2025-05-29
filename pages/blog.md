@@ -5,8 +5,22 @@ permalink: /blog/
 ---
 
 <div class="blog-posts">
+  <div class="blog-header">
+    <h1>Blog</h1>
+    <p class="subtitle">Thoughts, tutorials, and updates on my creative journey</p>
+  </div>
+  
+  <div class="blog-search-container">
+    <div class="search-input-wrapper">
+      <input type="text" id="blog-search-input" placeholder="Search posts..." aria-label="Search blog posts">
+      <button id="clear-search" aria-label="Clear search">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+  </div>
+  
   <div class="category-filter">
-    <a href="/blog/" class="filter-button {% if page.url == '/blog/' %}active{% endif %}">All Posts</a>
+    <button type="button" data-category="all" class="filter-button active">All Posts</button>
     {% assign categories = site.posts | map: 'categories' | flatten | uniq | sort %}
     {% for category in categories %}
       {% assign words = category | split: ' ' %}
@@ -15,14 +29,18 @@ permalink: /blog/
           {{ word | capitalize }}
         {% endfor %}
       {% endcapture %}
-      <a href="/blog/{{ category | downcase }}/" class="filter-button {% if page.url contains category %}active{% endif %}">{{ capitalized_category | strip }}</a>
+      <button type="button" data-category="{{ category | downcase }}" class="filter-button">{{ capitalized_category | strip }}</button>
     {% endfor %}
   </div>
   
   {%- if site.posts.size > 0 -%}
     <div class="post-list">
+      <div id="no-results-message" style="display: none;">
+        <p>No posts found matching your search. Try different keywords or <button id="reset-search">view all posts</button>.</p>
+      </div>
       {%- for post in site.posts -%}
-      <div class="post-row">
+      {% assign post_categories = post.categories | join: ' ' | downcase %}
+      <div class="post-row" data-categories="{{ post_categories }}">
         <div class="post-image">
           {% if post.image %}
             <img src="{{ post.image | relative_url }}" alt="{{ post.title }}">
@@ -58,3 +76,5 @@ permalink: /blog/
     </div>
   {%- endif -%}
 </div>
+
+<script src="{{ '/assets/js/blog-search.js' | relative_url }}" defer></script>

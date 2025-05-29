@@ -5,35 +5,69 @@
 .portfolio-page {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 .portfolio-header {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
+  position: relative;
+  padding: 40px 20px;
+  
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 80%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(vars.$clay, 0.1) 0%, rgba(vars.$moss-green, 0.15) 100%);
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    z-index: -1;
+  }
   
   h1 {
     color: vars.$rich-soil;
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+    
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background-color: vars.$moss-green;
+    }
   }
   
   .subtitle {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: vars.$grey-color;
     max-width: 700px;
-    margin: 0 auto;
+    margin: 20px auto 0;
+    line-height: 1.6;
   }
 }
 
 .portfolio-section {
-  margin-bottom: 80px;
+  margin-bottom: 30px;
   position: relative; /* For absolute positioning of carousel controls */
+  padding: 15px;
+  border-radius: 15px;
+  transition: background-color 0.3s ease;
   
   /* Carousel navigation controls */
   .carousel-controls {
     display: flex;
     justify-content: flex-end;
-    margin-top: 20px;
+    margin-top: 10px;
     gap: 10px;
     
     button {
@@ -69,14 +103,27 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 30px;
-  border-bottom: 2px solid vars.$clay;
-  padding-bottom: 15px;
+  margin-bottom: 15px;
+  border-bottom: none;
+  padding-bottom: 10px;
+  position: relative;
   
   h2 {
     color: vars.$forest-green;
-    font-size: 1.8rem;
+    font-size: 2rem;
     margin: 0;
+    position: relative;
+    padding-bottom: 10px;
+    
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 2px;
+      background-color: currentColor;
+    }
   }
   
   .platform-link {
@@ -108,13 +155,11 @@
 }
 
 .portfolio-grid {
-  display: flex;
-  gap: 30px;
-  overflow-x: auto;
-  scroll-behavior: smooth;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
   padding: 10px 0;
-  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
-  scrollbar-width: thin; /* Firefox */
+  overflow: visible;
   
   /* Hide scrollbar for Chrome, Safari and Opera */
   &::-webkit-scrollbar {
@@ -131,71 +176,87 @@
     border-radius: 10px;
   }
   
-  /* Force all portfolio items to be the same size */
-  & > * {
-    flex: 0 0 calc(50% - 15px); /* Two items visible at once with gap in between */
-    min-width: calc(50% - 15px);
-    max-width: calc(50% - 15px);
-    height: 450px; /* Fixed height for all items */
-  }
-  
   @media (max-width: 768px) {
-    & > * {
-      flex: 0 0 calc(100% - 15px);
-      min-width: calc(100% - 15px);
-      max-width: calc(100% - 15px);
-    }
+    grid-template-columns: 1fr;
   }
 }
 
 .coming-soon-banner {
   text-align: center;
-  padding: 60px 20px;
-  background-color: color.adjust(vars.$clay, $lightness: 45%);
-  border-radius: 10px;
-  margin: 40px auto;
-  max-width: 600px;
-  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+  padding: 50px 30px;
+  background: linear-gradient(135deg, color.adjust(vars.$clay, $lightness: 45%) 0%, color.adjust(vars.$moss-green, $lightness: 45%) 100%);
+  border-radius: 20px;
+  margin: 30px auto;
+  max-width: 700px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+  
+  &:before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+  }
   
   h3 {
     color: vars.$forest-green;
-    font-size: 2rem;
-    margin-bottom: 15px;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
+    position: relative;
+    display: inline-block;
+    
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background-color: vars.$moss-green;
+    }
   }
   
   p {
     color: vars.$grey-color;
-    font-size: 1.1rem;
-    margin: 0;
-    line-height: 1.5;
+    font-size: 1.2rem;
+    margin: 25px 0 0;
+    line-height: 1.6;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
 .portfolio-item {
   background-color: white;
-  border-radius: 10px;
+  border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
-  height: 450px; /* Fixed exact height for all items */
+  height: auto; /* Allow height to be determined by content */
   width: 100%;
   position: relative; /* For absolute positioning of children if needed */
   
   &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
   }
 }
 
 .portfolio-image {
-  height: 250px;
+  height: 280px;
   position: relative;
   overflow: hidden;
-  flex: 0 0 250px; /* Fixed height, don't allow shrinking or growing */
   width: 100%;
   
   img {
@@ -250,29 +311,36 @@
 }
 
 .portfolio-info {
-  padding: 25px;
-  flex: 1 0 auto; /* Grow but don't shrink, auto basis */
+  padding: 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-between; /* Distribute content evenly */
-  height: 200px; /* Fixed height for info section */
   box-sizing: border-box;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.95), rgba(255,255,255,1));
   
   h3 {
     margin-top: 0;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     color: vars.$text-color;
-    font-size: 1.3rem;
-    height: 30px; /* Fixed height for title */
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.3;
     overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
   }
   
   p {
     color: vars.$grey-color;
-    margin-bottom: 15px;
-    flex: 1 0 auto;
-    height: 60px; /* Fixed height for description */
+    margin-bottom: 20px;
+    line-height: 1.6;
     overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
   }
   
   .portfolio-tags {
@@ -334,29 +402,43 @@
 
 // Contact section styling
 .contact-section {
-  background-color: color.scale(vars.$background-color, $lightness: -2%);
-  padding: 60px;
-  border-radius: 10px;
+  background: linear-gradient(135deg, rgba(vars.$moss-green, 0.05) 0%, rgba(vars.$forest-green, 0.1) 100%);
+  padding: 60px 40px;
+  border-radius: 20px;
   text-align: center;
-  margin-top: 80px;
-  border: 1px solid color.scale(vars.$clay, $lightness: 10%);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-top: 60px;
+  position: relative;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  
+  &:before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    width: 150px;
+    height: 150px;
+    background: rgba(vars.$clay, 0.08);
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    z-index: 0;
+  }
   
   &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
   }
   
   h2 {
     color: vars.$forest-green;
     margin-top: 0;
-    margin-bottom: 20px;
-    font-size: 2rem;
+    margin-bottom: 25px;
+    font-size: 2.5rem;
     font-weight: 600;
     position: relative;
-    padding-bottom: 15px;
+    padding-bottom: 20px;
     display: inline-block;
+    z-index: 1;
     
     &:after {
       content: '';
@@ -371,13 +453,15 @@
   }
   
   p {
-    margin-bottom: 30px;
-    font-size: 1.2rem;
-    max-width: 600px;
+    margin-bottom: 40px;
+    font-size: 1.3rem;
+    max-width: 700px;
     margin-left: auto;
     margin-right: auto;
     color: color.scale(vars.$text-color, $lightness: 10%);
-    line-height: 1.6;
+    line-height: 1.7;
+    z-index: 1;
+    position: relative;
   }
 }
 
@@ -385,17 +469,20 @@
   display: inline-block;
   background-color: vars.$moss-green;
   color: white;
-  padding: 12px 30px;
-  border-radius: 30px;
+  padding: 15px 40px;
+  border-radius: 50px;
   text-decoration: none;
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   transition: all 0.3s ease;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 1;
+  letter-spacing: 0.5px;
   
   &:hover {
     background-color: vars.$forest-green;
-    transform: translateY(-3px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
   }
 }

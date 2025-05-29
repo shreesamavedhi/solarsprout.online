@@ -1,0 +1,356 @@
+@use "sass:color";
+@use "variables" as vars;
+
+// Blog page styles
+.blog-posts {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+// Blog search container
+.blog-search-container {
+  margin-bottom: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.search-input-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+}
+
+#blog-search-input {
+  width: 100%;
+  padding: 12px 45px 12px 20px;
+  border: 1px solid rgba(vars.$clay, 0.2);
+  border-radius: 30px;
+  font-size: 1rem;
+  background-color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  
+  &:focus {
+    outline: none;
+    border-color: vars.$moss-green;
+    box-shadow: 0 5px 15px rgba(vars.$moss-green, 0.1);
+  }
+  
+  &::placeholder {
+    color: rgba(vars.$grey-color, 0.7);
+  }
+}
+
+#clear-search {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: vars.$grey-color;
+  cursor: pointer;
+  padding: 5px;
+  font-size: 0.9rem;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+  
+  &:hover {
+    opacity: 1;
+  }
+}
+
+#no-results-message {
+  text-align: center;
+  padding: 30px;
+  background-color: rgba(vars.$clay, 0.05);
+  border-radius: 10px;
+  margin-bottom: 30px;
+  width: 100%;
+  grid-column: 1 / -1;
+  
+  p {
+    margin-bottom: 0;
+    color: vars.$grey-color;
+  }
+  
+  button {
+    background: none;
+    border: none;
+    color: vars.$moss-green;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0;
+    text-decoration: underline;
+    
+    &:hover {
+      color: darken(vars.$moss-green, 10%);
+    }
+  }
+}
+
+// Blog header styles
+.blog-header {
+  text-align: center;
+  margin-bottom: 60px;
+  position: relative;
+  padding: 60px 20px;
+  
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 80%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(vars.$moss-green, 0.1) 0%, rgba(vars.$clay, 0.15) 100%);
+    border-radius: 70% 30% 30% 70% / 30% 70% 30% 70%;
+    z-index: -1;
+  }
+  
+  h1 {
+    color: vars.$forest-green;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+    
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background-color: vars.$moss-green;
+    }
+  }
+  
+  .subtitle {
+    font-size: 1.3rem;
+    color: vars.$grey-color;
+    max-width: 700px;
+    margin: 20px auto 0;
+    line-height: 1.6;
+  }
+}
+
+// Enhanced category filter
+.category-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 40px;
+  justify-content: center;
+  
+  .filter-button {
+    padding: 10px 20px;
+    background-color: rgba(vars.$clay, 0.05);
+    border-radius: 30px;
+    text-decoration: none;
+    color: vars.$text-color;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(vars.$clay, 0.1);
+    
+    &:hover {
+      background-color: rgba(vars.$moss-green, 0.1);
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+    
+    &.active {
+      background-color: vars.$moss-green;
+      color: white;
+      border-color: vars.$moss-green;
+      box-shadow: 0 5px 15px rgba(vars.$moss-green, 0.2);
+    }
+  }
+}
+
+// Enhanced post list
+.post-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  margin-top: 40px;
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Enhanced post row
+.post-row {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: white;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  height: 100%;
+  
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+  }
+}
+
+// Enhanced post image
+.post-image {
+  flex: 0 0 220px;
+  overflow: hidden;
+  position: relative;
+  
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  &:hover img {
+    transform: scale(1.05);
+  }
+}
+
+// Enhanced post content
+.post-content {
+  padding: 30px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.95), rgba(255,255,255,1));
+}
+
+// Enhanced post meta
+.post-meta {
+  font-size: 0.9rem;
+  color: vars.$grey-color;
+  margin-bottom: 12px;
+  display: block;
+  font-weight: 500;
+}
+
+// Enhanced post title
+.post-title {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.3;
+  
+  a {
+    color: vars.$text-color;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    
+    &:hover {
+      color: vars.$moss-green;
+    }
+  }
+}
+
+// Enhanced post excerpt
+.post-excerpt {
+  color: vars.$grey-color;
+  margin-bottom: 20px;
+  flex-grow: 1;
+  line-height: 1.6;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+// Enhanced post tags
+.post-tags {
+  margin-top: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+// Blog post animations
+@keyframes fadeInUp {
+  from { 
+    opacity: 0; 
+    transform: translateY(30px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+@keyframes scaleIn {
+  from { 
+    opacity: 0; 
+    transform: scale(0.9); 
+  }
+  to { 
+    opacity: 1; 
+    transform: scale(1); 
+  }
+}
+
+@keyframes expandWidth {
+  from {
+    width: 0;
+  }
+  to {
+    width: 80px;
+  }
+}
+
+// Animation classes
+.blog-header {
+  opacity: 0;
+  animation: fadeInUp 1s ease-out forwards;
+  
+  &:before {
+    opacity: 0;
+    animation: scaleIn 1.2s ease 0.1s forwards;
+  }
+  
+  h1 {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease 0.3s forwards;
+    
+    &:after {
+      width: 0;
+      opacity: 1;
+      animation: expandWidth 0.6s ease 1s forwards;
+    }
+  }
+  
+  .subtitle {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease 0.6s forwards;
+  }
+}
+
+.category-filter {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease 0.8s forwards;
+}
+
+.post-row {
+  opacity: 0;
+  animation: scaleIn 0.8s ease forwards;
+  
+  @for $i from 1 through 12 {
+    &:nth-child(#{$i}) {
+      animation-delay: #{0.8 + ($i * 0.1)}s;
+    }
+  }
+}

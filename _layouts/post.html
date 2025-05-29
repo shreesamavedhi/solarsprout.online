@@ -4,7 +4,7 @@ layout: default
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
   {% if page.image %}
-  <div class="post-hero" style="position: relative; height: 400px; margin: -30px -30px 30px -30px; overflow: hidden; background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('{{ page.image }}') center/cover no-repeat;">
+  <div class="post-hero" style="position: relative; height: 400px; margin: -40px -30px 30px -30px; overflow: hidden; background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('{{ page.image }}') center/cover no-repeat; border-radius: 25px 25px 0 0;">
     <div style="position: absolute; bottom: 40px; left: 40px; right: 40px; color: white;">
       <h1 class="post-title p-name" itemprop="name headline" style="color: white; margin: 0; font-size: 2.5em; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">{{ page.title | escape }}</h1>
     </div>

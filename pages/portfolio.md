@@ -9,20 +9,6 @@ permalink: /portfolio/
     <h1>Creative Portfolio</h1>
     <p class="subtitle">A showcase of my work across film, music, games, and art</p>
   </div>
-  <!-- Film Section -->
-  <section class="portfolio-section" id="film">
-    <div class="section-header">
-      <h2>Film</h2>
-      <a href="https://www.youtube.com/@SolarSproutFilms" class="platform-link" target="_blank">
-        <i class="fab fa-youtube"></i> View on YouTube
-      </a>
-    </div>
-    
-    <div class="coming-soon-banner">
-      <h3>Coming Soon</h3>
-      <p>Film projects are in development. Stay tuned!</p>
-    </div>
-  </section>
 
   <!-- Music Section -->
   <section class="portfolio-section" id="music">
@@ -40,14 +26,7 @@ permalink: /portfolio/
         alt="would you wonder at all - Music"
         link="/posts/2024/08/08/would-you-wonder-at-all/"
         button_text="Listen" %}
-        
-      {% include portfolio-item.html 
-        title="'not-so-simple'"
-        image="/assets/images/posts/not-so-simple/cover.png"
-        alt="not so simple - Music"
-        link="/posts/2024/09/05/not-so-simple/"
-        button_text="Listen" %}
-        
+
       {% include portfolio-item.html 
         title="Fire&Dreams"
         image="/assets/images/posts/fire-and-dreams/cover.jpg"
@@ -89,13 +68,6 @@ permalink: /portfolio/
         alt="Time Lost Her Arrow - Artwork"
         link="/posts/2020/11/29/time-lost-her-arrow/"
         button_text="View Artwork" %}
-
-      {% include portfolio-item.html 
-        title="Nearsighted"
-        image="/assets/images/posts/nearsighted/cover.jpg"
-        alt="Nearsighted - Artwork"
-        link="/posts/2021/11/12/nearsighted/"
-        button_text="View Artwork" %}
     </div>
     
     <div class="carousel-controls">
@@ -133,6 +105,21 @@ permalink: /portfolio/
       <button class="carousel-next" aria-label="Next items" data-target="gamedev-carousel">
         <i class="fas fa-chevron-right"></i>
       </button>
+    </div>
+  </section>
+
+  <!-- Film Section -->
+  <section class="portfolio-section" id="film">
+    <div class="section-header">
+      <h2>Film</h2>
+      <a href="https://www.youtube.com/@SolarSproutFilms" class="platform-link" target="_blank">
+        <i class="fab fa-youtube"></i> View on YouTube
+      </a>
+    </div>
+    
+    <div class="coming-soon-banner">
+      <h3>Coming Soon</h3>
+      <p>Film projects are in development. Stay tuned!</p>
     </div>
   </section>
   
