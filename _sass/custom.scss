@@ -99,36 +99,39 @@
       height: 2px;
       background-color: vars.$rich-soil;
       position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      transition: all 0.3s ease;
-      
-      &:nth-child(1) { top: 25%; }
-      &:nth-child(2) { top: 50%; }
-      &:nth-child(3) { top: 75%; }
-    }
-    
-    &.active {
-      span {
-        &:nth-child(1) {
-          top: 50%;
-          transform: translate(-50%, -50%) rotate(45deg);
-        }
-        
-        &:nth-child(2) {
-          opacity: 0;
-        }
-        
-        &:nth-child(3) {
-          top: 50%;
-          transform: translate(-50%, -50%) rotate(-45deg);
-        }
-      }
     }
   }
-  
+}
 
-  
+// Swiper navigation styles
+.swiper {
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: vars.$rich-soil !important; // Deep brown from our theme
+    
+    &:hover {
+      color: vars.$terracotta !important; // Lighter brown on hover
+    }
+
+    &:active {
+      color: vars.$moss-green !important; // Green when clicked
+    }
+  }
+
+  // Pagination dots
+  .swiper-pagination-bullet {
+    background: vars.$rich-soil !important; // Deep brown dots
+    opacity: 0.3;
+
+    &-active {
+      opacity: 1;
+      background: vars.$rich-soil !important;
+    }
+  }
+}
+
+// Mobile navigation styles
+.site-nav {
   @media screen and (max-width: 600px) {
     height: 40px;
     
