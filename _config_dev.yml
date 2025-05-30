@@ -1,0 +1,11 @@
+# Development configuration that overrides _config.yml
+# This simulates a local environment with the same path structure as GitHub Pages
+# Run with: bundle exec jekyll serve --config _config.yml,_config_dev.yml
+
+# Use these settings for local development
+baseurl: ""
+url: "http://localhost:4000"
+
+# Local development settings
+livereload: true
+incremental: true
