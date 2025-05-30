@@ -1,13 +1,27 @@
 ---
 layout: default
 ---
-<div class="tag-page">
+<script src="{{ "/assets/js/blog-view-toggle.js" | relative_url }}" defer></script>
+
+<div class="blog-posts tag-page">
   <div class="tag-header">
     <span class="category-label">category</span>
     <h1 class="tag-title">{{ page.tag }}</h1>
   </div>
   
-  <div class="post-list">
+  <div class="view-options">
+    <div class="view-toggle">
+      <span class="view-label">View:</span>
+      <button type="button" data-view="regular" class="view-button active" aria-label="Regular view">
+        <i class="fas fa-th-large"></i>
+      </button>
+      <button type="button" data-view="compact" class="view-button" aria-label="Compact view">
+        <i class="fas fa-list"></i>
+      </button>
+    </div>
+  </div>
+
+  <div class="post-list" data-current-view="regular">
     {% for post in site.posts %}
       {% if post.tags contains page.tag %}
         <div class="post-row">

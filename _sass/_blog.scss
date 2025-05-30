@@ -291,11 +291,44 @@
 
 // Enhanced post list
 .post-list {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
-  margin-top: 40px;
   transition: all 0.3s ease;
+  
+  &[data-current-view="regular"] {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    
+    .post-row {
+      flex-direction: column;
+      
+      .post-image {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+  }
+  
+  &[data-current-view="compact"] {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    
+    .post-row {
+      flex-direction: row;
+      
+      .post-image {
+        width: 200px;
+        flex-shrink: 0;
+        margin-right: 30px;
+        margin-bottom: 0;
+      }
+      
+      .post-content {
+        flex-grow: 1;
+      }
+    }
+  }
   
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
