@@ -11,6 +11,5 @@
 @mixin tag-color($name, $color) {
   .tag-#{$name} {
     background-color: $color;
-    color: white;
   }
 }
