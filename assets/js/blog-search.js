@@ -14,7 +14,8 @@ document.addEventListener('DOMContentLoaded', function() {
   let activeCategory = 'all';
   let currentSearchTerm = '';
   
-  // Function to filter posts based on both search term and category
+  // Function to filter posts based on search term and category
+  // Advanced tag filtering is handled by blog-advanced-filters.js
   function filterPosts() {
     let matchCount = 0;
     
@@ -41,20 +42,34 @@ document.addEventListener('DOMContentLoaded', function() {
       const matchesCategory = activeCategory === 'all' || 
                              postCategories.includes(activeCategory);
       
-      if (matchesSearch && matchesCategory) {
-        post.style.display = 'flex';
-        matchCount++;
+      // Store the basic filter state (without tag filtering)
+      post.dataset.matchesBasicFilters = (matchesSearch && matchesCategory) ? 'true' : 'false';
+      
+      // If we have the advanced filtering system, let it handle the final display
+      if (window.blogAdvancedFilters) {
+        // Don't change display here - advanced filters will handle it
       } else {
-        post.style.display = 'none';
+        // Fall back to basic filtering if advanced filters aren't loaded
+        if (matchesSearch && matchesCategory) {
+          post.style.display = 'flex';
+          matchCount++;
+        } else {
+          post.style.display = 'none';
+        }
       }
     });
     
-    // Show or hide the no results message
-    if (noResultsMessage) {
-      if (matchCount === 0 && (currentSearchTerm !== '' || activeCategory !== 'all')) {
-        noResultsMessage.style.display = 'block';
-      } else {
-        noResultsMessage.style.display = 'none';
+    // If advanced filtering is available, let it handle the final filtering
+    if (window.blogAdvancedFilters) {
+      window.blogAdvancedFilters.applyFilters();
+    } else {
+      // Show or hide the no results message (basic filtering only)
+      if (noResultsMessage) {
+        if (matchCount === 0 && (currentSearchTerm !== '' || activeCategory !== 'all')) {
+          noResultsMessage.style.display = 'block';
+        } else {
+          noResultsMessage.style.display = 'none';
+        }
       }
     }
   }

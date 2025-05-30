@@ -37,7 +37,7 @@ layout: default
       {% for tag in page.tags %}
         {% assign tag_slug = tag | slugify %}
         {% assign tag_class = "tag-" | append: tag_slug %}
-        <a href="/tag/{{ tag_slug }}" class="post-tag {{ tag_class }}">{{ tag }}</a>
+        <a href="/blog/?tag={{ tag_slug }}" class="post-tag {{ tag_class }}" data-tag="{{ tag_slug }}">{{ tag }}</a>
       {% endfor %}
     </div>
     {% endif %}

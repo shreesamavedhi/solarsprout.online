@@ -45,6 +45,37 @@ permalink: /blog/
     {% endfor %}
   </div>
   
+  <div class="advanced-filter-toggle">
+    <button id="toggle-advanced-filters" class="toggle-button" aria-expanded="false">
+      <span class="toggle-text">Advanced Filters</span>
+      <i class="fas fa-chevron-down toggle-icon"></i>
+    </button>
+  </div>
+  
+  <div id="advanced-filters" class="advanced-filters" style="display: none;">
+    <div class="tag-filter">
+      <h3>Filter by Tags</h3>
+      <div class="tag-cloud">
+        {% assign tags = site.posts | map: 'tags' | flatten | uniq | sort %}
+        {% for tag in tags %}
+          {% assign tag_slug = tag | slugify %}
+          {% assign tag_count = site.posts | where_exp: "post", "post.tags contains tag" | size %}
+          <button type="button" data-tag="{{ tag_slug }}" class="tag-filter-button">
+            {{ tag }} <span class="tag-count">({{ tag_count }})</span>
+          </button>
+        {% endfor %}
+      </div>
+    </div>
+    
+    <div class="active-filters">
+      <div id="active-tags" class="active-tags" style="display: none;">
+        <h4>Active Tag Filters:</h4>
+        <div id="active-tag-list" class="active-tag-list"></div>
+        <button id="clear-tag-filters" class="clear-filters-button">Clear Tag Filters</button>
+      </div>
+    </div>
+  </div>
+  
   {%- if site.posts.size > 0 -%}
     <div class="post-list" data-current-view="regular">
       <div id="no-results-message" style="display: none;">
@@ -52,7 +83,12 @@ permalink: /blog/
       </div>
       {%- for post in site.posts -%}
       {% assign post_categories = post.categories | join: ' ' | downcase %}
-      <div class="post-row" data-categories="{{ post_categories }}">
+      {% assign post_tags = "" %}
+      {% for tag in post.tags %}
+        {% assign tag_slug = tag | slugify %}
+        {% assign post_tags = post_tags | append: tag_slug | append: ' ' %}
+      {% endfor %}
+      <div class="post-row" data-categories="{{ post_categories }}" data-tags="{{ post_tags | strip }}">
         <div class="post-image">
           {% if post.image %}
             <img src="{{ post.image | relative_url }}" alt="{{ post.title }}">
@@ -78,7 +114,7 @@ permalink: /blog/
             {% for tag in post.tags %}
               {% assign tag_slug = tag | slugify %}
               {% assign tag_class = "tag-" | append: tag_slug %}
-              <a href="/tag/{{ tag_slug }}" class="post-tag {{ tag_class }}">{{ tag }}</a>
+              <a href="/blog/?tag={{ tag_slug }}" class="post-tag {{ tag_class }}" data-tag="{{ tag_slug }}">{{ tag }}</a>
             {% endfor %}
           </div>
           {% endif %}
@@ -91,3 +127,4 @@ permalink: /blog/
 
 <script src="{{ '/assets/js/blog-search.js' | relative_url }}" defer></script>
 <script src="{{ '/assets/js/blog-view-toggle.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/blog-advanced-filters.js' | relative_url }}" defer></script>
