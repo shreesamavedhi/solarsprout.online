@@ -9,20 +9,27 @@
 .site-header {
   border-top: 5px solid vars.$rich-soil;
   border-bottom: 1px solid vars.$clay;
-  min-height: 55.95px;
+  height: 65px;
   position: relative;
   background-color: white;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0 30px;
+  }
 }
 
 .site-title {
   font-size: 26px;
   font-weight: 300;
-  line-height: 54px;
   letter-spacing: -1px;
   margin-bottom: 0;
-  float: left;
   text-decoration: none;
+  padding: 5px 0;
   
   &, &:visited {
     color: vars.$rich-soil;
@@ -34,64 +41,141 @@
 }
 
 .site-nav {
-  float: right;
-  line-height: 54px;
+  height: 100%;
   display: flex;
   align-items: center;
+  
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    height: 100%;
+    padding: 0 10px;
+  }
+  
+  .page-link {
+    color: vars.$rich-soil;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.5rem 0;
+    position: relative;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: vars.$moss-green;
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+    
+    &:hover {
+      text-decoration: none;
+      
+      &::after {
+        transform: scaleX(1);
+      }
+    }
+  }
   
   .menu-icon {
     display: none;
     background: none;
     border: none;
     cursor: pointer;
-    padding: 15px;
+    padding: 4px 8px;
     position: relative;
-    z-index: 2;
+    z-index: 1000;
+    width: 38px;
+    height: 26px;
     
     span {
       display: block;
-      width: 25px;
+      width: 18px;
       height: 2px;
       background-color: vars.$rich-soil;
-      margin: 5px 0;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
       transition: all 0.3s ease;
+      
+      &:nth-child(1) { top: 25%; }
+      &:nth-child(2) { top: 50%; }
+      &:nth-child(3) { top: 75%; }
     }
-  }
-  
-  .nav-links {
-    display: flex;
-    align-items: center;
-    height: 100%;
-  }
-  
-  .page-link {
-    color: #111;
-    line-height: 54px;
-    margin-left: 20px;
-    display: inline-block;
     
-    &:hover {
-      text-decoration: underline;
+    &.active {
+      span {
+        &:nth-child(1) {
+          top: 50%;
+          transform: translate(-50%, -50%) rotate(45deg);
+        }
+        
+        &:nth-child(2) {
+          opacity: 0;
+        }
+        
+        &:nth-child(3) {
+          top: 50%;
+          transform: translate(-50%, -50%) rotate(-45deg);
+        }
+      }
     }
   }
+  
+
   
   @media screen and (max-width: 600px) {
+    height: 40px;
+    
     .menu-icon {
       display: block;
     }
     
     .nav-links {
       display: none;
-      position: absolute;
-      top: 100%;
+      position: fixed;
+      top: 65px; // Height of the header
       left: 0;
       right: 0;
-      background-color: white;
-      padding: 20px;
+      bottom: 0;
+      background-color: rgba(255, 255, 255, 0.98);
+      padding: 2rem;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
       flex-direction: column;
-      align-items: flex-start;
-      height: auto;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      height: calc(100vh - 65px);
+      z-index: 999;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      backdrop-filter: blur(5px);
+      
+      .page-link {
+        font-size: 1.25rem;
+        margin: 0;
+        padding: 1rem 2rem;
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        
+        &::after {
+          display: none;
+        }
+        
+        &:hover {
+          background-color: vars.$sage;
+          color: white;
+          text-decoration: none;
+        }
+      }
       
       &.show {
         display: flex;
