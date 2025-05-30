@@ -19,20 +19,25 @@ permalink: /blog/
     </div>
   </div>
   
-  <div class="view-options">
-    <div class="view-toggle">
-      <span class="view-label">View:</span>
-      <button type="button" data-view="regular" class="view-button active" aria-label="Regular view">
-        <i class="fas fa-th-large"></i>
-      </button>
-      <button type="button" data-view="compact" class="view-button" aria-label="Compact view">
-        <i class="fas fa-list"></i>
-      </button>
-    </div>
-  </div>
-  
   <div class="category-filter-section">
-    <h3>Browse by Category</h3>
+    <div class="filter-header">
+      <h3>Browse by Category</h3>
+      <div class="filter-controls">
+        <div class="view-toggle">
+          <span class="view-label">View:</span>
+          <button type="button" data-view="regular" class="view-button active" aria-label="Regular view">
+            <i class="fas fa-th-large"></i>
+          </button>
+          <button type="button" data-view="compact" class="view-button" aria-label="Compact view">
+            <i class="fas fa-list"></i>
+          </button>
+        </div>
+        <button id="toggle-advanced-filters" class="toggle-button" aria-expanded="false">
+          <span class="toggle-text">Tag Filters</span>
+          <i class="fas fa-chevron-down toggle-icon"></i>
+        </button>
+      </div>
+    </div>
     <div class="category-filter">
       <button type="button" data-category="all" class="filter-button active">All Posts</button>
       {% assign categories = site.posts | map: 'categories' | flatten | uniq | sort %}
@@ -46,13 +51,6 @@ permalink: /blog/
         <button type="button" data-category="{{ category | downcase }}" class="filter-button"><i class="fas fa-folder"></i> {{ capitalized_category | strip }}</button>
       {% endfor %}
     </div>
-  </div>
-  
-  <div class="advanced-filter-toggle">
-    <button id="toggle-advanced-filters" class="toggle-button" aria-expanded="false">
-      <span class="toggle-text">Advanced Filters</span>
-      <i class="fas fa-chevron-down toggle-icon"></i>
-    </button>
   </div>
   
   <div id="advanced-filters" class="advanced-filters" style="display: none;">

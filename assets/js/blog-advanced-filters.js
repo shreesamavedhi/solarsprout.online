@@ -31,10 +31,17 @@ document.addEventListener('DOMContentLoaded', function() {
         // Make sure advanced filters are visible
         advancedFiltersSection.style.display = 'block';
         advancedFiltersToggle.setAttribute('aria-expanded', 'true');
-        advancedFiltersToggle.querySelector('.toggle-icon').classList.add('fa-chevron-up');
-        advancedFiltersToggle.querySelector('.toggle-icon').classList.remove('fa-chevron-down');
+        // Note: We're not changing the icon class, relying on CSS transform instead
       }
     }
+  }
+  
+  // Get category filter section
+  const categoryFilterSection = document.querySelector('.category-filter-section');
+  
+  // Add no-advanced class initially if needed
+  if (categoryFilterSection && advancedFiltersSection.style.display === 'none') {
+    categoryFilterSection.classList.add('no-advanced');
   }
   
   // Toggle advanced filters visibility
@@ -45,13 +52,19 @@ document.addEventListener('DOMContentLoaded', function() {
       if (isExpanded) {
         advancedFiltersSection.style.display = 'none';
         advancedFiltersToggle.setAttribute('aria-expanded', 'false');
-        advancedFiltersToggle.querySelector('.toggle-icon').classList.remove('fa-chevron-up');
-        advancedFiltersToggle.querySelector('.toggle-icon').classList.add('fa-chevron-down');
+        
+        // Add class to category filter section when advanced filters are hidden
+        if (categoryFilterSection) {
+          categoryFilterSection.classList.add('no-advanced');
+        }
       } else {
         advancedFiltersSection.style.display = 'block';
         advancedFiltersToggle.setAttribute('aria-expanded', 'true');
-        advancedFiltersToggle.querySelector('.toggle-icon').classList.add('fa-chevron-up');
-        advancedFiltersToggle.querySelector('.toggle-icon').classList.remove('fa-chevron-down');
+        
+        // Remove class from category filter section when advanced filters are shown
+        if (categoryFilterSection) {
+          categoryFilterSection.classList.remove('no-advanced');
+        }
       }
     });
   }

@@ -1,59 +1,58 @@
 // Advanced filtering styles for blog page
 @import "variables";
 
-.advanced-filter-toggle {
-  margin: 2rem 0 1.5rem;
-  text-align: center;
+.toggle-button {
+  background-color: rgba($sage, 0.05);
+  border: 1px solid rgba($terracotta, 0.15);
+  color: $rich-soil;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 0.5rem 1.1rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba($rich-soil, 0.05);
   
-  .toggle-button {
-    background-color: rgba($clay, 0.03);
-    border: 1px solid rgba($clay, 0.1);
-    color: $forest-green;
-    font-size: 1rem;
-    font-weight: 500;
-    padding: 0.6rem 1.2rem;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
-    
-    &:hover {
-      background-color: rgba($moss-green, 0.05);
-      transform: translateY(-2px);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
-    }
+  &:hover {
+    background-color: rgba($moss-green, 0.08);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba($rich-soil, 0.08);
+    border-color: rgba($moss-green, 0.3);
+  }
+  
+  .toggle-icon {
+    transition: transform 0.3s ease;
+    color: $terracotta;
+    font-size: 0.8rem;
+  }
+  
+  &[aria-expanded="true"] {
+    background-color: rgba($sage, 0.15);
     
     .toggle-icon {
-      transition: transform 0.3s ease;
-      color: $autumn-leaf;
-    }
-    
-    &[aria-expanded="true"] {
-      background-color: rgba($moss-green, 0.1);
-      
-      .toggle-icon {
-        transform: rotate(180deg);
-      }
+      transform: rotate(180deg);
     }
   }
 }
 
 .advanced-filters {
-  background-color: white;
-  border-radius: 12px;
-  padding: 1.8rem;
+  background-color: rgba($sage, 0.03);
+  border-radius: 0 0 20px 20px;
+  padding: 1.5rem;
+  margin-top: -1px;
   margin-bottom: 2.5rem;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-  border: 1px solid rgba($clay, 0.1);
+  box-shadow: 0 5px 15px rgba($rich-soil, 0.06);
+  border: 1px solid rgba($sage, 0.15);
+  border-top: none;
   
   h3 {
     margin-top: 0;
     margin-bottom: 1.2rem;
     font-size: 1.2rem;
-    color: $forest-green;
+    color: $rich-soil;
     position: relative;
     padding-bottom: 10px;
     text-align: center;
@@ -66,7 +65,7 @@
       transform: translateX(-50%);
       width: 60px;
       height: 2px;
-      background-color: rgba($moss-green, 0.5);
+      background-color: rgba($terracotta, 0.5);
     }
   }
   
@@ -84,7 +83,7 @@
         align-items: center;
         justify-content: center;
         padding: 0.4rem 0.9rem;
-        border-radius: 12px;
+        border-radius: 20px;
         font-size: 0.85rem;
         cursor: pointer;
         transition: all 0.2s ease-in-out;
@@ -146,17 +145,17 @@
   
   .active-filters {
     .active-tags {
-      background-color: rgba($clay, 0.03);
-      border-radius: 12px;
+      background-color: rgba($sage, 0.05);
+      border-radius: 20px;
       padding: 1.2rem;
       margin-bottom: 1.5rem;
-      border: 1px solid rgba($clay, 0.1);
+      border: 1px solid rgba($terracotta, 0.15);
       
       h4 {
         margin-top: 0;
         margin-bottom: 1rem;
         font-size: 1rem;
-        color: $forest-green;
+        color: $rich-soil;
         text-align: center;
       }
       
@@ -171,7 +170,7 @@
           display: inline-flex;
           align-items: center;
           color: #222;
-          border-radius: 12px;
+          border-radius: 20px;
           padding: 0.4rem 0.9rem;
           font-size: 0.85rem;
           font-weight: 600;
@@ -223,23 +222,24 @@
       }
       
       .clear-filters-button {
-        background-color: white;
-        border: 1px solid rgba($clay, 0.15);
-        border-radius: 8px;
-        padding: 0.5rem 1rem;
+        background-color: rgba(white, 0.9);
+        border: 1px solid rgba($terracotta, 0.15);
+        border-radius: 30px;
+        padding: 0.5rem 1.2rem;
         font-size: 0.9rem;
         cursor: pointer;
         transition: all 0.3s ease;
         display: block;
         margin: 0 auto;
-        color: $forest-green;
+        color: $rich-soil;
         font-weight: 500;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+        box-shadow: 0 2px 4px rgba($rich-soil, 0.05);
         
         &:hover {
-          background-color: rgba($moss-green, 0.05);
+          background-color: rgba($moss-green, 0.08);
           transform: translateY(-2px);
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 4px 8px rgba($rich-soil, 0.08);
+          border-color: rgba($moss-green, 0.3);
         }
       }
     }

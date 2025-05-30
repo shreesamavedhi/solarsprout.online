@@ -182,52 +182,38 @@
   }
 }
 
-// View options
-.view-options {
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 20px;
-  padding: 0 15px;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
-  
-  &.animate {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
-  @media (max-width: 576px) {
-    margin-bottom: 15px;
-    justify-content: center;
-  }
-}
-
+// View toggle in filter header
 .view-toggle {
   display: flex;
   align-items: center;
-  background-color: rgba($clay, 0.05);
-  border-radius: 30px;
-  padding: 5px 10px;
-  border: 1px solid rgba($clay, 0.1);
+  background-color: rgba(white, 0.9);
+  border-radius: 20px;
+  padding: 5px 12px;
+  border: 1px solid rgba($terracotta, 0.15);
+  box-shadow: 0 2px 4px rgba($rich-soil, 0.05);
   
   .view-label {
-    margin-right: 10px;
+    margin-right: 8px;
     font-size: 0.9rem;
-    color: $grey-color;
+    color: $rich-soil;
+    font-weight: 500;
   }
   
   .view-button {
     background: none;
     border: none;
-    padding: 8px 12px;
-    border-radius: 20px;
+    padding: 6px 10px;
+    border-radius: 16px;
     cursor: pointer;
-    color: $grey-color;
+    color: $terracotta;
     transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     
     &:hover {
       color: $moss-green;
+      background-color: rgba($moss-green, 0.08);
     }
     
     &.active {
@@ -236,24 +222,77 @@
     }
     
     i {
-      font-size: 1rem;
+      font-size: 0.95rem;
+    }
+    
+    & + .view-button {
+      margin-left: 2px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    padding: 4px 8px;
+    
+    .view-label {
+      font-size: 0.85rem;
+    }
+    
+    .view-button {
+      padding: 5px 8px;
+      
+      i {
+        font-size: 0.9rem;
+      }
     }
   }
 }
 
 // Enhanced category filter section
 .category-filter-section {
-  margin-bottom: 40px;
-  background-color: rgba($clay, 0.03);
-  border-radius: 12px;
-  padding: 25px 20px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  border: 1px solid rgba($clay, 0.1);
+  margin-bottom: 0;
+  background-color: rgba($sage, 0.05);
+  border-radius: 20px 20px 0 0;
+  padding: 25px 20px 20px;
+  box-shadow: 0 2px 8px rgba($rich-soil, 0.05);
+  border: 1px solid rgba($sage, 0.15);
+  
+  &.no-advanced {
+    margin-bottom: 40px;
+    border-radius: 20px;
+  }
+  
+  .filter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    
+    .filter-controls {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    @media (max-width: 768px) {
+      .filter-controls {
+        gap: 8px;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      flex-direction: column;
+      gap: 15px;
+      
+      .filter-controls {
+        width: 100%;
+        justify-content: center;
+        gap: 12px;
+      }
+    }
+  }
   
   h3 {
-    text-align: center;
-    margin-top: 0;
-    margin-bottom: 20px;
+    margin: 0;
     font-size: 1.2rem;
     color: $forest-green;
     position: relative;
@@ -263,11 +302,19 @@
       content: '';
       position: absolute;
       bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
+      left: 0;
       width: 60px;
       height: 2px;
       background-color: rgba($moss-green, 0.5);
+    }
+    
+    @media (max-width: 576px) {
+      text-align: center;
+      
+      &:after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
     }
   }
   
@@ -292,17 +339,17 @@
   
   .filter-button {
     padding: 10px 20px;
-    background-color: white;
-    border-radius: 8px;
+    background-color: rgba(white, 0.9);
+    border-radius: 30px;
     text-decoration: none;
-    color: $text-color;
+    color: $rich-soil;
     font-size: 0.95rem;
     display: flex;
     align-items: center;
     gap: 8px;
     transition: all 0.3s ease;
-    border: 1px solid rgba($clay, 0.15);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba($terracotta, 0.15);
+    box-shadow: 0 2px 4px rgba($rich-soil, 0.05);
     
     i {
       color: $autumn-leaf;
@@ -315,17 +362,18 @@
     }
     
     &:hover {
-      background-color: rgba($moss-green, 0.05);
+      background-color: rgba($moss-green, 0.08);
       transform: translateY(-2px);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 4px 8px rgba($rich-soil, 0.08);
+      border-color: rgba($moss-green, 0.3);
     }
     
     &.active {
-      background-color: $forest-green;
+      background-color: $moss-green;
       color: white;
       transform: translateY(-2px);
-      box-shadow: 0 4px 8px rgba($forest-green, 0.2);
-      border-color: $forest-green;
+      box-shadow: 0 4px 8px rgba($moss-green, 0.25);
+      border-color: $moss-green;
       
       i {
         color: white;
