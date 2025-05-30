@@ -15,7 +15,13 @@ if (urlParams.get('section') === 'contact') {
   });
 }
 
+// No transition overlay needed - normal navigation will be used
+
+// Allow normal navigation behavior without the flash effect
+// No need to prevent default behavior or use transitions
+
 document.addEventListener('DOMContentLoaded', function() {
+  // No overlay to hide
   // Check if we're redirected to contact section
   if (window.location.hash === '#contact') {
     const contactSection = document.querySelector('.get-in-touch');
