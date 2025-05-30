@@ -10,18 +10,9 @@ permalink: /blog/
     <p class="subtitle">Thoughts, tutorials, and updates on my creative journey</p>
   </div>
   
-  <div class="blog-search-container">
-    <div class="search-input-wrapper">
-      <input type="text" id="blog-search-input" placeholder="Search posts..." aria-label="Search blog posts">
-      <button id="clear-search" aria-label="Clear search">
-        <i class="fas fa-times"></i>
-      </button>
-    </div>
-  </div>
-  
-  <div class="category-filter-section">
+  <div class="blog-filter-section">
     <div class="filter-header">
-      <h3>Browse by Category</h3>
+      <h3>Filter & Search Posts</h3>
       <div class="filter-controls">
         <div class="view-toggle">
           <span class="view-label">View:</span>
@@ -35,6 +26,16 @@ permalink: /blog/
         <button id="toggle-advanced-filters" class="toggle-button" aria-expanded="false">
           <span class="toggle-text">Tag Filters</span>
           <i class="fas fa-chevron-down toggle-icon"></i>
+        </button>
+      </div>
+    </div>
+    
+    <div class="search-filter-row">
+      <div class="search-input-wrapper">
+        <i class="fas fa-search search-icon"></i>
+        <input type="text" id="blog-search-input" placeholder="Search by title, description, or content..." aria-label="Search blog posts by title, description, or content">
+        <button id="clear-search" aria-label="Clear search">
+          <i class="fas fa-times"></i>
         </button>
       </div>
     </div>

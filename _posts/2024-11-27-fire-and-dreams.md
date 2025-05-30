@@ -3,7 +3,7 @@ layout: post
 title: "'Fire&Dreams'"
 date: 2024-11-27
 time: false
-categories: [Music, Portfolio]
+categories: [Music]
 description: "A multi-part single that explores the feeling of chasing dreams."
 image: "/assets/images/posts/fire-and-dreams/cover.jpg"
 tags: [music, single, conceptual, electronic, photography]

@@ -3,7 +3,7 @@ layout: post
 title: "Nearsighted"
 date: 2021-11-12
 time: false
-categories: [Art, Portfolio]
+categories: [Art]
 description: "This drawing explores how we limit ourselves in how we view the world, polluting the environment for others"
 tags: [art, pencil, marker, conceptual]
 image: "/assets/images/posts/nearsighted/cover.jpg"

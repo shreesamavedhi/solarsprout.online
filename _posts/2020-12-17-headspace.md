@@ -3,7 +3,7 @@ layout: post
 title: "Headspace"
 date: 2020-12-17
 time: false
-categories: [Art, Portfolio]
+categories: [Art]
 description: "A painting that expresses conflicting emotions and thoughts through color."
 tags: [art, painting, acrylic, conceptual]
 image: "/assets/images/posts/headspace/cover.jpg"

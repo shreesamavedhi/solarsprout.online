@@ -3,7 +3,7 @@ layout: post
 title: "'not-so-simple'"
 date: 2024-09-05
 time: false
-categories: [Music, Portfolio]
+categories: [Music]
 description: "A catchy pop single, taking inspiration from sounds of the 80s."
 image: "/assets/images/posts/not-so-simple/cover.png"
 tags: [music, single, electronic]

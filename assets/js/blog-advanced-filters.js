@@ -36,12 +36,12 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
   
-  // Get category filter section
-  const categoryFilterSection = document.querySelector('.category-filter-section');
+  // Get blog filter section
+  const blogFilterSection = document.querySelector('.blog-filter-section');
   
   // Add no-advanced class initially if needed
-  if (categoryFilterSection && advancedFiltersSection.style.display === 'none') {
-    categoryFilterSection.classList.add('no-advanced');
+  if (blogFilterSection && advancedFiltersSection.style.display === 'none') {
+    blogFilterSection.classList.add('no-advanced');
   }
   
   // Toggle advanced filters visibility
@@ -53,17 +53,17 @@ document.addEventListener('DOMContentLoaded', function() {
         advancedFiltersSection.style.display = 'none';
         advancedFiltersToggle.setAttribute('aria-expanded', 'false');
         
-        // Add class to category filter section when advanced filters are hidden
-        if (categoryFilterSection) {
-          categoryFilterSection.classList.add('no-advanced');
+        // Add class to blog filter section when advanced filters are hidden
+        if (blogFilterSection) {
+          blogFilterSection.classList.add('no-advanced');
         }
       } else {
         advancedFiltersSection.style.display = 'block';
         advancedFiltersToggle.setAttribute('aria-expanded', 'true');
         
-        // Remove class from category filter section when advanced filters are shown
-        if (categoryFilterSection) {
-          categoryFilterSection.classList.remove('no-advanced');
+        // Remove class from blog filter section when advanced filters are shown
+        if (blogFilterSection) {
+          blogFilterSection.classList.remove('no-advanced');
         }
       }
     });
