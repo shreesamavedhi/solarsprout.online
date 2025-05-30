@@ -1,39 +1,39 @@
-@use "sass:color";
-@use "variables" as vars;
-@use "mixins" as mix;
+// Using @import instead of @use for GitHub Pages compatibility
+@import "variables";
+@import "mixins";
 
 // Theme components
-@use "minima-base";
-@use "minima-layout";
-@use "minima-syntax-highlighting";
+@import "minima-base";
+@import "minima-layout";
+@import "minima-syntax-highlighting";
 
 // Shared animations
-@use "animations";
+@import "animations";
 
 // Custom styles
-@use "custom";
+@import "custom";
 
 // Home page
-@use "home";
-@use "home_animations";
+@import "home";
+@import "home_animations";
 
 // About page
-@use "about";
-@use "about_animations";
+@import "about";
+@import "about_animations";
 
 // Portfolio page
-@use "portfolio";
-@use "portfolio_animations";
+@import "portfolio";
+@import "portfolio_animations";
 
 // Blog page
-@use "blog";
-@use "blog_animations";
+@import "blog";
+@import "blog_animations";
 
 // Components
-@use "gallery";
+@import "gallery";
 
 // Image optimizations
-@use "image-optimizations";
+@import "image-optimizations";
 
 // Page transitions
-@use "page-transitions";
+@import "page-transitions";
