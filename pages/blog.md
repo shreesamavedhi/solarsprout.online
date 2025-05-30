@@ -16,10 +16,10 @@ permalink: /blog/
       <div class="filter-controls">
         <div class="view-toggle">
           <span class="view-label">View:</span>
-          <button type="button" data-view="regular" class="view-button active" aria-label="Regular view">
+          <button type="button" data-view="regular" class="view-button" aria-label="Regular view">
             <i class="fas fa-th-large"></i>
           </button>
-          <button type="button" data-view="compact" class="view-button" aria-label="Compact view">
+          <button type="button" data-view="compact" class="view-button active" aria-label="Compact view">
             <i class="fas fa-list"></i>
           </button>
         </div>
@@ -79,7 +79,7 @@ permalink: /blog/
   </div>
   
   {%- if site.posts.size > 0 -%}
-    <div class="post-list" data-current-view="regular">
+    <div class="post-list" data-current-view="compact">
       <div id="no-results-message" style="display: none;">
         <p>No posts found matching your search. Try different keywords or <button id="reset-search">view all posts</button>.</p>
       </div>
@@ -106,9 +106,11 @@ permalink: /blog/
           </h3>
           <div class="post-excerpt">
             {% if post.description %}
-              {{ post.description }}
+              <span class="regular-excerpt">{{ post.description }}</span>
+              <span class="compact-excerpt">{{ post.description | truncatewords: 20 }}</span>
             {% else %}
-              {{ post.excerpt | strip_html | truncatewords: 30 }}
+              <span class="regular-excerpt">{{ post.excerpt | strip_html | truncatewords: 40 }}</span>
+              <span class="compact-excerpt">{{ post.excerpt | strip_html | truncatewords: 15 }}</span>
             {% endif %}
           </div>
           {% if post.tags %}

@@ -633,14 +633,52 @@
 // Enhanced post excerpt
 .post-excerpt {
   color: $grey-color;
-  margin-bottom: 20px;
-  flex-grow: 1;
+  font-size: 0.95rem;
   line-height: 1.6;
+  margin-bottom: 15px;
   overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  line-clamp: 3;
-  -webkit-box-orient: vertical;
+  
+  .regular-excerpt,
+  .compact-excerpt {
+    display: none;
+  }
+  
+  @media (max-width: 576px) {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+}
+
+// View-specific excerpt styles
+.post-list[data-current-view="regular"] .post-excerpt {
+  .regular-excerpt {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    overflow: hidden;
+    
+    @media (max-width: 576px) {
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+    }
+  }
+}
+
+.post-list[data-current-view="compact"] .post-excerpt {
+  .compact-excerpt {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    overflow: hidden;
+    
+    @media (max-width: 576px) {
+      -webkit-line-clamp: 1;
+      line-clamp: 1;
+    }
+  }
 }
 
 // Enhanced post tags

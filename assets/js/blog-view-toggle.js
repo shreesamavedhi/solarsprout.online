@@ -9,18 +9,23 @@ document.addEventListener('DOMContentLoaded', function() {
   // Check if there's a saved preference in localStorage
   const savedView = localStorage.getItem('blogViewPreference');
   
-  // Apply saved preference if it exists
-  if (savedView && postList) {
-    postList.setAttribute('data-current-view', savedView);
-    
-    // Update active button
-    viewButtons.forEach(button => {
-      if (button.getAttribute('data-view') === savedView) {
-        button.classList.add('active');
-      } else {
-        button.classList.remove('active');
-      }
-    });
+  if (postList) {
+    // Apply saved preference if it exists, otherwise default to compact
+    if (savedView) {
+      postList.setAttribute('data-current-view', savedView);
+      
+      // Update active button
+      viewButtons.forEach(button => {
+        if (button.getAttribute('data-view') === savedView) {
+          button.classList.add('active');
+        } else {
+          button.classList.remove('active');
+        }
+      });
+    } else {
+      // Set compact as default for new visitors
+      localStorage.setItem('blogViewPreference', 'compact');
+    }
   }
   
   // Add click event listeners to view buttons
