@@ -11,8 +11,8 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 
-# Enable custom plugins
-safe: false
+# GitHub Pages compatibility
+# safe: false  # Commented out as GitHub Pages forces safe mode
 
 # Navigation
 header_pages:
