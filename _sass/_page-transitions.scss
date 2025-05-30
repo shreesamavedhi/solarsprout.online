@@ -1,0 +1,42 @@
+// Enhanced page transition styles
+// This implementation prevents flash of content during navigation
+
+// Base transition styles
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  position: relative;
+  overflow-x: hidden;
+  // Add backface visibility to prevent flickering in some browsers
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+// Initial page load state
+body:not(.page-loaded) {
+  opacity: 0;
+}
+
+// Animate in when page is loaded
+body.page-loaded {
+  opacity: 1;
+  transition: opacity 0.3s ease-out;
+}
+
+// Transition out when navigating away
+body.page-transition-out .page-content {
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+
+// Keep the header visible during transitions
+.site-header {
+  opacity: 1 !important;
+  transition: none !important;
+  // Ensure it's above other content
+  z-index: 1000;
+  position: relative;
+}
