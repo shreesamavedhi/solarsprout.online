@@ -63,7 +63,8 @@ layout: default
           </div>
           <div class="post-tags">
             {% for tag in post.tags %}
-            <a href="{{ '/tag/' | append: tag | relative_url }}" class="post-tag tag-{{ tag }}">{{ tag }}</a>
+            {% assign tag_slug = tag | slugify %}
+            <a href="{{ '/blog/?tag=' | append: tag_slug | relative_url }}" class="post-tag tag-{{ tag_slug }}" data-tag="{{ tag_slug }}">{{ tag }}</a>
             {% endfor %}
           </div>
         </div>
