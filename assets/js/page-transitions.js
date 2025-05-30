@@ -31,7 +31,22 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Handle the page load completion - ensure we're visible when page loads
   window.addEventListener('pageshow', function(e) {
-    // Reset the transition class
+    // Reset the transition class immediately
+    document.body.classList.remove('page-transition-out');
+    
+    // Fix for bfcache (back-forward cache) issues
+    if (e.persisted) {
+      // Force a repaint to ensure the page is visible
+      document.body.style.display = 'none';
+      requestAnimationFrame(() => {
+        document.body.style.display = '';
+      });
+    }
+  });
+  
+  // Handle browser back/forward navigation
+  window.addEventListener('popstate', function() {
+    // Ensure the page is visible when using browser navigation
     document.body.classList.remove('page-transition-out');
   });
   
