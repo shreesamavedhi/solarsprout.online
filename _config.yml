@@ -3,16 +3,17 @@ description: Film, Music, Games, Art & More by Shree Samavedhi
 baseurl: ""
 url: "https://solarsprout.online"
 
-# Theme settings
-# Using custom theme files instead of minima
-theme: null
+# Build settings
+markdown: kramdown
+theme: minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-github-metadata
 
 # GitHub Pages compatibility
-# safe: false  # Commented out as GitHub Pages forces safe mode
+repository: shreesamavedhi/solarsprout.online
 
 # Navigation
 header_pages:

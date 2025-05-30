@@ -1,5 +1,4 @@
-@use "sass:color";
-@use "variables" as vars;
+@import "variables";
 
 // Blog page styles
 .blog-posts {
@@ -41,7 +40,7 @@
 #blog-search-input {
   width: 100%;
   padding: 12px 45px 12px 20px;
-  border: 1px solid rgba(vars.$clay, 0.2);
+  border: 1px solid rgba($clay, 0.2);
   border-radius: 30px;
   font-size: 1rem;
   background-color: white;
@@ -56,12 +55,12 @@
   
   &:focus {
     outline: none;
-    border-color: vars.$moss-green;
-    box-shadow: 0 5px 15px rgba(vars.$moss-green, 0.1);
+    border-color: $moss-green;
+    box-shadow: 0 5px 15px rgba($moss-green, 0.1);
   }
   
   &::placeholder {
-    color: rgba(vars.$grey-color, 0.7);
+    color: rgba($grey-color, 0.7);
   }
 }
 
@@ -72,7 +71,7 @@
   transform: translateY(-50%);
   background: none;
   border: none;
-  color: vars.$grey-color;
+  color: $grey-color;
   cursor: pointer;
   padding: 5px;
   font-size: 0.9rem;
@@ -92,7 +91,7 @@
 #no-results-message {
   text-align: center;
   padding: 30px;
-  background-color: rgba(vars.$clay, 0.05);
+  background-color: rgba($clay, 0.05);
   border-radius: 10px;
   margin-bottom: 30px;
   width: 100%;
@@ -100,20 +99,20 @@
   
   p {
     margin-bottom: 0;
-    color: vars.$grey-color;
+    color: $grey-color;
   }
   
   button {
     background: none;
     border: none;
-    color: vars.$moss-green;
+    color: $moss-green;
     font-weight: 500;
     cursor: pointer;
     padding: 0;
     text-decoration: underline;
     
     &:hover {
-      color: color.adjust(vars.$moss-green, $lightness: -10%);
+      color: darken($moss-green, 10%);
     }
   }
 }
@@ -139,13 +138,13 @@
     margin: 0 auto;
     width: 80%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(vars.$moss-green, 0.1) 0%, rgba(vars.$clay, 0.15) 100%);
+    background: linear-gradient(135deg, rgba($moss-green, 0.1) 0%, rgba($clay, 0.15) 100%);
     border-radius: 70% 30% 30% 70% / 30% 70% 30% 70%;
     z-index: -1;
   }
   
   h1 {
-    color: vars.$forest-green;
+    color: $forest-green;
     font-size: 3rem;
     margin-bottom: 20px;
     position: relative;
@@ -164,13 +163,13 @@
       transform: translateX(-50%);
       width: 80px;
       height: 3px;
-      background-color: vars.$moss-green;
+      background-color: $moss-green;
     }
   }
   
   .subtitle {
     font-size: 1.3rem;
-    color: vars.$grey-color;
+    color: $grey-color;
     max-width: 700px;
     margin: 20px auto 0;
     line-height: 1.6;
@@ -207,15 +206,15 @@
 .view-toggle {
   display: flex;
   align-items: center;
-  background-color: rgba(vars.$clay, 0.05);
+  background-color: rgba($clay, 0.05);
   border-radius: 30px;
   padding: 5px 10px;
-  border: 1px solid rgba(vars.$clay, 0.1);
+  border: 1px solid rgba($clay, 0.1);
   
   .view-label {
     margin-right: 10px;
     font-size: 0.9rem;
-    color: vars.$grey-color;
+    color: $grey-color;
   }
   
   .view-button {
@@ -224,15 +223,15 @@
     padding: 8px 12px;
     border-radius: 20px;
     cursor: pointer;
-    color: vars.$grey-color;
+    color: $grey-color;
     transition: all 0.3s ease;
     
     &:hover {
-      color: vars.$moss-green;
+      color: $moss-green;
     }
     
     &.active {
-      background-color: vars.$moss-green;
+      background-color: $moss-green;
       color: white;
     }
     
@@ -260,14 +259,14 @@
   
   .filter-button {
     padding: 10px 20px;
-    background-color: rgba(vars.$clay, 0.05);
+    background-color: rgba($clay, 0.05);
     border-radius: 30px;
     text-decoration: none;
-    color: vars.$text-color;
+    color: $text-color;
     font-size: 0.95rem;
     
     transition: all 0.3s ease;
-    border: 1px solid rgba(vars.$clay, 0.1);
+    border: 1px solid rgba($clay, 0.1);
     
     @media (max-width: 576px) {
       padding: 8px 16px;
@@ -275,16 +274,16 @@
     }
     
     &:hover {
-      background-color: rgba(vars.$moss-green, 0.1);
+      background-color: rgba($moss-green, 0.1);
       transform: translateY(-3px);
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     }
     
     &.active {
-      background-color: vars.$moss-green;
+      background-color: $moss-green;
       color: white;
-      border-color: vars.$moss-green;
-      box-shadow: 0 5px 15px rgba(vars.$moss-green, 0.2);
+      border-color: $moss-green;
+      box-shadow: 0 5px 15px rgba($moss-green, 0.2);
     }
   }
 }
@@ -484,7 +483,7 @@
 // Enhanced post meta
 .post-meta {
   font-size: 0.9rem;
-  color: vars.$grey-color;
+  color: $grey-color;
   margin-bottom: 12px;
   display: block;
   font-weight: 500;
@@ -506,19 +505,19 @@
   line-height: 1.3;
   
   a {
-    color: vars.$text-color;
+    color: $text-color;
     text-decoration: none;
     transition: color 0.3s ease;
     
     &:hover {
-      color: vars.$moss-green;
+      color: $moss-green;
     }
   }
 }
 
 // Enhanced post excerpt
 .post-excerpt {
-  color: vars.$grey-color;
+  color: $grey-color;
   margin-bottom: 20px;
   flex-grow: 1;
   line-height: 1.6;

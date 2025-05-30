@@ -1,22 +1,14 @@
 source "https://rubygems.org"
 
-# Standard library gems that are no longer included by default in Ruby 3.4
-gem "csv"
-gem "base64"
-gem "bigdecimal"
-gem "drb"
-gem "mutex_m"
-gem "observer"
-gem "logger"
+# If you want to use GitHub Pages, remove the "gem 'jekyll'" above and
+# uncomment the line below. To upgrade, run `bundle update github-pages`.
+gem "github-pages", "~> 232", group: :jekyll_plugins
 
-# Jekyll and its dependencies
-gem "jekyll", "~> 4.3.2"
-gem "minima", "~> 2.5"
-
+# If you have any plugins, put them here!
 group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.12"
-  gem "jekyll-seo-tag", "~> 2.8"
-  gem "jekyll-sitemap", "~> 1.4"
+  gem "jekyll-feed"
+  gem "jekyll-seo-tag"
+  gem "jekyll-sitemap"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

@@ -1,5 +1,4 @@
-@use "sass:color";
-@use "variables" as vars;
+@import "variables";
 
 // Portfolio page styles
 .portfolio-page {
@@ -32,13 +31,13 @@
     margin: 0 auto;
     width: 80%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(vars.$clay, 0.1) 0%, rgba(vars.$moss-green, 0.15) 100%);
+    background: linear-gradient(135deg, rgba($clay, 0.1) 0%, rgba($moss-green, 0.15) 100%);
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
     z-index: -1;
   }
   
   h1 {
-    color: vars.$rich-soil;
+    color: $rich-soil;
     font-size: 3rem;
     margin-bottom: 20px;
     position: relative;
@@ -57,13 +56,13 @@
       transform: translateX(-50%);
       width: 80px;
       height: 3px;
-      background-color: vars.$moss-green;
+      background-color: $moss-green;
     }
   }
   
   .subtitle {
     font-size: 1.3rem;
-    color: vars.$grey-color;
+    color: $grey-color;
     max-width: 700px;
     margin: 20px auto 0;
     line-height: 1.6;
@@ -111,7 +110,7 @@
   }
   
   h2 {
-    color: vars.$rich-soil;
+    color: $rich-soil;
     font-size: 2.2rem;
     margin-bottom: 15px;
     
@@ -124,7 +123,7 @@
   .platform-link {
     display: inline-flex;
     align-items: center;
-    color: vars.$clay;
+    color: $clay;
     text-decoration: none;
     font-size: 1.1rem;
     transition: color 0.3s ease;
@@ -139,7 +138,7 @@
     }
     
     &:hover {
-      color: vars.$autumn-leaf;
+      color: $autumn-leaf;
     }
   }
   
@@ -194,7 +193,7 @@
 .coming-soon-banner {
   text-align: center;
   padding: 50px 30px;
-  background: linear-gradient(135deg, color.adjust(vars.$clay, $lightness: 45%) 0%, color.adjust(vars.$moss-green, $lightness: 45%) 100%);
+  background: linear-gradient(135deg, lighten($clay, 45%) 0%, lighten($moss-green, 45%) 100%);
   border-radius: 20px;
   margin: 0 auto;
   max-width: 700px;
@@ -223,7 +222,7 @@
   }
   
   h3 {
-    color: vars.$forest-green;
+    color: $forest-green;
     font-size: 2.2rem;
     margin-bottom: 20px;
     text-transform: uppercase;
@@ -239,12 +238,12 @@
       transform: translateX(-50%);
       width: 80px;
       height: 3px;
-      background-color: vars.$moss-green;
+      background-color: $moss-green;
     }
   }
   
   p {
-    color: vars.$grey-color;
+    color: $grey-color;
     font-size: 1.2rem;
     margin: 25px 0 0;
     line-height: 1.6;
@@ -315,7 +314,7 @@
   }
   
   .view-button {
-    background-color: vars.$moss-green;
+    background-color: $moss-green;
     color: white;
     padding: 10px 20px;
     border-radius: 30px;
@@ -330,7 +329,7 @@
     }
     
     &:hover {
-      background-color: vars.$forest-green;
+      background-color: $forest-green;
     }
   }
   
@@ -361,7 +360,7 @@
   
   h3 {
     font-size: 1.4rem;
-    color: vars.$rich-soil;
+    color: $rich-soil;
     margin-bottom: 12px;
     
     @media (max-width: 576px) {
@@ -371,7 +370,7 @@
   }
   
   p {
-    color: vars.$grey-color;
+    color: $grey-color;
     margin-bottom: 15px;
     line-height: 1.6;
     flex-grow: 1;
@@ -424,27 +423,27 @@
 
 // Animation section styling
 #animation .section-header h2 {
-  color: vars.$autumn-leaf;
+  color: $autumn-leaf;
 }
 
 // Game development section styling
 #gamedev .section-header h2 {
-  color: vars.$terracotta;
+  color: $terracotta;
 }
 
 // Music section styling
 #music .section-header h2 {
-  color: vars.$stone;
+  color: $stone;
 }
 
 // Art section styling
 #art .section-header h2 {
-  color: vars.$rich-soil;
+  color: $rich-soil;
 }
 
 // Film section styling
 #film .section-header h2 {
-  color: vars.$sage;
+  color: $sage;
 }
 
 .coming-soon-banner {
@@ -456,13 +455,13 @@
   margin: 20px 0;
   
   h3 {
-    color: vars.$rich-soil;
+    color: $rich-soil;
     font-size: 1.4rem;
     margin-bottom: 12px;
   }
   
   p {
-    color: vars.$grey-color;
+    color: $grey-color;
     line-height: 1.6;
   }
   
@@ -497,7 +496,7 @@
   text-align: center;
   padding: 40px 20px;
   margin-top: 100px; // Increased margin for more space
-  background: linear-gradient(135deg, rgba(vars.$clay, 0.05) 0%, rgba(vars.$moss-green, 0.08) 100%);
+  background: linear-gradient(135deg, rgba($clay, 0.05) 0%, rgba($moss-green, 0.08) 100%);
   border-radius: 20px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
   
@@ -548,7 +547,7 @@
 
 .contact-button {
   display: inline-block;
-  background-color: vars.$moss-green;
+  background-color: $moss-green;
   color: white;
   padding: 15px 40px;
   border-radius: 30px;
@@ -569,8 +568,8 @@
   }
   
   &:hover {
-    background-color: vars.$forest-green;
+    background-color: $forest-green;
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(vars.$moss-green, 0.2);
+    box-shadow: 0 5px 15px rgba($moss-green, 0.2);
   }
 }

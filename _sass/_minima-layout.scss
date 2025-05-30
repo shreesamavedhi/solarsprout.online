@@ -1,13 +1,12 @@
-@use "sass:color";
-@use "variables" as vars;
-@use "mixins" as mix;
+@import "variables";
+@import "mixins";
 
 /**
  * Site header
  */
 .site-header {
-  border-top: 5px solid vars.$grey-color-dark;
-  border-bottom: 1px solid vars.$grey-color-light;
+  border-top: 5px solid $grey-color-dark;
+  border-bottom: 1px solid $grey-color-light;
   min-height: 55.95px;
   position: relative;
 }
@@ -22,7 +21,7 @@
 
   &,
   &:visited {
-    color: vars.$grey-color-dark;
+    color: $grey-color-dark;
   }
 }
 
@@ -39,7 +38,7 @@
   }
 
   .page-link {
-    color: vars.$text-color;
+    color: $text-color;
     line-height: 1.5;
 
     // Gaps between nav items, but not on the last one
@@ -48,12 +47,12 @@
     }
   }
 
-  @include mix.media-query(vars.$on-palm) {
+  @include media-query($on-palm) {
     position: absolute;
     top: 9px;
     right: 15px;
-    background-color: vars.$background-color;
-    border: 1px solid vars.$grey-color-light;
+    background-color: $background-color;
+    border: 1px solid $grey-color-light;
     border-radius: 5px;
     text-align: right;
 
@@ -76,7 +75,7 @@
       text-align: center;
 
       > svg {
-        fill: vars.$grey-color-dark;
+        fill: $grey-color-dark;
       }
     }
 
@@ -106,7 +105,7 @@
  * Site footer
  */
 .site-footer {
-  border-top: 1px solid vars.$grey-color-light;
+  border-top: 1px solid $grey-color-light;
   padding: 30px 0;
 }
 
@@ -123,7 +122,7 @@
 
 .footer-col-wrapper {
   font-size: 15px;
-  color: vars.$grey-color;
+  color: $grey-color;
   margin-left: -15px;
 }
 
@@ -148,7 +147,7 @@
   width:         calc(45% - (30px / 2));
 }
 
-@include mix.media-query(vars.$on-laptop) {
+@include media-query($on-laptop) {
   .footer-col-1,
   .footer-col-2 {
     width: -webkit-calc(50% - (30px / 2));
@@ -161,7 +160,7 @@
   }
 }
 
-@include mix.media-query(vars.$on-palm) {
+@include media-query($on-palm) {
   .footer-col {
     float: none;
     width: -webkit-calc(100% - (30px / 2));
@@ -196,7 +195,7 @@
 
 .post-meta {
   font-size: 14px;
-  color: vars.$grey-color;
+  color: $grey-color;
 }
 
 .post-link {
@@ -216,7 +215,7 @@
   letter-spacing: -1px;
   line-height: 1;
 
-  @include mix.media-query(vars.$on-laptop) {
+  @include media-query($on-laptop) {
     font-size: 36px;
   }
 }
@@ -227,7 +226,7 @@
   h2 {
     font-size: 32px;
 
-    @include mix.media-query(vars.$on-laptop) {
+    @include media-query($on-laptop) {
       font-size: 28px;
     }
   }
@@ -235,7 +234,7 @@
   h3 {
     font-size: 26px;
 
-    @include mix.media-query(vars.$on-laptop) {
+    @include media-query($on-laptop) {
       font-size: 22px;
     }
   }
@@ -243,7 +242,7 @@
   h4 {
     font-size: 20px;
 
-    @include mix.media-query(vars.$on-laptop) {
+    @include media-query($on-laptop) {
       font-size: 18px;
     }
   }

@@ -1,5 +1,4 @@
-@use "sass:color";
-@use "variables" as vars;
+@import "variables";
 
 // Hero Banner Section
 .hero-banner {
@@ -54,7 +53,7 @@
 
 .banner-button {
   display: inline-block;
-  background-color: vars.$moss-green;
+  background-color: $moss-green;
   color: white;
   padding: 12px 30px;
   border-radius: 30px;
@@ -64,7 +63,7 @@
   transition: all 0.3s ease;
   
   &:hover {
-    background-color: vars.$forest-green;
+    background-color: $forest-green;
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   }
@@ -77,11 +76,11 @@
 
 // About Section
 .home-about {
-  background-color: color.scale(vars.$background-color, $lightness: -2%);
+  background-color: darken($background-color, 2%);
   padding: 60px 0;
   margin-bottom: 60px;
   border-radius: 10px;
-  border: 1px solid color.scale(vars.$clay, $lightness: 10%);
+  border: 1px solid lighten($clay, 10%);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   
@@ -130,7 +129,7 @@
   }
   
   h2 {
-    color: vars.$forest-green;
+    color: $forest-green;
     font-weight: 600;
     position: relative;
     padding-bottom: 15px;
@@ -149,7 +148,7 @@
       left: 0;
       width: 40px;
       height: 2px;
-      background-color: vars.$moss-green;
+      background-color: $moss-green;
       
       @media (max-width: 768px) {
         left: 50%;
@@ -160,7 +159,7 @@
   }
   
   p {
-    color: color.scale(vars.$text-color, $lightness: 10%);
+    color: lighten($text-color, 10%);
     line-height: 1.6;
     font-size: 1.1rem;
     
@@ -183,7 +182,7 @@
 
 .read-more-button {
   display: inline-block;
-  background-color: vars.$sage;
+  background-color: $sage;
   color: white;
   padding: 10px 25px;
   border-radius: 30px;
@@ -200,7 +199,7 @@
   }
   
   &:hover {
-    background-color: vars.$forest-green;
+    background-color: $forest-green;
     transform: translateY(-2px);
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
   }
@@ -213,7 +212,7 @@
   h2 {
     text-align: center;
     margin-bottom: 40px;
-    color: vars.$rich-soil;
+    color: $rich-soil;
     font-size: 2rem;
   }
 }
@@ -277,11 +276,11 @@
   margin-bottom: 15px;
   
   a {
-    color: vars.$text-color;
+    color: $text-color;
     text-decoration: none;
     
     &:hover {
-      color: vars.$moss-green;
+      color: $moss-green;
     }
   }
 }
@@ -293,7 +292,7 @@
 
 .view-all-button {
   display: inline-block;
-  background-color: vars.$moss-green;
+  background-color: $moss-green;
   color: white;
   padding: 10px 25px;
   border-radius: 30px;
@@ -303,7 +302,7 @@
   transition: all 0.3s ease;
   
   &:hover {
-    background-color: vars.$forest-green;
+    background-color: $forest-green;
     transform: translateY(-2px);
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
   }
@@ -311,7 +310,7 @@
 
 // Newsletter Section
 .newsletter {
-  background-color: vars.$terracotta;
+  background-color: $terracotta;
   padding: 60px 0;
   margin-top: 80px;
   margin-bottom: 60px;
@@ -375,7 +374,7 @@
   }
   
   button {
-    background-color: vars.$rich-soil;
+    background-color: $rich-soil;
     color: white;
     border: none;
     padding: 15px 30px;
@@ -393,7 +392,7 @@
     }
     
     &:hover {
-      background-color: vars.$forest-green;
+      background-color: $forest-green;
     }
   }
 }

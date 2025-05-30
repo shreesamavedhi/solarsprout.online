@@ -1,6 +1,5 @@
-@use "sass:color";
-@use "variables" as vars;
-@use "animations";
+@import "variables";
+@import "animations";
 
 .blog-header {
   opacity: 0;

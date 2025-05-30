@@ -1,5 +1,4 @@
-@use "sass:color";
-@use "variables" as vars;
+@import "variables";
 
 /**
  * Reset some basic elements
@@ -16,8 +15,8 @@ dl, dd, ol, ul, figure {
  */
 body {
   font: 400 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  color: vars.$text-color;
-  background-color: vars.$background-color;
+  color: $text-color;
+  background-color: $background-color;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
      -moz-font-feature-settings: "kern" 1;
@@ -90,15 +89,15 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-  color: vars.$brand-color;
+  color: $brand-color;
   text-decoration: none;
 
   &:visited {
-    color: color.scale(vars.$brand-color, $lightness: -15%);
+    color: darken($brand-color, 15%);
   }
 
   &:hover {
-    color: vars.$text-color;
+    color: $text-color;
     text-decoration: underline;
   }
 
@@ -115,8 +114,8 @@ a {
  * Blockquotes
  */
 blockquote {
-  color: vars.$grey-color;
-  border-left: 4px solid vars.$grey-color-light;
+  color: $grey-color;
+  border-left: 4px solid $grey-color-light;
   padding-left: 15px;
   font-size: 18px;
   letter-spacing: -1px;
@@ -133,9 +132,9 @@ blockquote {
 pre,
 code {
   font-size: 15px;
-  border: 1px solid vars.$grey-color-light;
+  border: 1px solid $grey-color-light;
   border-radius: 3px;
-  background-color: color.scale(vars.$grey-color-light, $lightness: 6%);
+  background-color: lighten($grey-color-light, 6%);
 }
 
 code {
@@ -157,7 +156,7 @@ pre {
  * Wrapper
  */
 .wrapper {
-  max-width: calc(#{vars.$content-width} - (30px * 2));
+  max-width: calc(#{$content-width} - (30px * 2));
   margin-right: auto;
   margin-left: auto;
   padding-right: 30px;
@@ -181,23 +180,23 @@ table {
   margin-bottom: 30px;
   width: 100%;
   text-align: left;
-  color: color.scale(vars.$text-color, $lightness: 18%);
+  color: lighten($text-color, 18%);
   border-collapse: collapse;
-  border: 1px solid vars.$grey-color-light;
+  border: 1px solid $grey-color-light;
   tr {
     &:nth-child(even) {
-      background-color: color.scale(vars.$grey-color-light, $lightness: 6%);
+      background-color: lighten($grey-color-light, 6%);
     }
   }
   th, td {
     padding: 10px 15px;
   }
   th {
-    background-color: color.scale(vars.$grey-color-light, $lightness: 3%);
-    border: 1px solid color.scale(vars.$grey-color-light, $lightness: -2%);
-    border-bottom-color: color.scale(vars.$grey-color-light, $lightness: -12%);
+    background-color: lighten($grey-color-light, 3%);
+    border: 1px solid darken($grey-color-light, 2%);
+    border-bottom-color: darken($grey-color-light, 12%);
   }
   td {
-    border: 1px solid vars.$grey-color-light;
+    border: 1px solid $grey-color-light;
   }
 }

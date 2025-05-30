@@ -1,6 +1,5 @@
-@use "sass:color";
-@use "variables" as vars;
-@use "animations";
+@import "variables";
+@import "animations";
 
 // Portfolio Header Animations
 .portfolio-header {
@@ -174,7 +173,7 @@
     
     /* Hover state - no animation, just style changes */
     &:hover {
-      background-color: vars.$forest-green;
+      background-color: $forest-green;
       transform: translateY(-5px);
       box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
     }

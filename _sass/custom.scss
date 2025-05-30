@@ -1,14 +1,12 @@
-@use "sass:color";
-@use "sass:map";
-@use "variables" as vars;
-@use "mixins" as mix;
+@import "variables";
+@import "mixins";
 
 // Custom styles for SolarSprout
 // These styles will override Minima theme defaults
 
 .site-header {
-  border-top: 5px solid vars.$rich-soil;
-  border-bottom: 1px solid vars.$clay;
+  border-top: 5px solid $rich-soil;
+  border-bottom: 1px solid $clay;
   height: 65px;
   position: relative;
   background-color: white;
@@ -32,7 +30,7 @@
   padding: 5px 0;
   
   &, &:visited {
-    color: vars.$rich-soil;
+    color: $rich-soil;
   }
   
   &:hover {
@@ -54,7 +52,7 @@
   }
   
   .page-link {
-    color: vars.$rich-soil;
+    color: $rich-soil;
     text-decoration: none;
     font-size: 1rem;
     font-weight: 500;
@@ -68,7 +66,7 @@
       left: 0;
       width: 100%;
       height: 2px;
-      background-color: vars.$moss-green;
+      background-color: $moss-green;
       transform: scaleX(0);
       transition: transform 0.3s ease;
     }
@@ -97,7 +95,7 @@
       display: block;
       width: 18px;
       height: 2px;
-      background-color: vars.$rich-soil;
+      background-color: $rich-soil;
       position: absolute;
     }
   }
@@ -107,25 +105,25 @@
 .swiper {
   .swiper-button-next,
   .swiper-button-prev {
-    color: vars.$rich-soil !important; // Deep brown from our theme
+    color: $rich-soil !important; // Deep brown from our theme
     
     &:hover {
-      color: vars.$terracotta !important; // Lighter brown on hover
+      color: $terracotta !important; // Lighter brown on hover
     }
 
     &:active {
-      color: vars.$moss-green !important; // Green when clicked
+      color: $moss-green !important; // Green when clicked
     }
   }
 
   // Pagination dots
   .swiper-pagination-bullet {
-    background: vars.$rich-soil !important; // Deep brown dots
+    background: $rich-soil !important; // Deep brown dots
     opacity: 0.3;
 
     &-active {
       opacity: 1;
-      background: vars.$rich-soil !important;
+      background: $rich-soil !important;
     }
   }
 }
@@ -174,7 +172,7 @@
         }
         
         &:hover {
-          background-color: vars.$sage;
+          background-color: $sage;
           color: white;
           text-decoration: none;
         }
@@ -237,7 +235,7 @@
     background-color: #f5f5f5;
     border-radius: 20px;
     text-decoration: none;
-    color: vars.$text-color;
+    color: $text-color;
     font-size: 0.9rem;
     transition: all 0.2s ease;
     
@@ -247,7 +245,7 @@
     }
     
     &.active {
-      background-color: vars.$moss-green;
+      background-color: $moss-green;
       color: white;
     }
   }
@@ -311,7 +309,7 @@
 
 .post-meta {
   font-size: 14px;
-  color: vars.$grey-color;
+  color: $grey-color;
   margin-bottom: 10px;
   display: block;
 }
@@ -326,7 +324,7 @@
     text-decoration: none;
     
     &:hover {
-      color: vars.$brand-color;
+      color: $brand-color;
     }
   }
 }
@@ -457,13 +455,13 @@
     
     .portfolio-title {
       font-size: 2.5rem;
-      color: vars.$rich-soil;
+      color: $rich-soil;
       margin-bottom: 15px;
     }
     
     .portfolio-subtitle {
       font-size: 1.2rem;
-      color: vars.$grey-color;
+      color: $grey-color;
       margin-bottom: 20px;
     }
     
@@ -481,14 +479,14 @@
     font-size: 1.05rem;
     
     h2 {
-      color: vars.$forest-green;
+      color: $forest-green;
       margin-top: 40px;
       margin-bottom: 20px;
       font-size: 1.8rem;
     }
     
     h3 {
-      color: vars.$moss-green;
+      color: $moss-green;
       margin-top: 30px;
       margin-bottom: 15px;
       font-size: 1.4rem;
@@ -512,7 +510,7 @@
     margin: 50px 0;
     
     h2 {
-      color: vars.$forest-green;
+      color: $forest-green;
       margin-bottom: 25px;
       text-align: center;
     }
@@ -538,7 +536,7 @@
         text-align: center;
         margin-top: 10px;
         font-size: 0.9rem;
-        color: vars.$grey-color;
+        color: $grey-color;
       }
     }
   }
@@ -550,7 +548,7 @@
     border-radius: 8px;
     
     h2 {
-      color: vars.$forest-green;
+      color: $forest-green;
       margin-top: 0;
       margin-bottom: 20px;
     }
@@ -571,7 +569,7 @@
       .external-link {
         display: inline-flex;
         align-items: center;
-        color: vars.$moss-green;
+        color: $moss-green;
         text-decoration: none;
         font-weight: 500;
         transition: color 0.3s ease;
@@ -582,7 +580,7 @@
         }
         
         &:hover {
-          color: vars.$autumn-leaf;
+          color: $autumn-leaf;
         }
       }
     }
@@ -594,8 +592,8 @@
     
     .back-button {
       display: inline-block;
-      background-color: vars.$clay;
-      color: vars.$text-color;
+      background-color: $clay;
+      color: $text-color;
       padding: 12px 25px;
       border-radius: 30px;
       text-decoration: none;
@@ -603,7 +601,7 @@
       transition: background-color 0.3s ease, transform 0.3s ease;
       
       &:hover {
-        background-color: color.scale(vars.$clay, $lightness: -5%);
+        background-color: darken($clay, 5%);
         transform: translateY(-2px);
       }
     }
@@ -634,28 +632,28 @@
   margin-top: 30px;
   
   a {
-    color: vars.$forest-green;
+    color: $forest-green;
     text-decoration: none;
     
     &:hover {
-      color: vars.$moss-green;
+      color: $moss-green;
       text-decoration: none;
     }
   }
 }
 
 // Generate tag colors using the mixin
-@each $name, $color in vars.$tag-colors {
-  @include mix.tag-color($name, $color);
+@each $name, $color in $tag-colors {
+  @include tag-color($name, $color);
 }
 
 // Footer styles
 .site-footer {
-  background-color: vars.$rich-soil;
+  background-color: $rich-soil;
   color: #f5f5f5;
   padding: 60px 0 20px;
   margin-top: 60px;
-  border-top: 3px solid vars.$moss-green;
+  border-top: 3px solid $moss-green;
   position: relative;
   overflow: hidden;
   
@@ -688,7 +686,7 @@
 }
 
 .footer-col h3 {
-  color: vars.$autumn-leaf;
+  color: $autumn-leaf;
   margin-top: 0;
   margin-bottom: 20px;
   font-size: 1.3rem;
@@ -703,7 +701,7 @@
     left: 0;
     width: 40px;
     height: 2px;
-    background-color: vars.$autumn-leaf;
+    background-color: $autumn-leaf;
     opacity: 0.6;
   }
   
@@ -757,10 +755,10 @@
     }
     
     &:hover {
-      color: vars.$autumn-leaf;
+      color: $autumn-leaf;
       
       i {
-        color: vars.$autumn-leaf;
+        color: $autumn-leaf;
       }
     }
   }
@@ -810,7 +808,7 @@
   padding-top: 20px;
   text-align: center;
   font-size: 0.85rem;
-  color: vars.$clay;
+  color: $clay;
   position: relative;
   z-index: 1;
   letter-spacing: 0.02em;
@@ -823,7 +821,7 @@
     transform: translateX(-50%);
     width: 60px;
     height: 1px;
-    background-color: vars.$autumn-leaf;
+    background-color: $autumn-leaf;
     opacity: 0.4;
   }
 }

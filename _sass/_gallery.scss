@@ -1,5 +1,4 @@
-@use "sass:color";
-@use "variables" as vars;
+@import "variables";
 
 // Swiper gallery styles
 .swiper {
@@ -26,12 +25,12 @@
   color: #666;
   
   &:hover {
-    color: vars.$moss-green;
+    color: $moss-green;
   }
 }
 
 .swiper-pagination-bullet {
   &-active {
-    background-color: vars.$moss-green;
+    background-color: $moss-green;
   }
 }
