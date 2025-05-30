@@ -97,6 +97,21 @@
       height: 2px;
       background-color: $rich-soil;
       position: absolute;
+      left: 10px;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+      transform-origin: center;
+      
+      &:nth-child(1) {
+        top: 6px;
+      }
+      
+      &:nth-child(2) {
+        top: 12px;
+      }
+      
+      &:nth-child(3) {
+        top: 18px;
+      }
     }
   }
 }
@@ -154,7 +169,8 @@
       height: calc(100vh - 65px);
       z-index: 999;
       opacity: 0;
-      transition: opacity 0.3s ease;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      transform: translateY(-10px);
       backdrop-filter: blur(5px);
       
       .page-link {
@@ -180,6 +196,8 @@
       
       &.show {
         display: flex;
+        opacity: 1;
+        transform: translateY(0);
       }
     }
     
