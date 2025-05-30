@@ -77,25 +77,19 @@
 }
 
 .portfolio-section {
-  padding: 25px;
+  padding: 20px;
   border-radius: 15px;
   transition: background-color 0.3s ease;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
   
   @media (max-width: 768px) {
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     padding: 12px;
   }
   
   @media (max-width: 576px) {
-    margin-bottom: 5px;
+    margin-bottom: 15px;
     padding: 8px;
-  }
-  
-  &#film {
-    @media (max-width: 576px) {
-      margin-bottom: 15px;
-    }
   }
   
   &:last-child {
@@ -105,15 +99,15 @@
 }
 
 .section-header {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   text-align: center;
   
   @media (max-width: 768px) {
-    margin-bottom: 25px;
+    margin-bottom: 15px;
   }
   
   @media (max-width: 576px) {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
   }
   
   h2 {
@@ -162,7 +156,7 @@
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 40px;
+  gap: 25px;
   margin-bottom: 0;
   overflow: visible;
   
@@ -202,11 +196,20 @@
   padding: 50px 30px;
   background: linear-gradient(135deg, color.adjust(vars.$clay, $lightness: 45%) 0%, color.adjust(vars.$moss-green, $lightness: 45%) 100%);
   border-radius: 20px;
-  margin: 30px auto;
+  margin: 0 auto;
   max-width: 700px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   position: relative;
   overflow: hidden;
+  
+  @media (max-width: 768px) {
+    padding: 40px 25px;
+  }
+  
+  @media (max-width: 576px) {
+    padding: 30px 20px;
+    border-radius: 15px;
+  }
   
   &:before {
     content: '';
@@ -485,7 +488,7 @@
   
   @media (max-width: 576px) {
     display: block;
-    height: 50px; // Explicit height to create visible gap on mobile
+    height: 70px; // Increased height to create more visible gap on mobile
   }
 }
 
@@ -493,7 +496,7 @@
 .contact-section {
   text-align: center;
   padding: 40px 20px;
-  margin-top: 70px;
+  margin-top: 100px; // Increased margin for more space
   background: linear-gradient(135deg, rgba(vars.$clay, 0.05) 0%, rgba(vars.$moss-green, 0.08) 100%);
   border-radius: 20px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
@@ -510,7 +513,7 @@
   
   @media (max-width: 768px) {
     padding: 30px 20px;
-    margin-top: 30px;
+    margin-top: 60px; // Increased margin for tablet view
     
     h2 {
       font-size: 1.8rem;
@@ -525,7 +528,7 @@
   
   @media (max-width: 576px) {
     padding: 20px 15px;
-    margin-top: 40px;
+    margin-top: 60px; // Increased margin for mobile view
     
     h2 {
       font-size: 1.5rem;
