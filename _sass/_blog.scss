@@ -241,32 +241,73 @@
   }
 }
 
-// Enhanced category filter
+// Enhanced category filter section
+.category-filter-section {
+  margin-bottom: 40px;
+  background-color: rgba($clay, 0.03);
+  border-radius: 12px;
+  padding: 25px 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba($clay, 0.1);
+  
+  h3 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    color: $forest-green;
+    position: relative;
+    padding-bottom: 10px;
+    
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 2px;
+      background-color: rgba($moss-green, 0.5);
+    }
+  }
+  
+  @media (max-width: 576px) {
+    padding: 20px 15px;
+    margin-bottom: 30px;
+  }
+}
+
 .category-filter {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  margin-bottom: 40px;
   justify-content: center;
   padding: 0 15px;
   
   @media (max-width: 576px) {
     gap: 8px;
-    margin-bottom: 25px;
     padding: 0 5px;
     width: 100%;
   }
   
   .filter-button {
     padding: 10px 20px;
-    background-color: rgba($clay, 0.05);
-    border-radius: 30px;
+    background-color: white;
+    border-radius: 8px;
     text-decoration: none;
     color: $text-color;
     font-size: 0.95rem;
-    
+    display: flex;
+    align-items: center;
+    gap: 8px;
     transition: all 0.3s ease;
-    border: 1px solid rgba($clay, 0.1);
+    border: 1px solid rgba($clay, 0.15);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+    
+    i {
+      color: $autumn-leaf;
+      font-size: 0.85rem;
+    }
     
     @media (max-width: 576px) {
       padding: 8px 16px;
@@ -274,16 +315,21 @@
     }
     
     &:hover {
-      background-color: rgba($moss-green, 0.1);
-      transform: translateY(-3px);
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      background-color: rgba($moss-green, 0.05);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
     }
     
     &.active {
-      background-color: $moss-green;
+      background-color: $forest-green;
       color: white;
-      border-color: $moss-green;
-      box-shadow: 0 5px 15px rgba($moss-green, 0.2);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba($forest-green, 0.2);
+      border-color: $forest-green;
+      
+      i {
+        color: white;
+      }
     }
   }
 }

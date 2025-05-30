@@ -1,32 +1,39 @@
 // Advanced filtering styles for blog page
+@import "variables";
 
 .advanced-filter-toggle {
-  margin: 1.5rem 0;
+  margin: 2rem 0 1.5rem;
   text-align: center;
   
   .toggle-button {
-    background: none;
-    border: none;
-    color: #333;
+    background-color: rgba($clay, 0.03);
+    border: 1px solid rgba($clay, 0.1);
+    color: $forest-green;
     font-size: 1rem;
     font-weight: 500;
-    padding: 0.5rem 1rem;
+    padding: 0.6rem 1.2rem;
     cursor: pointer;
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    border-radius: 0.25rem;
-    transition: all 0.2s ease;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
     
     &:hover {
-      background-color: #f0f0f0;
+      background-color: rgba($moss-green, 0.05);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
     }
     
     .toggle-icon {
       transition: transform 0.3s ease;
+      color: $autumn-leaf;
     }
     
     &[aria-expanded="true"] {
+      background-color: rgba($moss-green, 0.1);
+      
       .toggle-icon {
         transform: rotate(180deg);
       }
@@ -35,48 +42,103 @@
 }
 
 .advanced-filters {
-  background-color: #f9f9f9;
-  border-radius: 0.5rem;
-  padding: 1.5rem;
-  margin-bottom: 2rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  background-color: white;
+  border-radius: 12px;
+  padding: 1.8rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba($clay, 0.1);
   
   h3 {
     margin-top: 0;
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
     font-size: 1.2rem;
+    color: $forest-green;
+    position: relative;
+    padding-bottom: 10px;
+    text-align: center;
+    
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 2px;
+      background-color: rgba($moss-green, 0.5);
+    }
   }
   
   .tag-filter {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.8rem;
     
     .tag-cloud {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.5rem;
+      gap: 0.6rem;
+      justify-content: center;
       
       .tag-filter-button {
-        background-color: #f0f0f0;
-        border: none;
-        border-radius: 2rem;
-        padding: 0.4rem 0.8rem;
-        font-size: 0.9rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.4rem 0.9rem;
+        border-radius: 12px;
+        font-size: 0.85rem;
         cursor: pointer;
-        transition: all 0.2s ease;
+        transition: all 0.2s ease-in-out;
+        border: 1px solid rgba(0,0,0,0.05);
+        box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+        color: #222;
+        font-weight: 600;
+        text-transform: lowercase;
         
         &:hover {
-          background-color: #e0e0e0;
           transform: translateY(-2px);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          filter: brightness(1.05);
         }
         
         &.active {
-          background-color: #333;
-          color: #fff;
+          color: #fff !important;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+          border-color: rgba(0,0,0,0.1);
+          position: relative;
+          
+          &:after {
+            content: '✓';
+            margin-left: 5px;
+            font-size: 0.8rem;
+          }
         }
         
         .tag-count {
-          font-size: 0.8rem;
-          opacity: 0.7;
+          font-size: 0.75rem;
+          opacity: 0.8;
+          margin-left: 4px;
+        }
+        
+        /* Apply the same tag colors as in post tags */
+        &[data-tag="animation"] { background-color: #FFB86C; }
+        &[data-tag="music"] { background-color: #9CDBFF; }
+        &[data-tag="single"] { background-color: #9DAB86; }
+        &[data-tag="conceptual"] { background-color: #D4B499; }
+        &[data-tag="electronic"] { background-color: #A0C4FF; }
+        &[data-tag="photography"] { background-color: #F0E6A9; }
+        &[data-tag="gamedev"] { background-color: #FFAAA7; }
+        &[data-tag="pixel-art"] { background-color: #C3C9E9; }
+        &[data-tag="portfolio"] { background-color: #B5B0C0; }
+        &[data-tag="art"] { background-color: #C8A4D4; }
+        &[data-tag="pencil"] { background-color: #8B9A7E; }
+        &[data-tag="marker"] { background-color: #E8B4BC; }
+        &[data-tag="painting"] { background-color: #92A8D1; }
+        &[data-tag="acrylic"] { background-color: #B4A7D6; }
+        &[data-tag="comic"] { background-color: #D5A6BD; }
+        
+        /* For tags without specific colors, use a default */
+        &:not([data-tag="animation"]):not([data-tag="music"]):not([data-tag="single"]):not([data-tag="conceptual"]):not([data-tag="electronic"]):not([data-tag="photography"]):not([data-tag="gamedev"]):not([data-tag="pixel-art"]):not([data-tag="portfolio"]):not([data-tag="art"]):not([data-tag="pencil"]):not([data-tag="marker"]):not([data-tag="painting"]):not([data-tag="acrylic"]):not([data-tag="comic"]) {
+          background-color: #e9ecef;
         }
       }
     }
@@ -84,36 +146,65 @@
   
   .active-filters {
     .active-tags {
-      background-color: #fff;
-      border-radius: 0.5rem;
-      padding: 1rem;
-      margin-bottom: 1rem;
+      background-color: rgba($clay, 0.03);
+      border-radius: 12px;
+      padding: 1.2rem;
+      margin-bottom: 1.5rem;
+      border: 1px solid rgba($clay, 0.1);
       
       h4 {
         margin-top: 0;
-        margin-bottom: 0.75rem;
+        margin-bottom: 1rem;
         font-size: 1rem;
+        color: $forest-green;
+        text-align: center;
       }
       
       .active-tag-list {
         display: flex;
         flex-wrap: wrap;
-        gap: 0.5rem;
-        margin-bottom: 1rem;
+        gap: 0.6rem;
+        margin-bottom: 1.2rem;
+        justify-content: center;
         
         .active-tag {
           display: inline-flex;
           align-items: center;
-          background-color: #333;
-          color: #fff;
-          border-radius: 2rem;
-          padding: 0.3rem 0.8rem;
-          font-size: 0.9rem;
+          color: #222;
+          border-radius: 12px;
+          padding: 0.4rem 0.9rem;
+          font-size: 0.85rem;
+          font-weight: 600;
+          text-transform: lowercase;
+          border: 1px solid rgba(0,0,0,0.05);
+          box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+          
+          /* Apply the same tag colors as in tag filter buttons */
+          &[data-tag="animation"] { background-color: #FFB86C; }
+          &[data-tag="music"] { background-color: #9CDBFF; }
+          &[data-tag="single"] { background-color: #9DAB86; }
+          &[data-tag="conceptual"] { background-color: #D4B499; }
+          &[data-tag="electronic"] { background-color: #A0C4FF; }
+          &[data-tag="photography"] { background-color: #F0E6A9; }
+          &[data-tag="gamedev"] { background-color: #FFAAA7; }
+          &[data-tag="pixel-art"] { background-color: #C3C9E9; }
+          &[data-tag="portfolio"] { background-color: #B5B0C0; }
+          &[data-tag="art"] { background-color: #C8A4D4; }
+          &[data-tag="pencil"] { background-color: #8B9A7E; }
+          &[data-tag="marker"] { background-color: #E8B4BC; }
+          &[data-tag="painting"] { background-color: #92A8D1; }
+          &[data-tag="acrylic"] { background-color: #B4A7D6; }
+          &[data-tag="comic"] { background-color: #D5A6BD; }
+          
+          /* For tags without specific colors, use a default */
+          &:not([data-tag="animation"]):not([data-tag="music"]):not([data-tag="single"]):not([data-tag="conceptual"]):not([data-tag="electronic"]):not([data-tag="photography"]):not([data-tag="gamedev"]):not([data-tag="pixel-art"]):not([data-tag="portfolio"]):not([data-tag="art"]):not([data-tag="pencil"]):not([data-tag="marker"]):not([data-tag="painting"]):not([data-tag="acrylic"]):not([data-tag="comic"]) {
+            background-color: #e9ecef;
+          }
           
           .remove-tag {
             background: none;
             border: none;
-            color: #fff;
+            color: inherit;
             margin-left: 0.5rem;
             cursor: pointer;
             display: flex;
@@ -121,26 +212,34 @@
             justify-content: center;
             padding: 0;
             opacity: 0.7;
-            transition: opacity 0.2s ease;
+            transition: all 0.2s ease;
             
             &:hover {
               opacity: 1;
+              transform: scale(1.1);
             }
           }
         }
       }
       
       .clear-filters-button {
-        background-color: transparent;
-        border: 1px solid #ccc;
-        border-radius: 0.25rem;
-        padding: 0.4rem 0.8rem;
+        background-color: white;
+        border: 1px solid rgba($clay, 0.15);
+        border-radius: 8px;
+        padding: 0.5rem 1rem;
         font-size: 0.9rem;
         cursor: pointer;
-        transition: all 0.2s ease;
+        transition: all 0.3s ease;
+        display: block;
+        margin: 0 auto;
+        color: $forest-green;
+        font-weight: 500;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
         
         &:hover {
-          background-color: #f0f0f0;
+          background-color: rgba($moss-green, 0.05);
+          transform: translateY(-2px);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
         }
       }
     }
@@ -149,14 +248,86 @@
 
 // Responsive adjustments
 @media (max-width: 768px) {
+  .advanced-filter-toggle {
+    margin: 1.5rem 0 1rem;
+    
+    .toggle-button {
+      padding: 0.5rem 1rem;
+      font-size: 0.95rem;
+    }
+  }
+  
   .advanced-filters {
-    padding: 1rem;
+    padding: 1.5rem 1rem;
+    margin-bottom: 2rem;
+    
+    h3 {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+    
+    .tag-filter {
+      margin-bottom: 1.5rem;
+      
+      .tag-cloud {
+        gap: 0.5rem;
+        
+        .tag-filter-button {
+          font-size: 0.8rem;
+          padding: 0.35rem 0.8rem;
+        }
+      }
+    }
+    
+    .active-filters .active-tags {
+      padding: 1rem;
+      
+      h4 {
+        font-size: 0.95rem;
+      }
+      
+      .active-tag-list {
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+        
+        .active-tag {
+          font-size: 0.8rem;
+          padding: 0.35rem 0.8rem;
+        }
+      }
+      
+      .clear-filters-button {
+        padding: 0.4rem 0.9rem;
+        font-size: 0.85rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .advanced-filter-toggle {
+    margin: 1.2rem 0 0.8rem;
+    
+    .toggle-button {
+      padding: 0.4rem 0.9rem;
+      font-size: 0.9rem;
+    }
+  }
+  
+  .advanced-filters {
+    padding: 1.2rem 0.8rem;
+    margin-bottom: 1.5rem;
+    border-radius: 10px;
+    
+    h3 {
+      font-size: 1rem;
+    }
     
     .tag-filter .tag-cloud {
       gap: 0.4rem;
       
       .tag-filter-button {
-        font-size: 0.8rem;
+        font-size: 0.75rem;
         padding: 0.3rem 0.7rem;
       }
     }

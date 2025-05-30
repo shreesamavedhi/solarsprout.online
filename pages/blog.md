@@ -31,18 +31,21 @@ permalink: /blog/
     </div>
   </div>
   
-  <div class="category-filter">
-    <button type="button" data-category="all" class="filter-button active">All Posts</button>
-    {% assign categories = site.posts | map: 'categories' | flatten | uniq | sort %}
-    {% for category in categories %}
-      {% assign words = category | split: ' ' %}
-      {% capture capitalized_category %}
-        {% for word in words %}
-          {{ word | capitalize }}
-        {% endfor %}
-      {% endcapture %}
-      <button type="button" data-category="{{ category | downcase }}" class="filter-button">{{ capitalized_category | strip }}</button>
-    {% endfor %}
+  <div class="category-filter-section">
+    <h3>Browse by Category</h3>
+    <div class="category-filter">
+      <button type="button" data-category="all" class="filter-button active">All Posts</button>
+      {% assign categories = site.posts | map: 'categories' | flatten | uniq | sort %}
+      {% for category in categories %}
+        {% assign words = category | split: ' ' %}
+        {% capture capitalized_category %}
+          {% for word in words %}
+            {{ word | capitalize }}
+          {% endfor %}
+        {% endcapture %}
+        <button type="button" data-category="{{ category | downcase }}" class="filter-button"><i class="fas fa-folder"></i> {{ capitalized_category | strip }}</button>
+      {% endfor %}
+    </div>
   </div>
   
   <div class="advanced-filter-toggle">
