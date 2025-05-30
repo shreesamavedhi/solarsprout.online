@@ -1,4 +1,36 @@
+// Handle contact section scroll position immediately
+const urlParams = new URLSearchParams(window.location.search);
+if (urlParams.get('section') === 'contact') {
+  // Set this before any content loads
+  document.documentElement.style.scrollBehavior = 'auto';
+  window.addEventListener('load', function() {
+    const contactSection = document.querySelector('.get-in-touch');
+    if (contactSection) {
+      const offsetY = contactSection.offsetTop - 200;
+      window.scrollTo(0, offsetY);
+      contactSection.classList.add('animate', 'animate-fast');
+      // Clean up URL
+      history.replaceState(null, '', '/about');
+    }
+  });
+}
+
+// No transition overlay needed - normal navigation will be used
+
+// Allow normal navigation behavior without the flash effect
+// No need to prevent default behavior or use transitions
+
 document.addEventListener('DOMContentLoaded', function() {
+  // No overlay to hide
+  // Check if we're redirected to contact section
+  if (window.location.hash === '#contact') {
+    const contactSection = document.querySelector('.get-in-touch');
+    if (contactSection) {
+      // Add a special class for faster animation
+      contactSection.classList.add('animate', 'animate-fast');
+    }
+  }
+
   // Elements to animate on the About page
   const aboutElements = document.querySelectorAll('.about-section, .about-header, .about-image-container, .mission-card, .timeline-item, .about-content h2, .get-in-touch');
   
@@ -22,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Elements to animate on the Blog page
   const blogElements = document.querySelectorAll(
     '.blog-header, .blog-header h1, .blog-header .subtitle, ' +
-    '.blog-search-container, .category-filter, .post-row, .pagination'
+    '.blog-search-container, .category-filter, .post-row, .pagination, .view-options'
   );
   
   // Contact buttons need special handling to ensure they only animate once

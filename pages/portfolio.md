@@ -28,7 +28,7 @@ permalink: /portfolio/
         button_text="Listen" %}
 
       {% include portfolio-item.html 
-        title="Fire&Dreams"
+        title="'Fire&Dreams'"
         image="/assets/images/posts/fire-and-dreams/cover.jpg"
         alt="Fire&Dreams - Music"
         link="/posts/2024/11/27/fire-and-dreams/"
@@ -57,7 +57,7 @@ permalink: /portfolio/
 
       {% include portfolio-item.html 
         title="Time Lost Her Arrow"
-        image="/assets/images/posts/time-lost-her-arrow/cover.jpg"
+        image="/assets/images/posts/time-lost-her-arrow/cover.png"
         alt="Time Lost Her Arrow - Artwork"
         link="/posts/2020/11/29/time-lost-her-arrow/"
         button_text="View Artwork" %}
@@ -102,10 +102,13 @@ permalink: /portfolio/
     </div>
   </section>
   
+  <!-- Spacer for mobile -->
+  <div class="mobile-spacer"></div>
+  
   <!-- Contact Section -->
   <section class="contact-section">
     <h2>Let's Work Together</h2>
     <p>Interested in collaborating on a project? Get in touch!</p>
-    <a href="/about#contact" class="contact-button">Contact Me</a>
+    <a href="/about?section=contact" class="contact-button">Contact Me</a>
   </section>
 </div>

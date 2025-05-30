@@ -3,7 +3,7 @@ layout: post
 title: "Wizard Wars Game"
 date: 2024-12-30
 time: false
-categories: [GameDev, portfolio]
+categories: [GameDev, Portfolio]
 description: "My submission for the 2024 WinterMelon Game Jam. I created a boss-rush and card-game combo, in which I solo-developed using Love2D, Aseprite, and Fl Studio."
 image: "/assets/images/posts/wizard-wars/cover.png"
 tags: [gamedev, pixel-art, portfolio]

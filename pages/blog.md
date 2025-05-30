@@ -19,6 +19,18 @@ permalink: /blog/
     </div>
   </div>
   
+  <div class="view-options">
+    <div class="view-toggle">
+      <span class="view-label">View:</span>
+      <button type="button" data-view="regular" class="view-button active" aria-label="Regular view">
+        <i class="fas fa-th-large"></i>
+      </button>
+      <button type="button" data-view="compact" class="view-button" aria-label="Compact view">
+        <i class="fas fa-list"></i>
+      </button>
+    </div>
+  </div>
+  
   <div class="category-filter">
     <button type="button" data-category="all" class="filter-button active">All Posts</button>
     {% assign categories = site.posts | map: 'categories' | flatten | uniq | sort %}
@@ -34,7 +46,7 @@ permalink: /blog/
   </div>
   
   {%- if site.posts.size > 0 -%}
-    <div class="post-list">
+    <div class="post-list" data-current-view="regular">
       <div id="no-results-message" style="display: none;">
         <p>No posts found matching your search. Try different keywords or <button id="reset-search">view all posts</button>.</p>
       </div>
@@ -78,3 +90,4 @@ permalink: /blog/
 </div>
 
 <script src="{{ '/assets/js/blog-search.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/blog-view-toggle.js' | relative_url }}" defer></script>

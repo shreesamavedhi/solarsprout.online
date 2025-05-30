@@ -3,12 +3,15 @@ layout: post
 title: "Headspace"
 date: 2020-12-17
 time: false
-categories: [Art, portfolio]
+categories: [Art, Portfolio]
+description: "A painting that expresses conflicting emotions and thoughts through color."
 tags: [art, painting, acrylic, conceptual]
 image: "/assets/images/posts/headspace/cover.jpg"
 ---
 
-An exploration of inner thoughts and mental landscapes. This piece visualizes the complex nature of our consciousness.
+## Project Overview
+
+This painting is not meant to be pleasant to look at. The colors lifting the head upwards depict how underlying conflicts can be overwhelming when brought out at once. You'll notice the other plants surrounding the main image, comparatively, are similar to the person-- there is growth that blooms from this type of headspace. 
 
 <div class="magnify-container">
   <img src="/assets/images/posts/headspace/cover.jpg" alt="Headspace" class="main-image">
