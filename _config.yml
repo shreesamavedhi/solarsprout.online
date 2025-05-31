@@ -49,11 +49,21 @@ defaults:
     values:
       layout: "default"
 
-# Build settings
-markdown: kramdown
+# Additional build settings
 highlighter: rouge
 
 # Sass/SCSS
 sass:
   sass_dir: _sass
   style: compressed
+
+# Exclude from processing
+exclude:
+  - vendor
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/

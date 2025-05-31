@@ -1,0 +1,15 @@
+name: Exclude vendor directory
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create _config_ci.yml
+        run: |
+          echo 'exclude: [vendor]' > _config_ci.yml
