@@ -33,6 +33,7 @@ jobs:
         uses: actions/configure-pages@v4
       - name: Build with Jekyll
         run: |
+          bundle lock --add-platform x86_64-linux
           bundle config path vendor/bundle
           bundle install
           bundle exec jekyll build
