@@ -10,6 +10,7 @@
   
   @media (max-width: 576px) {
     padding: 0 10px;
+    max-width: 100%;
   }
 }
 
@@ -55,6 +56,10 @@
     font-size: 0.9rem;
     opacity: 0.8;
     z-index: 1;
+    
+    @media (max-width: 576px) {
+      left: 10px;
+    }
   }
 }
 
@@ -70,7 +75,7 @@
   box-sizing: border-box;
   
   @media (max-width: 576px) {
-    padding: 10px 40px 10px 15px;
+    padding: 10px 40px 10px 35px;
     font-size: 0.95rem;
   }
   
@@ -412,6 +417,12 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
     
+    @media (max-width: 576px) {
+      grid-template-columns: 1fr;
+      gap: 25px;
+      width: 100%;
+    }
+    
     .post-row {
       flex-direction: column;
       
@@ -482,7 +493,7 @@
       
       @media (max-width: 576px) {
         flex-direction: row;
-        max-height: 120px;
+        max-height: 90px;
         padding-right: 0;
         margin-bottom: 5px;
         border-radius: 12px;
@@ -502,8 +513,21 @@
       min-width: 0;
       
       @media (max-width: 576px) {
-        flex: 0 0 100px;
-        height: 100%;
+        flex: 0 0 90px !important;
+        height: 90px !important; /* Match the max-height of the post-row */
+        position: relative !important;
+        overflow: hidden !important;
+        min-height: 90px !important;
+        
+        img {
+          position: absolute !important;
+          top: 0 !important;
+          left: 0 !important;
+          width: 100% !important;
+          height: 90px !important; /* Fixed height to match container */
+          object-fit: cover !important;
+          display: block !important;
+        }
       }
     }
     
@@ -514,8 +538,8 @@
       width: calc(100% - 200px);
       
       @media (max-width: 576px) {
-        padding: 10px 10px 10px 15px;
-        width: calc(100% - 100px);
+        padding: 8px 8px 8px 12px;
+        width: calc(100% - 90px);
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -527,9 +551,17 @@
       margin-bottom: 10px;
       
       @media (max-width: 576px) {
-        font-size: 1rem;
-        margin-bottom: 5px;
-        line-height: 1.2;
+        font-size: 0.9rem;
+        margin-bottom: 2px;
+        line-height: 1.3;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        word-wrap: break-word;
+        word-break: break-word;
+        max-height: none;
+        height: auto;
       }
     }
     
@@ -566,6 +598,15 @@
     transform: translateY(-8px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
   }
+  
+  .post-list[data-current-view="regular"] & {
+    @media (max-width: 576px) {
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 100%;
+    }
+  }
 }
 
 // Enhanced post image
@@ -584,6 +625,18 @@
   &:hover img {
     transform: scale(1.05);
   }
+  
+  .post-list[data-current-view="regular"] & {
+    @media (max-width: 576px) {
+      height: 200px;
+      min-height: 200px;
+      
+      img {
+        height: 200px;
+        object-position: center;
+      }
+    }
+  }
 }
 
 // Enhanced post content
@@ -593,6 +646,16 @@
   display: flex;
   flex-direction: column;
   background: linear-gradient(to bottom, rgba(255,255,255,0.95), rgba(255,255,255,1));
+  
+  @media (max-width: 576px) {
+    padding: 20px;
+  }
+  
+  .post-list[data-current-view="regular"] & {
+    @media (max-width: 576px) {
+      padding: 15px;
+    }
+  }
 }
 
 // Enhanced post meta
@@ -605,8 +668,9 @@
   
   .post-list[data-current-view="compact"] & {
     @media (max-width: 576px) {
-      font-size: 0.8rem;
-      margin-bottom: 5px;
+      font-size: 0.75rem;
+      margin-bottom: 2px;
+      opacity: 0.85;
     }
   }
 }
@@ -626,6 +690,13 @@
     
     &:hover {
       color: $moss-green;
+    }
+  }
+  
+  .post-list[data-current-view="regular"] & {
+    @media (max-width: 576px) {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
     }
   }
 }
@@ -692,6 +763,20 @@
   .post-list[data-current-view="compact"] & {
     @media (max-width: 576px) {
       display: none;
+    }
+  }
+  
+  .post-list[data-current-view="regular"] & {
+    @media (max-width: 576px) {
+      gap: 6px;
+      margin-top: 12px;
+    }
+  }
+  
+  .post-tag {
+    @media (max-width: 576px) {
+      padding: 3px 8px;
+      font-size: 0.7rem;
     }
   }
 }
