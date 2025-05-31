@@ -25,3 +25,6 @@ gem "webrick", "~> 1.8"
 
 # Explicitly pin activesupport to a version compatible with Ruby 3.1.7
 gem "activesupport", "~> 7.0.8"
+
+# Add bigdecimal which is no longer part of default gems in Ruby 3.4.0+
+gem "bigdecimal", "~> 3.1.4"

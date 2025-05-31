@@ -1,6 +1,20 @@
 @import "variables";
 @import "animations";
 
+.blog-filter-section {
+  opacity: 0;
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  animation-play-state: paused;
+  animation-delay: 0.2s;
+  
+  &.animate {
+    animation-name: fadeInUp;
+    animation-play-state: running;
+  }
+}
+
 .blog-header {
   opacity: 0;
   animation-duration: 0.6s;
