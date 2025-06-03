@@ -20,6 +20,7 @@ header_pages:
   - pages/blog.md
   - pages/portfolio.md
   - pages/about.md
+  - pages/shop.md
 
 # Collections
 collections:

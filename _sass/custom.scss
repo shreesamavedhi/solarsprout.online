@@ -671,7 +671,7 @@
   color: #f5f5f5;
   padding: 60px 0 20px;
   margin-top: 60px;
-  border-top: 3px solid $moss-green;
+  border-top: 3px solid $rich-soil;
   position: relative;
   overflow: hidden;
   
@@ -704,7 +704,7 @@
 }
 
 .footer-col h3 {
-  color: $autumn-leaf;
+  color: $terracotta;
   margin-top: 0;
   margin-bottom: 20px;
   font-size: 1.3rem;
@@ -719,7 +719,7 @@
     left: 0;
     width: 40px;
     height: 2px;
-    background-color: $autumn-leaf;
+    background-color: $terracotta;
     opacity: 0.6;
   }
   
@@ -773,10 +773,10 @@
     }
     
     &:hover {
-      color: $autumn-leaf;
+      color: $terracotta;
       
       i {
-        color: $autumn-leaf;
+        color: $terracotta;
       }
     }
   }
@@ -826,7 +826,7 @@
   padding-top: 20px;
   text-align: center;
   font-size: 0.85rem;
-  color: $clay;
+  color: rgba(245, 245, 245, 0.8);
   position: relative;
   z-index: 1;
   letter-spacing: 0.02em;
@@ -839,7 +839,7 @@
     transform: translateX(-50%);
     width: 60px;
     height: 1px;
-    background-color: $autumn-leaf;
+    background-color: $terracotta;
     opacity: 0.4;
   }
 }
